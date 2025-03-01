@@ -3,7 +3,7 @@ chcp 65001 > NUL
 
 set "PROJECT_NAME=EasyWanVideo"
 set "PROJECT_SETUP_BAT=%~dp0%PROJECT_NAME%\Setup.bat"
-set "PROJECT_MODEL_DOWNLOAD_BAT=%~dp0Download\Kijai_T2v_1B.bat"
+set "PROJECT_MODEL_DOWNLOAD_BAT=%~dp0Download\Kijai_T2v1B.bat"
 
 set PROJECT_URL=https://github.com/Zuntan03/%PROJECT_NAME%
 set PROJECT_BRANCH=main
