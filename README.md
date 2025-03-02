@@ -1,21 +1,19 @@
 ﻿# EasyWanVideo
 
-工事中。  
-おすすめ設定の調査中で、まだ使いやすくなっていません。
-
 Geforce RTX 3060 12GB での作例:
 [2](https://x.com/Zuntan03/status/1896103446983688362)
 [1](https://x.com/Zuntan03/status/1894893100025422207)
 
-- [Wan 2.1](https://github.com/Wan-Video/Wan2.1) を Geforce RTX 3060 などで簡単に試せる Win 用ローカル環境です。
+準備中。おすすめ設定の調査中で、まだ使いやすくなっていません。
+
+- [Wan 2.1](https://github.com/Wan-Video/Wan2.1) を Geforce RTX 3060 12GB などで簡単に試せる Win 用ローカル環境です。
 	- Wan はプロンプトからの動画生成 (T2V) と、画像からの動画生成 (I2V) の両方に対応しています。
 	- プロンプトからの軽量動画生成では、5秒の 480p 動画を 5分半で生成します。
 		- T2V 1.3B, 832x480, 81 frames, 15step, sageattn, RTX 3060 12GB
 	- 画像からの高品質動画生成では、5秒の 480p 動画を 20分で生成します。
-		- T2V 14B 480p, 832x480, 81 frames, 10step, sageattn, RTX 3060 12GB
+		- Kijai 版 T2V 14B 480p, 832x480, 81 frames, 10step, sageattn, RTX 3060 12GB
 	- 解像度やフレーム数を半減すれば、それだけ生成時間が減りますが、品質への悪影響がありそうです。
-- 現在は [Kijai 版](https://github.com/kijai/ComfyUI-WanVideoWrapper) をサポートしています。
-	- 手元では ComfyUI の [Native 版](https://comfyui.org/blog/revolutionize-video-creation-comfyui) も GGUF & VRAM 12GB で動作しています。
+- [Kijai 版](https://github.com/kijai/ComfyUI-WanVideoWrapper) と ComfyUI [Native 版](https://comfyui.org/blog/revolutionize-video-creation-comfyui) をサポートしています。
 
 ## インストール
 
