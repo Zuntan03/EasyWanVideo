@@ -1,6 +1,11 @@
 ﻿# EasyWanVideo
 
-工事中。おすすめ設定の調査中で、まだ使いやすくなっていません。
+工事中。  
+おすすめ設定の調査中で、まだ使いやすくなっていません。
+
+Geforce RTX 3060 12GB での作例:
+[2](https://x.com/Zuntan03/status/1896103446983688362)
+[1](https://x.com/Zuntan03/status/1894893100025422207)
 
 - [Wan 2.1](https://github.com/Wan-Video/Wan2.1) を Geforce RTX 3060 などで簡単に試せる Win 用ローカル環境です。
 	- Wan はプロンプトからの動画生成 (T2V) と、画像からの動画生成 (I2V) の両方に対応しています。
@@ -39,15 +44,16 @@ GGUF なら動きそう？なので近日中に用意します。
 
 SageAttention をセットアップすると、手元では **大幅に短い時間** で生成できています。
 
-セットアップ
+### セットアップ
 
 1. `EasyWanVideo/SageAttention/` にある `SetupSageAttention.bat` を実行します。
 2. `vs_buildtools.exe` で `C++ によるデスクトップ開発` を選択してインストールします。
 3. `cuda_12.8.0_windows_network.exe` をインストールします。
 
-利用方法
+### 利用方法
 
 - **Kijai ワークフローの `WanVideo Model Loader` ノードで、`attention_mode` を `sageattn` にします。**
+- **Native ワークフローの `SageAttension 切り替え` ノードで有効にします。**
 
 SageAttention のインストールに失敗して `ComfyUI.bat` がエラーになる場合は、`ComfyUI/venv/` の削除で元に戻せます。
 
@@ -69,6 +75,13 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 - `Clip TextEncoder` は、`visual` 有無のどちらが良いのかわからず
 
 ## 更新履歴
+
+### 2025/03/03
+
+- [ComfyUI Wan 2.1 Native](https://comfyanonymous.github.io/ComfyUI_examples/wan/) の [GGUF](https://huggingface.co/city96/Wan2.1-I2V-14B-480P-gguf) に対応した、`Easy/15_Native_I2v480p` ワークフローを追加しました。
+	- あらかじめ `Download/Native_I2v480p.bat` で必要なファイルをダウンロードしてください。
+	- メインメモリが 32GB でも I2V が動作します（Kijai 版は 64GB 推奨）が、生成は遅くなっています。
+	- SageAttention を有効にすると、Kijai 版と同様に大幅に高速化します。
 
 ### 2025/03/02
 

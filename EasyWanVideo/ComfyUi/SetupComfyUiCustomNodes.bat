@@ -14,8 +14,8 @@ popd
 pushd %~dp0..\..\ComfyUI\custom_nodes
 
 @REM https://github.com/chrisgoringe/cg-use-everywhere
-@REM call :GITHUB_HASH_REQUIREMENTS chrisgoringe cg-use-everywhere main
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+call :GITHUB_HASH_REQUIREMENTS chrisgoringe cg-use-everywhere main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/SeargeDP/ComfyUI_Searge_LLM
 @REM call :GITHUB_HASH_REQUIREMENTS SeargeDP ComfyUI_Searge_LLM main
@@ -26,8 +26,8 @@ pushd %~dp0..\..\ComfyUI\custom_nodes
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/pythongosssss/ComfyUI-Custom-Scripts
-@REM call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/Fannovel16/ComfyUI-Frame-Interpolation
 @REM call :GITHUB_HASH_REQUIREMENTS Fannovel16 ComfyUI-Frame-Interpolation main
@@ -38,31 +38,16 @@ pushd %~dp0..\..\ComfyUI\custom_nodes
 @REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/city96/ComfyUI-GGUF
-@REM call :GITHUB_HASH_REQUIREMENTS city96 ComfyUI-GGUF main
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
-
-@REM echo pip install -qq gguf
-@REM pip install -qq gguf
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+call :GITHUB_HASH_REQUIREMENTS city96 ComfyUI-GGUF main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM HyVideoEnhance
 @REM https://github.com/kijai/ComfyUI-HunyuanVideoWrapper
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-HunyuanVideoWrapper main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-@REM TeaCache https://github.com/kijai/ComfyUI-WanVideoWrapper/pull/226
-@REM Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
-@REM set CUDA_VISIBLE_DEVICES=0 Not resolved
-@REM BlockSwap https://github.com/kijai/ComfyUI-WanVideoWrapper/pull/226#issuecomment-2567087150
-@REM echo git -C ComfyUI-WanVideoWrapper fetch origin pull/226/head:TeaCache
-@REM git -C ComfyUI-WanVideoWrapper fetch origin pull/226/head:TeaCache
-@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
-@REM echo git -C ComfyUI-WanVideoWrapper switch TeaCache
-@REM git -C ComfyUI-WanVideoWrapper switch TeaCache
-@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
-
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Pack
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.8.1
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.8.2
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Subpack
@@ -102,8 +87,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/rgthree/rgthree-comfy
-@REM call :GITHUB_HASH_REQUIREMENTS rgthree rgthree-comfy main
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+call :GITHUB_HASH_REQUIREMENTS rgthree rgthree-comfy main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/KohakuBlueleaf/z-tipo-extension
 @REM call :GITHUB_HASH_REQUIREMENTS KohakuBlueleaf z-tipo-extension main
