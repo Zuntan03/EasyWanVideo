@@ -8,4 +8,5 @@ call %~dp0text_encoders\Kijai\umt5-xxl-enc-fp8_e4m3fn.bat
 
 call %~dp0vae\Kijai\Wan2_1_VAE_bf16.bat
 
+call %~dp0diffusion_models\Kijai\Wan2_1-I2V-14B-480P_fp8_e5m2.bat
 call %~dp0diffusion_models\Kijai\Wan2_1-I2V-14B-480P_fp8_e4m3fn.bat

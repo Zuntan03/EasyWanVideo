@@ -1,6 +1,6 @@
 ﻿# EasyWanVideo
 
-工事中。
+工事中。おすすめ設定の調査中で、まだ使いやすくなっていません。
 
 - [Wan 2.1](https://github.com/Wan-Video/Wan2.1) を Geforce RTX 3060 などで簡単に試せる Win 用ローカル環境です。
 	- Wan はプロンプトからの動画生成 (T2V) と、画像からの動画生成 (I2V) の両方に対応しています。
@@ -18,7 +18,7 @@
 2. インストール先の空フォルダを `C:/EasyWan/` や `D:/EasyWan/` などの浅いパスに用意して、ここに `EasyWanVideoInstaller.bat` を移動して実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 
-**`ComfyUi.bat` で EasyHunyuanVideo が起動し、`Update.bat` で更新できます。**
+**`ComfyUi.bat` で EasyWanVideo が起動し、`Update.bat` で更新できます。**
 
 ## 使い方
 
@@ -62,12 +62,20 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 	- 画像からのプロンプト生成はあまり使えなさそう。
 - scheduler は `unipc` か `dpm++` の `10 steps`
 - `480p` モデルの想定サイズ `832x480` から離れると劣化する
-	- 面積が同じ `480x832` はそこそこの品質に見える
-		- `544x720` は同じ面積でも品質が落ちる？パラメータで変わるかも
-- 画像のサイズと `ImageClip Encode` のサイズは合わせておくと無難
 - 生成フレーム数は `81 frames` から増やしても減らしても劣化する
+- `832x480` & `81 frames` での生成と比較しながらパラメータを調整したほうが無難
+- 画像のサイズと `ImageClip Encode` のサイズは合わせておくと無難
 - I2V では `Enhance A Video` は無し
 - `Clip TextEncoder` は、`visual` 有無のどちらが良いのかわからず
+
+## 更新履歴
+
+### 2025/03/02
+
+- リポジトリを公開しました。
+- Kijai で `Wan2_1-I2V-14B-480P_fp8_e5m2` モデルのダウンロードに対応しました。
+	- Geforce RTX 30X0 以前なら `fp8_e5m2` の `quantization` を使用します。
+	- Geforce RTX 40X0 以降なら `fp8_e4m3fn_fast` の `quantization` を使用します？（未検証）
 
 ## ライセンス
 
