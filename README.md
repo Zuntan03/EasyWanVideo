@@ -80,6 +80,7 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 	- あらかじめ `Download/Native_I2v480p.bat` で必要なファイルをダウンロードしてください。
 	- メインメモリが 32GB でも I2V が動作します（Kijai 版は 64GB 推奨）が、生成は遅くなっています。
 	- SageAttention を有効にすると、Kijai 版と同様に大幅に高速化します。
+- ワークフローにモザイクをかける `30_Mosaic`、アップスケールする `40_Upscale`、フレーム補完する `70_Interpolate` を追加しました。
 
 ### 2025/03/02
 
