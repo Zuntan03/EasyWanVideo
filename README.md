@@ -1,7 +1,7 @@
 ﻿# EasyWanVideo
 
 Geforce RTX 3060 12GB での作例:
-[2](https://x.com/Zuntan03/status/1896103446983688362)
+[2](https://x.com/Zuntan03/status/1896103446983688362), 
 [1](https://x.com/Zuntan03/status/1894893100025422207)
 
 準備中。おすすめ設定の調査中で、まだ使いやすくなっていません。

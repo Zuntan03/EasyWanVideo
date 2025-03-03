@@ -30,12 +30,12 @@ call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/Fannovel16/ComfyUI-Frame-Interpolation
-@REM call :GITHUB_HASH_REQUIREMENTS Fannovel16 ComfyUI-Frame-Interpolation main
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+call :GITHUB_HASH_REQUIREMENTS Fannovel16 ComfyUI-Frame-Interpolation main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-@REM echo pip install -qq -r ComfyUI-Frame-Interpolation\requirements-no-cupy.txt
-@REM pip install -qq -r ComfyUI-Frame-Interpolation\requirements-no-cupy.txt
-@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+echo pip install -qq -r ComfyUI-Frame-Interpolation\requirements-no-cupy.txt
+pip install -qq -r ComfyUI-Frame-Interpolation\requirements-no-cupy.txt
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/city96/ComfyUI-GGUF
 call :GITHUB_HASH_REQUIREMENTS city96 ComfyUI-GGUF main
