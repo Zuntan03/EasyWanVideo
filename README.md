@@ -74,6 +74,13 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 
 ## 更新履歴
 
+### 2025/03/04
+
+- `05_Kijai_I2v480p` ワークフローで、TeaChache と Compile に対応しました。
+	- SageAttension が必要です。
+		- SageAttention インストール済みでも、`EasyWanVideo/SageAttention/` にある `SetupSageAttention.bat` の再実行が必要です。
+	- ワークフロー内のノートを参考に設定を切り替えてください。
+
 ### 2025/03/03
 
 - [ComfyUI Wan 2.1 Native](https://comfyanonymous.github.io/ComfyUI_examples/wan/) の [GGUF](https://huggingface.co/city96/Wan2.1-I2V-14B-480P-gguf) に対応した、`Easy/15_Native_I2v480p` ワークフローを追加しました。

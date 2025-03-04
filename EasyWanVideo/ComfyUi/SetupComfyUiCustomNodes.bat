@@ -59,7 +59,7 @@ call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-KJNodes main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Manager
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.27.3
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.27.8
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-MMAudio

@@ -13,29 +13,34 @@ popd rem %~dp0..\..\ComfyUI
 
 pushd %~dp0
 
-@REM if not exist triton-3.1.0-cp310-cp310-win_amd64.whl ( 
-@REM 	setlocal enabledelayedexpansion
-@REM 	echo.
-@REM 	echo %CURL_CMD% -O https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post9/triton-3.1.0-cp310-cp310-win_amd64.whl
-@REM 	%CURL_CMD% -O https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post9/triton-3.1.0-cp310-cp310-win_amd64.whl
-@REM 	if !ERRORLEVEL! neq 0 ( pause & endlocal & popd & exit /b 1 )
-@REM 	endlocal
-@REM )
-@REM echo pip install -qq triton-3.1.0-cp310-cp310-win_amd64.whl
-@REM pip install -qq triton-3.1.0-cp310-cp310-win_amd64.whl
-@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+@REM https://github.com/pytorch/pytorch/pull/138992
+echo copy /Y pytorch\torch\_inductor\codecache.py %~dp0..\..\ComfyUI\venv\Lib\site-packages\torch\_inductor\codecache.py
+copy /Y pytorch\torch\_inductor\codecache.py %~dp0..\..\ComfyUI\venv\Lib\site-packages\torch\_inductor\codecache.py
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-if not exist triton-3.2.0-cp310-cp310-win_amd64.whl ( 
+if not exist triton-3.1.0-cp310-cp310-win_amd64.whl ( 
 	setlocal enabledelayedexpansion
 	echo.
-	echo %CURL_CMD% -O https://github.com/woct0rdho/triton-windows/releases/download/v3.2.0-windows.post10/triton-3.2.0-cp310-cp310-win_amd64.whl
-	%CURL_CMD% -O https://github.com/woct0rdho/triton-windows/releases/download/v3.2.0-windows.post10/triton-3.2.0-cp310-cp310-win_amd64.whl
+	echo %CURL_CMD% -O https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post9/triton-3.1.0-cp310-cp310-win_amd64.whl
+	%CURL_CMD% -O https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post9/triton-3.1.0-cp310-cp310-win_amd64.whl
 	if !ERRORLEVEL! neq 0 ( pause & endlocal & popd & exit /b 1 )
 	endlocal
 )
-echo pip install -qq triton-3.2.0-cp310-cp310-win_amd64.whl
-pip install -qq triton-3.2.0-cp310-cp310-win_amd64.whl
+echo pip install -qq triton-3.1.0-cp310-cp310-win_amd64.whl
+pip install -qq triton-3.1.0-cp310-cp310-win_amd64.whl
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+@REM if not exist triton-3.2.0-cp310-cp310-win_amd64.whl ( 
+@REM 	setlocal enabledelayedexpansion
+@REM 	echo.
+@REM 	echo %CURL_CMD% -O https://github.com/woct0rdho/triton-windows/releases/download/v3.2.0-windows.post10/triton-3.2.0-cp310-cp310-win_amd64.whl
+@REM 	%CURL_CMD% -O https://github.com/woct0rdho/triton-windows/releases/download/v3.2.0-windows.post10/triton-3.2.0-cp310-cp310-win_amd64.whl
+@REM 	if !ERRORLEVEL! neq 0 ( pause & endlocal & popd & exit /b 1 )
+@REM 	endlocal
+@REM )
+@REM echo pip install -qq triton-3.2.0-cp310-cp310-win_amd64.whl
+@REM pip install -qq triton-3.2.0-cp310-cp310-win_amd64.whl
+@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 if not exist "sageattention-2.1.1+cu124torch2.5.1-cp310-cp310-win_amd64.whl" (
 	setlocal enabledelayedexpansion
