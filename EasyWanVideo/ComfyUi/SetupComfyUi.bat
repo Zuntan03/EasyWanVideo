@@ -7,7 +7,7 @@ set PYTHON_ACTIVATE=%EASY_TOOLS%\Python\Python_Activate.bat
 pushd %~dp0..\..
 
 @REM https://github.com/comfyanonymous/ComfyUI
-call %GITHUB_CLONE_OR_PULL_TAG% comfyanonymous ComfyUI master v0.3.19
+call %GITHUB_CLONE_OR_PULL_TAG% comfyanonymous ComfyUI master v0.3.24
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 popd rem %~dp0
@@ -32,9 +32,9 @@ echo pip install -qq -r requirements.txt
 pip install -qq -r requirements.txt
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-@REM bnb_nf4
-@REM echo pip install -qq bitsandbytes==0.45.0
-@REM pip install -qq bitsandbytes==0.45.0
+@REM bnb_nf4 
+@REM echo pip install -qq bitsandbytes==0.45.3
+@REM pip install -qq bitsandbytes==0.45.3
 @REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM torchao
@@ -46,7 +46,7 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 @REM if not exist models\LLM\ ( mkdir models\LLM )
 @REM if not exist models\llm_gguf\ ( mkdir models\llm_gguf )
 @REM if not exist models\mmaudio\ ( mkdir models\mmaudio )
-@REM if not exist models\ultralytics\ ( mkdir models\ultralytics )
+if not exist models\ultralytics\ ( mkdir models\ultralytics )
 if not exist user\default\workflows\ ( mkdir user\default\workflows )
 
 popd rem %~dp0..\..\ComfyUI

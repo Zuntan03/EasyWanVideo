@@ -1,19 +1,21 @@
 ﻿# EasyWanVideo
 
-Geforce RTX 3060 12GB での作例:
+いずれも Geforce RTX 3060 12GB 環境での作例:
 [2](https://x.com/Zuntan03/status/1896103446983688362), 
-[1](https://x.com/Zuntan03/status/1894893100025422207)
+[1](https://x.com/Zuntan03/status/1894893100025422207)  
+**インストール後に `Sample/_Download.bat` で、幅広い作例を確認できます。**  
 
-準備中。おすすめ設定の調査中で、まだ使いやすくなっていません。
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vAll.webp)
 
 - [Wan 2.1](https://github.com/Wan-Video/Wan2.1) を Geforce RTX 3060 12GB などで簡単に試せる Win 用ローカル環境です。
-	- Wan はプロンプトからの動画生成 (T2V) と、画像からの動画生成 (I2V) の両方に対応しています。
-	- プロンプトからの軽量動画生成では、5秒の 480p 動画を 5分半で生成します。
-		- T2V 1.3B, 832x480, 81 frames, 15step, sageattn, RTX 3060 12GB
-	- 画像からの高品質動画生成では、5秒の 480p 動画を 20分で生成します。
-		- Kijai 版 T2V 14B 480p, 832x480, 81 frames, 10step, sageattn, RTX 3060 12GB
-	- 解像度やフレーム数を半減すれば、それだけ生成時間が減りますが、品質への悪影響がありそうです。
-- [Kijai 版](https://github.com/kijai/ComfyUI-WanVideoWrapper) と ComfyUI [Native 版](https://comfyui.org/blog/revolutionize-video-creation-comfyui) をサポートしています。
+	- 画像からの高品質動画生成 (I2V) では、3秒の 368x480 動画を 5分半、5秒の 432x576 動画を 12分で生成します。
+- [Kijai 版](https://github.com/kijai/ComfyUI-WanVideoWrapper) の I2V を主にサポートしています。 
+	- ComfyUI [Native 版](https://comfyui.org/blog/revolutionize-video-creation-comfyui) や T2I も一応サポートしています。
+- 自動＆手動モザイク、アップスケーラ、フレーム補間にも対応しています。
+
+**現在は Kijai 版 I2V を中心に環境を整えています。**  
+**Kijai 版はメインメモリが 64GB 推奨な点にご注意ください。**  
+**キャラや構図は [EasyReforge](https://github.com/Zuntan03/EasyReforge) などで固めて、動きは LoRA で補助すると、効率良く I2V 生成ができます。**
 
 ## インストール
 
@@ -23,78 +25,70 @@ Geforce RTX 3060 12GB での作例:
 
 **`ComfyUi.bat` で EasyWanVideo が起動し、`Update.bat` で更新できます。**
 
+**まずは `Sample/_Download.bat` で、どんな動画を生成できるのかを確認ください。**  
+`*.png` は ComfyUI にドラッグ＆ドロップすると、生成時の設定を確認できます。  
+更新により `Download/Kijai_I2v480p.bat` などによる追加ファイルのダウンロードや、ファイルパス指定の修正が必要な場合があります。
+
 ## 使い方
 
-- T2V 1B（軽量版のプロンプトから動画生成）
-	- `Easy/00_Kijai_T2v1B` ワークフローで生成します。
-		- インストール時にモデルをダウンロードしていなかった場合は、`Download/Kijai_T2v1B.bat` でモデルをダウンロードします。
-- T2V 14B（高品質版のプロンプトから動画生成）
-	- **`Download/Kijai_T2v14B.bat` でモデルをダウンロードします。**
-	- `Easy/01_Kijai_T2v14B` ワークフローで生成します。
-- I2V 14B 480p（画像から動画生成の 480p 版）
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vKijai.webp)  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vAllInfo.webp)
+
+- **オススメ！** I2V 14B 480p（画像から動画生成の 480p 版）
 	- **`Download/Kijai_I2v480p.bat` でモデルをダウンロードします。**
 	- `Easy/05_Kijai_I2v480p` ワークフローで生成します。
+- `Easy/30_Mosaic` では自動検出と画像のアルファ値でモザイクをかけられます。
+	- 画像のアルファ値は ComfyUI 内の `MaskEditor` で編集できます。
+- `Easy/40_Upscale` でアップスケーラによる拡大ができます。
+- `Easy/70_Interpolate` で動画を滑らかにするフレーム補間ができます。
+	- 補間数とフレームレートで再生速度をコントロールできます。
+	- ネットで共有するための MP4 形式への変換や、PingPong ループ再生変換もできます。
 
-メインメモリが 32GB の場合は 14B は動かないかもしれません。  
-GGUF なら動きそう？なので近日中に用意します。
+## オススメ！SageAttention で高速生成
 
-## SageAttention で高速生成
-
-SageAttention をセットアップすると、手元では **大幅に短い時間** で生成できています。
+SageAttention をセットアップすると、**生成時間が約半分になります**。
 
 ### セットアップ
 
 1. `EasyWanVideo/SageAttention/` にある `SetupSageAttention.bat` を実行します。
-2. `vs_buildtools.exe` で `C++ によるデスクトップ開発` を選択してインストールします。
+2. `vs_buildtools.exe` で `C++ によるデスクトップ開発` を選択してインストールします。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
 3. `cuda_12.8.0_windows_network.exe` をインストールします。
 
 ### 利用方法
 
-- **Kijai ワークフローの `WanVideo Model Loader` ノードで、`attention_mode` を `sageattn` にします。**
+- **`Easy/05_Kijai_I2v480p` ワークフローでは、以下で `spda` を `sageattn` に変更します。**  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/SageAttn.png)
 - **Native ワークフローの `SageAttension 切り替え` ノードで有効にします。**
 
 SageAttention のインストールに失敗して `ComfyUI.bat` がエラーになる場合は、`ComfyUI/venv/` の削除で元に戻せます。
 
-## 生成メモ
+## その他のワークフロー
 
-いずれも少し試した範囲での印象です。  
-また、急速に開発が進んでいるため、情報がすぐに古くなる可能性があります。
-
-### Kijai I2V 生成メモ
-
-- プロンプトには見た目や状態ではなく動きを記載しなくてはいけない。
-	- 画像からのプロンプト生成はあまり使えなさそう。
-- scheduler は `unipc` か `dpm++` の `10 steps`
-- `480p` モデルの想定サイズ `832x480` から離れると劣化する
-- 生成フレーム数は `81 frames` から増やしても減らしても劣化する
-- `832x480` & `81 frames` での生成と比較しながらパラメータを調整したほうが無難
-- 画像のサイズと `ImageClip Encode` のサイズは合わせておくと無難
-- I2V では `Enhance A Video` は無し
-- `Clip TextEncoder` は、`visual` 有無のどちらが良いのかわからず
+- I2V 14B 480p ComfyUI Native 版
+	- **`Download/Native_I2v480p.bat` でモデルをダウンロードします。**
+	- `Easy/15_Native_I2v480p` ワークフローで生成します。
+	- メインメモリが 32GB でも動作しますが、とても遅いです。
+- T2V 1B（軽量版のプロンプトから動画生成）
+	- `Easy/00_Kijai_T2v1B` ワークフローで生成します。
+		- インストール時にモデルをダウンロードしていなかった場合は、`Download/Kijai_T2v1B.bat` でモデルをダウンロードします。
+		- 小さいモデルですので、品質も相応です。
+- T2V 14B（高品質版のプロンプトから動画生成）
+	- **`Download/Kijai_T2v14B.bat` でモデルをダウンロードします。**
+	- `Easy/01_Kijai_T2v14B` ワークフローで生成します。
 
 ## 更新履歴
 
-### 2025/03/04
+### 2025/03/09
 
-- `05_Kijai_I2v480p` ワークフローで、TeaChache と Compile に対応しました。
-	- SageAttension が必要です。
-		- SageAttention インストール済みでも、`EasyWanVideo/SageAttention/` にある `SetupSageAttention.bat` の再実行が必要です。
-	- ワークフロー内のノートを参考に設定を切り替えてください。
+- `05_Kijai_I2v480p` ワークフローのパラメータチューニングが一段落しましたので正式公開します。
+	- まずは `Sample/_Download.bat` でダウンロードされるサンプルを確認ください。  
+Geforce RTX 3060 12GB で短期間に動画を量産できるポテンシャルがあります。 
+	- 3/7 に LTX Video と Hunyuan I2V を評価しましたが、この用途で一日触った範囲では、Wan が圧倒的でした。
+- [Nashikone さんの LoRA バンドル](https://huggingface.co/nashikone/iroiroLoRA/tree/main/Wan2.1-T2V-14B) のダウンロード `Download/loras/Bundle/Nashikone.bat` に対応しました。
+	- T2I 用ですが I2V でも微妙に効いている気がしています。
 
-### 2025/03/03
-
-- [ComfyUI Wan 2.1 Native](https://comfyanonymous.github.io/ComfyUI_examples/wan/) の [GGUF](https://huggingface.co/city96/Wan2.1-I2V-14B-480P-gguf) に対応した、`Easy/15_Native_I2v480p` ワークフローを追加しました。
-	- あらかじめ `Download/Native_I2v480p.bat` で必要なファイルをダウンロードしてください。
-	- メインメモリが 32GB でも I2V が動作します（Kijai 版は 64GB 推奨）が、生成は遅くなっています。
-	- SageAttention を有効にすると、Kijai 版と同様に大幅に高速化します。
-- ワークフローにモザイクをかける `30_Mosaic`、アップスケールする `40_Upscale`、フレーム補完する `70_Interpolate` を追加しました。
-
-### 2025/03/02
-
-- リポジトリを公開しました。
-- Kijai で `Wan2_1-I2V-14B-480P_fp8_e5m2` モデルのダウンロードに対応しました。
-	- Geforce RTX 30X0 以前なら `fp8_e5m2` の `quantization` を使用します。
-	- Geforce RTX 40X0 以降なら `fp8_e4m3fn_fast` の `quantization` を使用します？（未検証）
+[過去の更新内容](https://github.com/Zuntan03/EasyWanVideo/wiki/%E9%81%8E%E5%8E%BB%E3%81%AE%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9)
 
 ## ライセンス
 

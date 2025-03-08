@@ -1,6 +1,11 @@
 @echo off
 chcp 65001 > NUL
+set EASY_TOOLS=%~dp0..\EasyTools
 
+call %EASY_TOOLS%\Civitai\Civitai_ApiKey.bat
+if %ERRORLEVEL% neq 0 ( exit /b 1 )
+
+call %~dp0All\loras.bat
 call %~dp0All\upscale_models.bat
 
 call %~dp0clip_vision\Native\clip_vision_h.bat

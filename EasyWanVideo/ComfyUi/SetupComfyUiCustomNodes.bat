@@ -29,6 +29,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/kijai/ComfyUI-Florence2
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-Florence2 main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/Fannovel16/ComfyUI-Frame-Interpolation
 call :GITHUB_HASH_REQUIREMENTS Fannovel16 ComfyUI-Frame-Interpolation main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -41,13 +45,12 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS city96 ComfyUI-GGUF main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-@REM HyVideoEnhance
 @REM https://github.com/kijai/ComfyUI-HunyuanVideoWrapper
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-HunyuanVideoWrapper main
-if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+@REM call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-HunyuanVideoWrapper main
+@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Pack
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.8.2
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.8.4
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Subpack
@@ -59,7 +62,7 @@ call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-KJNodes main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Manager
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.27.8
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.30.2
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-MMAudio
@@ -67,8 +70,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/SeanScripts/ComfyUI-Unload-Model
-@REM call :GITHUB_HASH_REQUIREMENTS SeanScripts ComfyUI-Unload-Model main
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+call :GITHUB_HASH_REQUIREMENTS SeanScripts ComfyUI-Unload-Model main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite
 call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
