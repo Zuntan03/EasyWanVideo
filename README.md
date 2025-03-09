@@ -65,7 +65,7 @@ SageAttention をセットアップすると、**生成時間が約半分にな�
 
 - **`Easy/05_Kijai_I2v480p` ワークフローでは、以下で `spda` を `sageattn` に変更します。**  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/SageAttn.png)
-- **Native ワークフローの `SageAttension 切り替え` ノードで有効にします。**
+- **Native I2V ワークフローの `SageAttension 切り替え` ノードで有効にします。**
 
 SageAttention のインストールに失敗して `ComfyUI.bat` がエラーになる場合は、`ComfyUI/venv/` の削除で元に戻せます。
 
