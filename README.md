@@ -37,8 +37,8 @@
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vAllInfo.webp)
 
 - **オススメ！** I2V 14B 480p（画像から動画生成の 480p 版）
-	- **`Download/Kijai_I2v480p.bat` でモデルをダウンロードします。**
-	- `Easy/05_Kijai_I2v480p` ワークフローで生成します。
+	1. **`Download/Kijai_I2v480p.bat` でモデルをダウンロードします。**
+	2. `Easy/05_Kijai_I2v480p` ワークフローを開いて生成します。
 - `Easy/30_Mosaic` では自動検出と画像のアルファ値でモザイクをかけられます。
 	- 画像のアルファ値は ComfyUI 内の `MaskEditor` で編集できます。
 - `Easy/40_Upscale` でアップスケーラによる拡大ができます。
