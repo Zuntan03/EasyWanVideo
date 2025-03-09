@@ -1,6 +1,7 @@
 ﻿# EasyWanVideo
 
 **作例: 
+[4](https://x.com/Zuntan03/status/1898645052978770217), 
 [3](https://x.com/Zuntan03/status/1898559953687961728),
 [2](https://x.com/Zuntan03/status/1896103446983688362), 
 [Day1](https://x.com/Zuntan03/status/1894893100025422207)**  
@@ -25,11 +26,14 @@
 2. インストール先の空フォルダを `C:/EasyWan/` や `D:/EasyWan/` などの浅いパスに用意して、ここに `EasyWanVideoInstaller.bat` を移動して実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 
-**`ComfyUi.bat` で EasyWanVideo が起動し、`Update.bat` で更新できます。**
+**重要事項**
 
-**まずは `Sample/_Download.bat` で、どんな動画を生成できるのかを確認ください。**  
-`*.png` は ComfyUI にドラッグ＆ドロップすると、生成時の設定を確認できます。  
-更新により `Download/Kijai_I2v480p.bat` などによる追加ファイルのダウンロードや、ファイルパス指定の修正が必要な場合があります。
+- **`ComfyUi.bat` で EasyWanVideo が起動し、`Update.bat` で更新できます。**  
+- **`Easy/` 以下のワークフローは更新 (`Update.bat`) で最新状態になります。**  
+	- **編集したワークフローを残したい場合は別名で保存してください。**
+- **まずは `Sample/_Download.bat` で、どんな動画を生成できるのかを確認ください。**  
+	- `Sample/*.png` はサンプルのワークフローが含まれており、ComfyUI にドラッグ＆ドロップすると生成時の設定を確認できます。  
+サンプルのワークフローは更新により `Download/Kijai_I2v480p.bat` などによる追加ファイルのダウンロードや、ファイルパス指定の修正が必要な場合があります。
 
 ## 使い方
 
@@ -93,6 +97,10 @@ Geforce RTX 3060 12GB で短期間に動画を量産できるポテンシャル�
 	- `Download\loras\Bundle\Nashikone.bat`
 	- `Download\loras\Nsfw\nsfwsks_InAndOut_v014.bat`
 	- `Download\loras\Nsfw\missionary_sex_v10.bat`
+- SEGS 検出モデルを追加しました。
+	- `Download\ultralytics\segm\2DCockAndBallYolo8x.bat`
+	- `Download\ultralytics\segm\CockAndBallYolo8x.bat`
+	- `Download\ultralytics\segm\pussy_yolo11s_seg_best.bat`
 
 [過去の更新内容](https://github.com/Zuntan03/EasyWanVideo/wiki/%E9%81%8E%E5%8E%BB%E3%81%AE%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9)
 
