@@ -1,9 +1,11 @@
 ﻿# EasyWanVideo
 
-いずれも Geforce RTX 3060 12GB 環境での作例:
+**作例: 
+[3](https://x.com/Zuntan03/status/1898559953687961728),
 [2](https://x.com/Zuntan03/status/1896103446983688362), 
-[1](https://x.com/Zuntan03/status/1894893100025422207)  
-**インストール後に `Sample/_Download.bat` で、幅広い作例を確認できます。**  
+[Day1](https://x.com/Zuntan03/status/1894893100025422207)**  
+いずれも Geforce RTX 3060 12GB 環境で生成  
+**インストールしてから `Sample/_Download.bat` で、より多くの作例を確認できます。**  
 
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vAll.webp)
 
@@ -87,6 +89,10 @@ Geforce RTX 3060 12GB で短期間に動画を量産できるポテンシャル�
 	- 3/7 に LTX Video と Hunyuan I2V を評価しましたが、この用途で一日触った範囲では、Wan が圧倒的でした。
 - [Nashikone さんの LoRA バンドル](https://huggingface.co/nashikone/iroiroLoRA/tree/main/Wan2.1-T2V-14B) のダウンロード `Download/loras/Bundle/Nashikone.bat` に対応しました。
 	- T2I 用ですが I2V でも微妙に効いている気がしています。
+- 動作確認済みの LoRA とサンプルを追加しました。
+	- `Download\loras\Bundle\Nashikone.bat`
+	- `Download\loras\Nsfw\nsfwsks_InAndOut_v014.bat`
+	- `Download\loras\Nsfw\missionary_sex_v10.bat`
 
 [過去の更新内容](https://github.com/Zuntan03/EasyWanVideo/wiki/%E9%81%8E%E5%8E%BB%E3%81%AE%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9)
 
