@@ -26,7 +26,30 @@
 2. インストール先の空フォルダを `C:/EasyWan/` や `D:/EasyWan/` などの浅いパスに用意して、ここに `EasyWanVideoInstaller.bat` を移動して実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 
-**重要事項**
+**少し手間ですが、次の SageAttentionもインストールしてください。**  
+**サンプルの動作に必要です。後程インストール手順を整理します。**
+
+## オススメ！SageAttention で高速生成
+
+SageAttention をセットアップすることで、**生成時間を約半分にできます**。
+
+### セットアップ
+
+1. `EasyWanVideo/SageAttention/` にある `SetupSageAttention.bat` を実行します。
+2. `vs_buildtools.exe` で `C++ によるデスクトップ開発` を選択してインストールします。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
+3. `cuda_12.8.0_windows_network.exe` をインストールします。
+
+### 利用方法
+
+- **`Easy/05_Kijai_I2v480p` ワークフローでは、以下で `spda` を `sageattn` に変更します。**  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/SageAttn.png)
+- **Native I2V ワークフローの `SageAttension 切り替え` ノードで有効にします。**
+
+SageAttention のインストールに失敗して `ComfyUI.bat` がエラーになる場合は、`ComfyUI/venv/` の削除で元に戻せます。
+
+
+## 重要事項
 
 - **`ComfyUi.bat` で EasyWanVideo が起動し、`Update.bat` で更新できます。**  
 - **`Easy/` 以下のワークフローは更新 (`Update.bat`) で最新状態になります。**  
@@ -53,25 +76,6 @@
 - `Easy/70_Interpolate` で動画を滑らかにするフレーム補間ができます。
 	- 補間数とフレームレートで再生速度をコントロールできます。
 	- ネットで共有するための MP4 形式への変換や、PingPong ループ再生変換もできます。
-
-## オススメ！SageAttention で高速生成
-
-SageAttention をセットアップすることで、**生成時間を約半分にできます**。
-
-### セットアップ
-
-1. `EasyWanVideo/SageAttention/` にある `SetupSageAttention.bat` を実行します。
-2. `vs_buildtools.exe` で `C++ によるデスクトップ開発` を選択してインストールします。  
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
-3. `cuda_12.8.0_windows_network.exe` をインストールします。
-
-### 利用方法
-
-- **`Easy/05_Kijai_I2v480p` ワークフローでは、以下で `spda` を `sageattn` に変更します。**  
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/SageAttn.png)
-- **Native I2V ワークフローの `SageAttension 切り替え` ノードで有効にします。**
-
-SageAttention のインストールに失敗して `ComfyUI.bat` がエラーになる場合は、`ComfyUI/venv/` の削除で元に戻せます。
 
 ## その他のワークフロー
 
