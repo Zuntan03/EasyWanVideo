@@ -96,6 +96,8 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 
 ### 2025/03/10
 
+- `画像からのプロンプト生成` を切り替えられるようにしました。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/DisablePromptGen.png)
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\BounceOfPleasure_v10.bat`
 		- 胸が揺れない時にどうぞ。
