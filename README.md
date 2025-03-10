@@ -93,6 +93,12 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 
 ## 更新履歴
 
+### 2025/03/10
+
+- 動作確認済みの LoRA とサンプルを追加しました。
+	- `Download\loras\Nsfw\BounceOfPleasure_v10.bat`
+		- 胸が揺れない時にどうぞ。
+
 ### 2025/03/09
 
 - `05_Kijai_I2v480p` ワークフローのパラメータチューニングが一段落しましたので正式公開します。
