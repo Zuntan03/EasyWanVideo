@@ -1,14 +1,17 @@
 ﻿# EasyWanVideo
-記事: [『動画生成AIの進化がすごい　「超リアル」「ローカルで動く」2つの方向に』 p. 3](https://ascii.jp/elem/000/004/255/4255982/)  
-**作例（X へのログインが必要）: 
+
+- **作例（要ログイン）: 
 [6](https://x.com/Zuntan03/status/1899368720251920775), 
 [5](https://x.com/Zuntan03/status/1899022954434056661), 
 [4](https://x.com/Zuntan03/status/1898645052978770217), 
 [3](https://x.com/Zuntan03/status/1898559953687961728),
 [2](https://x.com/Zuntan03/status/1896103446983688362), 
 [Day1](https://x.com/Zuntan03/status/1894893100025422207)**  
-いずれも Geforce RTX 3060 12GB 環境で生成  
-**インストールしてから `Sample/_Download.bat` で、より多くの作例を確認できます。**  
+	- いずれも Geforce RTX 3060 12GB、メインメモリ 64GB 環境で生成  
+	- **インストールしてから `Sample/_Download.bat` で、より多くの作例を確認できます。**  
+- 記事:
+	- [『動画生成AIの進化がすごい　「超リアル」「ローカルで動く」2つの方向に』 p. 3](https://ascii.jp/elem/000/004/255/4255982/)
+	- 『[[紳士向け] オープンソース＆次世代AI「Wan 2.1」と「EasyWanVideo」で、簡単に叡智動画を生成できる使い方ガイド！](https://note.com/ryu_senpen/n/n017863a1a7cd)』
 
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vAll.webp)
 
