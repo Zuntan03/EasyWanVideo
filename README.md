@@ -51,6 +51,7 @@ SageAttention をセットアップすることで、**生成時間を約半分�
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/SageAttn.png)
 - **Native I2V ワークフローの `SageAttension 切り替え` ノードで有効にします。**
 
+動作しない場合に、`EasyWanVideo/SageAttention/DeleteTritonCache.bat` で triton のキャッシュファイルを削除すると動作する場合があります。
 SageAttention のインストールに失敗して `ComfyUI.bat` がエラーになる場合は、`ComfyUI/venv/` の削除で元に戻せます。
 
 
@@ -100,6 +101,8 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 
 ### 2025/03/11
 
+- triton のキャッシュファイルを削除する `EasyWanVideo/SageAttention/DeleteTritonCache.bat` を追加しました。
+	- SageAttention が動作しない場合に、triton のキャッシュファイルを削除すると動作する場合があります。
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\PovBlowjob_v10.bat`
 
