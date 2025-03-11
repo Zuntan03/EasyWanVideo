@@ -94,6 +94,11 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 
 ## 更新履歴
 
+### 2025/03/11
+
+- 動作確認済みの LoRA とサンプルを追加しました。
+	- `Download\loras\Nsfw\PovBlowjob_v10.bat`
+
 ### 2025/03/10
 
 - `画像からのプロンプト生成` を切り替えられるようにしました。  
