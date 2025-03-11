@@ -54,10 +54,11 @@ SageAttention をセットアップすることで、**生成時間を約半分�
 動作しない場合に、`EasyWanVideo/SageAttention/DeleteTritonCache.bat` で triton のキャッシュファイルを削除すると動作する場合があります。
 SageAttention のインストールに失敗して `ComfyUI.bat` がエラーになる場合は、`ComfyUI/venv/` の削除で元に戻せます。
 
-
 ## 重要事項
 
-- **`ComfyUi.bat` で EasyWanVideo が起動し、`Update.bat` で更新できます。**  
+- **`ComfyUi.bat` で EasyWanVideo が起動し、`Update.bat` で更新できます。**
+	- **初回起動時に過去にインストールしていた ComfyUI のワークフローが開かれ、`Missing Node Types` が表示される場合があります。**
+		- ワークフローを閉じて、`Easy/` のワークフローを開いてください。
 - **`Easy/` 以下のワークフローは更新 (`Update.bat`) で最新状態になります。**  
 	- **編集したワークフローを残したい場合は別名で保存してください。**
 - **まずは `Sample/_Download.bat` で、どんな動画を生成できるのかを確認ください。**  
