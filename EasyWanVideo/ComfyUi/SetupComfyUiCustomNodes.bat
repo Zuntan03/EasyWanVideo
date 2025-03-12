@@ -79,8 +79,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/2f085b8511aa0668926283adaa75317b364202f8 OOM
-@REM call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 1fe746bb9d61f3befd86d6ac1b552ee52a99e121
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 1fe746bb9d61f3befd86d6ac1b552ee52a99e121
+@REM call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/chengzeyi/Comfy-WaveSpeed

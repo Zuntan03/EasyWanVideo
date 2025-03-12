@@ -1,7 +1,7 @@
 ﻿# EasyWanVideo
 
-- **[重要] 3/10 にあった ComfyUI-WanVideoWrapper の [LoRA のロード方式変更](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/2f085b8511aa0668926283adaa75317b364202f8) により、`WanVideoModelLoader` が Geforce RTX 3060 12GB 環境で `Allocation on device` のエラーを起こすようになりました。**
-	- `Update.bat` を実行すると、直前のコミットに巻き戻します。  
+- **[重要] 3/10 にあった ComfyUI-WanVideoWrapper の [LoRA のロード方式変更](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/2f085b8511aa0668926283adaa75317b364202f8) により、Geforce RTX 3060 12GB 環境で `WanVideoModelLoader` が `Allocation on device` エラーを起こしていました。**
+	- `Update.bat` を実行すると、この変更前に巻き戻します。  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/OomError.png)
 
 ----
@@ -108,8 +108,8 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 
 ### 2025/03/12
 
-- **[重要] 3/10 にあった ComfyUI-WanVideoWrapper の [LoRA のロード方式変更](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/2f085b8511aa0668926283adaa75317b364202f8) により、`WanVideoModelLoader` が Geforce RTX 3060 12GB 環境で `Allocation on device` のエラーを起こすようになりました。**
-	- `Update.bat` を実行すると、直前のコミットに巻き戻します。  
+- **[重要] 3/10 にあった ComfyUI-WanVideoWrapper の [LoRA のロード方式変更](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/2f085b8511aa0668926283adaa75317b364202f8) により、Geforce RTX 3060 12GB 環境で `WanVideoModelLoader` が `Allocation on device` エラーを起こしていました。**
+	- `Update.bat` を実行すると、この変更前に巻き戻します。  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/OomError.png)
 
 ### 2025/03/11
