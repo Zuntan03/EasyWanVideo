@@ -4,9 +4,12 @@
 	- `Update.bat` を実行すると、この変更前に巻き戻します。  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/OomError.png)
 
+まとまった時間が取れ次第、ドキュメント整理します。
+
 ----
 
 - **作例（要ログイン）: 
+[7](https://x.com/Zuntan03/status/1899818287225242020), 
 [6](https://x.com/Zuntan03/status/1899368720251920775), 
 [5](https://x.com/Zuntan03/status/1899022954434056661), 
 [4](https://x.com/Zuntan03/status/1898645052978770217), 
@@ -113,6 +116,7 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/OomError.png)
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\tekoki_v028.bat`
+- `05_Kijai_I2v480p` ワークフローの `画像からのプロンプト生成` のデフォルトを無効にしました。
 
 ### 2025/03/11
 
