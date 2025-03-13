@@ -112,6 +112,7 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 ### 2025/03/13
 
 - `Easy/15_Native_I2v480p` と `Easy/00_Kijai_T2v1B` のワークフローを更新しました。
+- カラーマッチ用の `Easy/31_ColorMatch` ワークフローを追加しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\Cowgirl_v11.bat`
 	- `Download\loras\Nsfw\her_breasts_are_bouncing_v01.bat`
