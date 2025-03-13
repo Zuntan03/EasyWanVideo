@@ -109,6 +109,13 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 
 ## 更新履歴
 
+### 2025/03/13
+
+- `Easy/15_Native_I2v480p` と `Easy/00_Kijai_T2v1B` のワークフローを更新しました。
+- 動作確認済みの LoRA とサンプルを追加しました。
+	- `Download\loras\Nsfw\Cowgirl_v11.bat`
+	- `Download\loras\Nsfw\her_breasts_are_bouncing_v01.bat`
+
 ### 2025/03/12
 
 - **[重要] 3/10 にあった ComfyUI-WanVideoWrapper の [LoRA のロード方式変更](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/2f085b8511aa0668926283adaa75317b364202f8) により、Geforce RTX 3060 12GB 環境で `WanVideoModelLoader` が `Allocation on device` エラーを起こしていました。**
