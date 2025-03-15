@@ -116,13 +116,13 @@ I2V のチュートリアルでは動画素材を生成します。
 ### 2025/03/14
 
 - `Easy/30_Mosaic` で [Segment Anything Model 2](https://github.com/facebookresearch/sam2) によるポイント指定でのモザイクに対応しました。
-- `05_Kijai_I2v480p` でマスク指定によるモザイクの開始フレームと終了フレームの指定に対応しました。
+- `05_Kijai_I2v` でマスク指定によるモザイクの開始フレームと終了フレームの指定に対応しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Effect\r0t4tion_360_degrees_rotation_v10.bat`
 
 ### 2025/03/13
 
-- `Easy/15_Native_I2v480p` と `Easy/00_Kijai_T2v1B` のワークフローを更新しました。
+- `Easy/15_Native_I2v` と `Easy/00_Kijai_T2v1B` のワークフローを更新しました。
 - カラーマッチ用の `Easy/31_ColorMatch` ワークフローを追加しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\Cowgirl_v11.bat`
@@ -135,7 +135,7 @@ I2V のチュートリアルでは動画素材を生成します。
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/OomError.png)
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\tekoki_v028.bat`
-- `05_Kijai_I2v480p` ワークフローの `画像からのプロンプト生成` のデフォルトを無効にしました。
+- `05_Kijai_I2v` ワークフローの `画像からのプロンプト生成` のデフォルトを無効にしました。
 
 ## ドキュメント
 
