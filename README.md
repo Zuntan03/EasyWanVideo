@@ -7,6 +7,7 @@
 - I2V の元画像は [EasyReforge](https://github.com/Zuntan03/EasyReforge) などでお好みのキャラやシチュエーションの画像を用意します。
 	- 動画のアニメーションはプロンプトだけでなく、[Wan 用 LoRA](https://civitai.com/search/models?baseModel=Wan%20Video&modelType=LORA&sortBy=models_v9) も併用すると楽に制御できます。
 - **動作確認環境で生成した作例（要 X ログイン）:  
+[9](https://x.com/Zuntan03/status/1901052598607601850),
 [8](https://x.com/Zuntan03/status/1900804662569431481), 
 [7](https://x.com/Zuntan03/status/1899818287225242020), 
 [6](https://x.com/Zuntan03/status/1899368720251920775), 
