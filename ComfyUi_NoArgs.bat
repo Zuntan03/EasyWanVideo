@@ -22,8 +22,8 @@ pushd %~dp0ComfyUI
 call %PYTHON_ACTIVATE%
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-echo python %~dp0\EasyWanVideo\ComfyUi\src\comfy_ui_update_config.py user\default\comfy.settings.json
-python %~dp0\EasyWanVideo\ComfyUi\src\comfy_ui_update_config.py user\default\comfy.settings.json
+echo python %~dp0EasyWanVideo\ComfyUi\src\comfy_ui_update_config.py user\default\comfy.settings.json
+python %~dp0EasyWanVideo\ComfyUi\src\comfy_ui_update_config.py user\default\comfy.settings.json
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM cl.exe 用にパスを通す
