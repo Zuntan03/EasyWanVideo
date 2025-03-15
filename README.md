@@ -1,116 +1,104 @@
 ﻿# EasyWanVideo
 
-- **[重要] 3/10 にあった ComfyUI-WanVideoWrapper の [LoRA のロード方式変更](https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/2f085b8511aa0668926283adaa75317b364202f8) により、Geforce RTX 3060 12GB 環境で `WanVideoModelLoader` が `Allocation on device` エラーを起こしていました。**
-	- `Update.bat` を実行すると、この変更前に巻き戻します。  
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/OomError.png)
-
-この週末のうちに、ドキュメント整理します。
-
-----
-
-- **作例（要 X ログイン）: 
+- [Wan 2.1](https://github.com/Wan-Video/Wan2.1) による画像から動画の生成 (I2V) を、ローカルで簡単に試せる環境です。
+	- 最近の NVIDIA 製 GPU を搭載した、メインメモリ 32GB 以上の Win11 PC で動作します。
+		- 動作確認環境は Geforce RTX 3060 12GB とメインメモリ 64GB です。
+	- プロンプトからの動画の生成 (T2V) にも一応対応していますが、メインは I2V です。
+- I2V の元画像は [EasyReforge](https://github.com/Zuntan03/EasyReforge) などでお好みのキャラやシチュエーションの画像を用意します。
+	- 動画のアニメーションはプロンプトだけでなく、[Wan 用 LoRA](https://civitai.com/search/models?baseModel=Wan%20Video&modelType=LORA&sortBy=models_v9) も併用すると楽に制御できます。
+- **動作確認環境で生成した作例（要 X ログイン）:  
+[8](https://x.com/Zuntan03/status/1900804662569431481), 
 [7](https://x.com/Zuntan03/status/1899818287225242020), 
 [6](https://x.com/Zuntan03/status/1899368720251920775), 
 [5](https://x.com/Zuntan03/status/1899022954434056661), 
 [4](https://x.com/Zuntan03/status/1898645052978770217), 
 [3](https://x.com/Zuntan03/status/1898559953687961728),
 [2](https://x.com/Zuntan03/status/1896103446983688362), 
-[Day1](https://x.com/Zuntan03/status/1894893100025422207)**  
-	- いずれも Geforce RTX 3060 12GB、メインメモリ 64GB で生成  
-	- **インストールしてから `Sample/_Download.bat` で、より多くの作例を確認できます。**  
-- 記事:
+[Day1](https://x.com/Zuntan03/status/1894893100025422207)**
+	- **インストール後に 50 を超えるサンプル動画と、その生成設定を確認できます。**
+- 紹介記事:
 	- 2025/03/10『[動画生成AIの進化がすごい　「超リアル」「ローカルで動く」2つの方向に](https://ascii.jp/elem/000/004/255/4255982/)』 p. 3
-	- 2025/03/09『[[紳士向け] オープンソース＆次世代AI「Wan 2.1」と「EasyWanVideo」で、簡単に叡智動画を生成できる使い方ガイド！](https://note.com/ryu_senpen/n/n017863a1a7cd)』
 	- 2025/03/14『[【動画生成AI】EasyWanVideoを使ってみる【Wan2.1】](https://note.com/aiaicreate/n/n5bf5060e4a14)』
+	- 2025/03/09『[[紳士向け] オープンソース＆次世代AI「Wan 2.1」と「EasyWanVideo」で、簡単に叡智動画を生成できる使い方ガイド！](https://note.com/ryu_senpen/n/n017863a1a7cd)』
 
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vAll.webp)
 
-- [Wan 2.1](https://github.com/Wan-Video/Wan2.1) を Geforce RTX 3060 12GB などで簡単に試せる Win 用ローカル環境です。
-	- 画像からの高品質動画生成 (I2V) では、3秒の 368x480 動画を 5分半、5秒の 432x576 動画を 12分で生成します。
-- [Kijai 版](https://github.com/kijai/ComfyUI-WanVideoWrapper) の I2V を主にサポートしています。 
-	- ComfyUI [Native 版](https://comfyui.org/blog/revolutionize-video-creation-comfyui) や T2I も一応サポートしています。
-- 自動＆手動モザイク、アップスケーラ、フレーム補間にも対応しています。
+## [重要] Kijai 版と Native 版、2種類の Wan 生成環境
 
-**現在は Kijai 版 I2V を中心に環境を整えています。**  
-**Kijai 版はメインメモリが 64GB 推奨な点にご注意ください。**  
-**キャラや構図は [EasyReforge](https://github.com/Zuntan03/EasyReforge) などで固めて、動きは LoRA で補助すると、効率良く I2V 生成ができます。**
+[ComfyUI](https://github.com/comfyanonymous/ComfyUI) での Wan 動画の生成環境には、[Kijai 版](https://github.com/kijai/ComfyUI-WanVideoWrapper) と [Native 版](https://comfyanonymous.github.io/ComfyUI_examples/wan/) の 2種類があります。
 
-## インストール
+**現在はメインメモリが 48GB 以上なら、Kijai 版の利用を推奨しています。**
+
+メインメモリの [DDR4 64GB(32GB * 2) は \15,000～](https://kakaku.com/pc/pc-memory/itemlist.aspx?pdf_Spec101=6&pdf_Spec105=2&pdf_Spec301=32) で、GPU よりもずっと安価です。ローカル AI 動画生成では、交換や増設を検討ください。メインメモリの交換や増設には [マザーボードの仕様確認が必要](https://www.google.com/search?q=%E3%83%9E%E3%82%B6%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89+DIMM+%E5%A2%97%E8%A8%AD+%E5%AF%BE%E5%BF%9C) です。わからない場合は PC 販売元のサポートやクラウド AI にお問い合わせください。
+
+||Kijai 版|Native 版|メモ|
+|-:|:-:|:-:|:-|
+|メインメモリ|最低 48GB|最低 32GB|Kijai 版が GGUF 非対応の影響大。|
+|VRAM|最低 8GB?|最低 8GB?|VRAM 下限は未確認だが、12GB で余裕あり。<br>Native 版は GGUF で、Kijai版は BlockSwap で削減。|
+|生成時間|短い|長い|Kijai 版の FlowUniPCMultistepScheduler は 10ステップで I2V 可。<br> Native 版は倍以上のステップ数が必要。|
+
+気づけていない点がありましたら、お知らせください。
+
+## EasyWanVideo のインストールとチュートリアル
+
+**[重要] インストールでは動画の生成速度がほぼ倍になる SageAttention を導入します。  
+ただし、PC 環境によっては SageAttention が動作しない場合があります。**
+
+SageAttention を利用できない PC 環境では、代わりに SPDA を利用することで動画を生成できます。  
+ただし、ワークフローやサンプルは SageAttention を利用しているため、設定を SPDA に変更しないとエラーになります。
 
 1. [EasyWanVideoInstaller.bat](https://github.com/Zuntan03/EasyWanVideo/raw/main/EasyWanVideo/EasyWanVideoInstaller.bat?ver=0) を右クリックから保存します。
 2. インストール先の空フォルダを `C:/EasyWan/` や `D:/EasyWan/` などの浅いパスに用意して、ここに `EasyWanVideoInstaller.bat` を移動して実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
+3. インストール先の `EasyWanVideo/SageAttention/` で、SageAttention を導入します。
+	1. `SetupSageAttention.bat` を実行します。
+	2. `vs_buildtools.exe` を実行して、`C++ によるデスクトップ開発` を選択してインストールします。  
+	![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
+	3. `EasyWanVideo/SageAttention/` にある`cuda_12.8.0_windows_network.exe` をインストールします。
+		- CUDA Toolkit に合わせたグラフィックスドライバもインストールされます。
 
-**少し手間ですが、次の SageAttentionもインストールしてください。**  
-**サンプルの動作に必要です。後程インストール手順を整理します。**
+インストールが完了したら、ComfyUI が正常動作することを確認します。  
+**まだ、I2V の生成はできません。チュートリアルで生成できるようになります。**
 
-## オススメ！SageAttention で高速生成
+- `ComfyUi.bat` を実行すると、ComfyUI を起動できます。
+	- **過去にインストールした ComfyUI のワークフローが開かれ、`Missing Node Types` が表示される場合があります。関係のないワークフローですので、閉じてください。**
+- 黒いコンソール画面を閉じると、EasyWanVideo を終了できます。
+- `Update.bat` を実行すると、EasyWanVideo を更新できます。
 
-SageAttention をセットアップすることで、**生成時間を約半分にできます**。
+インストールで問題が発生した場合は、『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』を確認ください。  
+次はチュートリアルに進みます。
 
-### セットアップ
+- メインメモリが 48GB 以上なら『**[I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
+- メインメモリが 32GB なら『**[I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
 
-1. `EasyWanVideo/SageAttention/` にある `SetupSageAttention.bat` を実行します。
-2. `vs_buildtools.exe` で `C++ によるデスクトップ開発` を選択してインストールします。  
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
-3. `cuda_12.8.0_windows_network.exe` をインストールします。
+I2V のチュートリアルでは動画素材を生成します。  
+お好みの動画素材を生成できたら、動画を仕上げます。
 
-### 利用方法
+- 動画素材を公開用に整える 『**[動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
 
-- **`Easy/05_Kijai_I2v480p` ワークフローでは、以下で `spda` を `sageattn` に変更します。**  
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/SageAttn.png)
-- **Native I2V ワークフローの `SageAttension 切り替え` ノードで有効にします。**
+<!-- ワークフローの内容については『**[ワークフロー説明](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E8%AA%AC%E6%98%8E)**』を確認ください。 -->
 
-動作しない場合に、`EasyWanVideo/SageAttention/DeleteTritonCache.bat` で triton のキャッシュファイルを削除すると動作する場合があります。
-SageAttention のインストールに失敗して `ComfyUI.bat` がエラーになる場合は、`ComfyUI/venv/` の削除で元に戻せます。
+よくある使い方についての問い合わせを、『**[よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)**』にまとめています。
 
-## 重要事項
+## EasyWanVideo の更新方法
 
-- **`ComfyUi.bat` で EasyWanVideo が起動し、`Update.bat` で更新できます。**
-	- **初回起動時に過去にインストールしていた ComfyUI のワークフローが開かれ、`Missing Node Types` が表示される場合があります。**
-		- ワークフローを閉じて、`Easy/` のワークフローを開いてください。
-- **`Easy/` 以下のワークフローは更新 (`Update.bat`) で最新状態になります。**  
-	- **編集したワークフローを残したい場合は別名で保存してください。**
-- **まずは `Sample/_Download.bat` で、どんな動画を生成できるのかを確認ください。**  
-- `Sample/` の png 画像にはサンプルのワークフローが含まれており、ComfyUI にドラッグ＆ドロップすると生成時の設定を確認できます。  
-	- サンプルのワークフローは SageAttention を使用しています。
-		- 後述のSageAttention をセットアップするか、`sageattn` を `spda` に変更してください。
-	- I2V サンプルの `画像の読み込み` では、ワークフローの png を読み込んでください。
-		- ただし、画像サイズや修正の差で厳密には一致しません。
-	- サンプルのワークフローは更新により `Download/Kijai_I2v480p.bat` などによる追加ファイルのダウンロードや、ファイルパス指定の修正が必要な場合があります。
+1. `Update.bat` を実行すると、EasyWanVideo を更新します。
+	- `Workflow/Easy/*.json` が最新の状態になります。
+2. ご利用のワークフローに合わせて `Download/` にある `Kijai_I2v480p.bat` や `Native_I2v480p.bat` を実行すると、LoRA などの新たに入手可能なファイルがあればダウンロードします。
+3. `Sample/_Dwonload.bat` を実行すると、新たに入手可能なサンプルがあればダウンロードします。
+	- 新たなサンプルは新たな LoRA を参照している場合があり、`2.` のダウンロードを必要とする場合があります。
 
-## 使い方
+`2.` と `3.` は必要に応じての実行で問題ありません。
 
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vKijai.webp)  
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vAllInfo.webp)
+## 最近の更新履歴
 
-- **オススメ！** I2V 14B 480p（画像から動画生成の 480p 版）
-	1. **`Download/Kijai_I2v480p.bat` でモデルをダウンロードします。**
-	2. `Easy/05_Kijai_I2v480p` ワークフローを開いて生成します。
-- `Easy/30_Mosaic` では自動検出と画像のアルファ値でモザイクをかけられます。
-	- 画像のアルファ値は ComfyUI 内の `MaskEditor` で編集できます。
-- `Easy/40_Upscale` でアップスケーラによる拡大ができます。
-- `Easy/70_Interpolate` で動画を滑らかにするフレーム補間ができます。
-	- 補間数とフレームレートで再生速度をコントロールできます。
-	- ネットで共有するための MP4 形式への変換や、PingPong ループ再生変換もできます。
+### 2025/03/15
 
-## その他のワークフロー
+- [README](https://github.com/Zuntan03/EasyWanVideo) を刷新しました。
+	- 『[I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』『[I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』『[動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』を追加しました。
+- ワークフローで SageAttention をデフォルトで有効にしました。
 
-- I2V 14B 480p ComfyUI Native 版
-	- **`Download/Native_I2v480p.bat` でモデルをダウンロードします。**
-	- `Easy/15_Native_I2v480p` ワークフローで生成します。
-	- メインメモリが 32GB でも動作しますが、とても遅いです。
-- T2V 1B（軽量版のプロンプトから動画生成）
-	- `Easy/00_Kijai_T2v1B` ワークフローで生成します。
-		- インストール時にモデルをダウンロードしていなかった場合は、`Download/Kijai_T2v1B.bat` でモデルをダウンロードします。
-		- 小さいモデルですので、品質も相応です。
-- T2V 14B（高品質版のプロンプトから動画生成）
-	- **`Download/Kijai_T2v14B.bat` でモデルをダウンロードします。**
-	- `Easy/01_Kijai_T2v14B` ワークフローで生成します。
-
-## 更新履歴
-
-### 2025/03/13
+### 2025/03/14
 
 - `Easy/30_Mosaic` で [Segment Anything Model 2](https://github.com/facebookresearch/sam2) によるポイント指定でのモザイクに対応しました。
 - `05_Kijai_I2v480p` でマスク指定によるモザイクの開始フレームと終了フレームの指定に対応しました。
@@ -134,40 +122,15 @@ SageAttention のインストールに失敗して `ComfyUI.bat` がエラーに
 	- `Download\loras\Nsfw\tekoki_v028.bat`
 - `05_Kijai_I2v480p` ワークフローの `画像からのプロンプト生成` のデフォルトを無効にしました。
 
-### 2025/03/11
+## ドキュメント
 
-- triton のキャッシュファイルを削除する `EasyWanVideo/SageAttention/DeleteTritonCache.bat` を追加しました。
-	- SageAttention が動作しない場合に、triton のキャッシュファイルを削除すると動作する場合があります。
-- 動作確認済みの LoRA とサンプルを追加しました。
-	- `Download\loras\Nsfw\PovBlowjob_v10.bat`
-
-### 2025/03/10
-
-- `画像からのプロンプト生成` を切り替えられるようにしました。  
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/DisablePromptGen.png)
-- `70_Interpolate` のフレーム補間ワークフローで PingPong 再生版を同時に生成するようにしました。
-- 動作確認済みの LoRA とサンプルを追加しました。
-	- `Download\loras\Nsfw\BounceOfPleasure_v10.bat`
-		- 胸が揺れない時にどうぞ。
-
-### 2025/03/09
-
-- `05_Kijai_I2v480p` ワークフローのパラメータチューニングが一段落しましたので正式公開します。
-	- まずは `Sample/_Download.bat` でダウンロードされるサンプルを確認ください。  
-Geforce RTX 3060 12GB で短期間に動画を量産できるポテンシャルがあります。 
-	- 3/7 に LTX Video と Hunyuan I2V を評価しましたが、この用途で一日触った範囲では、Wan が圧倒的でした。
-- [Nashikone さんの LoRA バンドル](https://huggingface.co/nashikone/iroiroLoRA/tree/main/Wan2.1-T2V-14B) のダウンロード `Download/loras/Bundle/Nashikone.bat` に対応しました。
-	- T2I 用ですが I2V でも微妙に効いている気がしています。
-- 動作確認済みの LoRA とサンプルを追加しました。
-	- `Download\loras\Bundle\Nashikone.bat`
-	- `Download\loras\Nsfw\nsfwsks_InAndOut_v014.bat`
-	- `Download\loras\Nsfw\missionary_sex_v10.bat`
-- SEGS 検出モデルを追加しました。
-	- `Download\ultralytics\segm\2DCockAndBallYolo8x.bat`
-	- `Download\ultralytics\segm\CockAndBallYolo8x.bat`
-	- `Download\ultralytics\segm\pussy_yolo11s_seg_best.bat`
-
-[過去の更新内容](https://github.com/Zuntan03/EasyWanVideo/wiki/%E9%81%8E%E5%8E%BB%E3%81%AE%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9)
+- [I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
+- [I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
+- [動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
+<!-- - [ワークフロー説明](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E8%AA%AC%E6%98%8E) -->
+- [よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)
+- [トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)
+- [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
 
 ## ライセンス
 
