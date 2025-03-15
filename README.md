@@ -97,6 +97,15 @@ I2V のチュートリアルでは動画素材を生成します。
 - [README](https://github.com/Zuntan03/EasyWanVideo) を刷新しました。
 	- 『[I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』『[I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』『[動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』を追加しました。
 - ワークフローで SageAttention をデフォルトで有効にしました。
+- `Download\loras\Bundle\NashikoneI2v720p.bat` を追加しました。
+- SageAttention と Triton をアンインストールする `EasyWanVideo\SageAttention\UninstallSageAttention.bat` を追加しました。
+- PyTorch 一式をアンインストールする `EasyWanVideo\SageAttention\UninstallPytorch.bat` を追加しました。
+- 試験的に Geforce RTX 50x0 に対応する、`EasyWanVideo\SageAttention\ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を追加しました。
+	- 通常の SageAttention のセットアップ（`vs_buildtools.exe` と `cuda_12.8.0_windows_network.exe` のインストール）を済ませた後に、`ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を実行してください。
+		- PyTorch を Nightly にし、triton を最新版にして、SageAttention をビルドします。
+		- トラブルにより SageAttention と Triton を巻き戻すなら `UninstallSageAttention.bat` を実行します。
+		- トラブルにより PyTorch を巻き戻すなら、`UninstallPytorch.bat` を実行した後に、`EasyWanVideo\Setup.bat` を実行します。
+	- Geforce RTX 30x0 や 40x0 で上手くインストールできていない環境でインストールすると、改善する可能性もあります。
 
 ### 2025/03/14
 

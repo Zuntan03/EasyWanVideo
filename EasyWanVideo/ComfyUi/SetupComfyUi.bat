@@ -20,6 +20,9 @@ echo python -m pip install -qq --upgrade pip
 python -m pip install -qq --upgrade pip
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
+pip list --format=freeze | find "torchvision==" > nul
+if %ERRORLEVEL% equ 0 ( goto :SKIP_TORCH_INSTALL )
+
 @REM echo pip install torch==2.6.0+cu126 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 @REM pip install torch==2.6.0+cu126 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 
@@ -27,6 +30,8 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 echo pip install -qq torch==2.5.1+cu124 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 pip install -qq torch==2.5.1+cu124 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+:SKIP_TORCH_INSTALL
 
 echo pip install -qq -r requirements.txt
 pip install -qq -r requirements.txt
