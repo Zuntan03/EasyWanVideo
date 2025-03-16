@@ -62,7 +62,8 @@ SageAttention を利用できない PC 環境では、代わりに SPDA を利�
 **まだ、I2V の生成はできません。チュートリアルで生成できるようになります。**
 
 - `ComfyUi.bat` を実行すると、ComfyUI を起動できます。
-	- **過去にインストールした ComfyUI のワークフローが開かれ、`Missing Node Types` が表示される場合があります。関係のないワークフローですので、閉じてください。**
+	- **過去にインストールした ComfyUI のワークフローが開かれ、`Missing Node Types` が表示される場合があります。**  
+関係のないワークフローですので、閉じてください。
 - 黒いコンソール画面を閉じると、EasyWanVideo を終了できます。
 - `Update.bat` を実行すると、EasyWanVideo を更新できます。
 
@@ -95,6 +96,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ### 2025/03/16
 
+- 『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』を更新しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\deepthroat_blowjob_v10.bat`
 		- 打率の高い LoRA だったので、量産テストとして 50動画を用意してみました。
