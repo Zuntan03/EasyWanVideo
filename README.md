@@ -53,10 +53,12 @@ SageAttention を利用できない PC 環境では、代わりに SPDA を利�
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 3. インストール先の `EasyWanVideo/SageAttention/` で、SageAttention を導入します。
 	1. `SetupSageAttention.bat` を実行します。
-	2. `vs_buildtools.exe` を実行して、`C++ によるデスクトップ開発` を選択してインストールします。  
+	2. `vs_buildtools.exe` を実行して、`C++ によるデスクトップ開発` を選択して `Visual Studio Build Tolls 2022` をインストールします。  
 	![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
-	3. `EasyWanVideo/SageAttention/` にある`cuda_12.8.0_windows_network.exe` をインストールします。
+	3. `EasyWanVideo/SageAttention/` にある`cuda_12.8.0_windows_network.exe` で `NVIDIA CUDA Toolkit` をインストールします。
 		- CUDA Toolkit に合わせたグラフィックスドライバもインストールされます。
+	4. この環境以外で SageAttention を利用していた場合は、`EasyWanVideo/SageAttention/DeleteTritonCache.bat` で Triton のキャッシュを削除してください。
+	- SageAttention 導入に失敗する場合に『[Geforce RTX 50x0 で動作しない](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)』で改善する可能性があります。
 
 インストールが完了したら、ComfyUI が正常動作することを確認します。  
 **まだ、I2V の生成はできません。チュートリアルで生成できるようになります。**
@@ -96,10 +98,13 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ### 2025/03/16
 
-- 『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』を更新しました。
+- 720p 用の LoRA は長辺が `720 pixel` 程度ないと暴れる印象がありますので、把握できる範囲で `Model/loras/Nsfw720p/` に分離しました。
+	- `Model/loras/Nsfw/` にある `her_breasts_are_bouncing_v01` は削除して問題ありません。
+- 『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』と『**[よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)**』を更新しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\deepthroat_blowjob_v10.bat`
 		- 打率の高い LoRA だったので、量産テストとして 50動画を用意してみました。
+- `Download\loras\Nsfw\Cowgirl_v12.bat` のバージョンを更新しました。
 
 ### 2025/03/15
 
