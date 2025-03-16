@@ -100,26 +100,29 @@ I2V のチュートリアルでは動画素材を生成します。
 
 - 720p 用の LoRA は長辺が `720 pixel` 程度ないと暴れる印象がありますので、把握できる範囲で `Model/loras/Nsfw720p/` に分離しました。
 	- `Model/loras/Nsfw/` にある `her_breasts_are_bouncing_v01` は削除して問題ありません。
-- `Download\Kijai_I2v.bat` と `Download\Native_I2v.bat` で 720p 用モデルもダウンロードするようにしました。
+- `Download/Kijai_I2v.bat` と `Download/Native_I2v.bat` で 720p 用モデルもダウンロードするようにしました。
+- `Kijai_I2v` ワークフローで、480p モデルと 720p モデルの切り替えに対応しました。
 - 『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』と『**[よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)**』を更新しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
-	- `Download\loras\Nsfw\deepthroat_blowjob_v10.bat`
+	- `Download/loras/Nsfw/deepthroat_blowjob_v10.bat`
 		- 打率の高い LoRA だったので、量産テストとして 50動画を用意してみました。
-- `Download\loras\Nsfw\Cowgirl_v12.bat` のバージョンを更新しました。
+- `Download/loras/Nsfw/Cowgirl_v12.bat` のバージョンを更新しました。
+- 試験的な Geforce RTX 50x0 対応の Triton バージョンを更新しました。
+	- `Update.bat` での更新後に `EasyWanVideo/SageAttention/` の `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を実行でバージョンアップします。
 
 ### 2025/03/15
 
 - [README](https://github.com/Zuntan03/EasyWanVideo) を刷新しました。
 	- 『[I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』『[I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』『[動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』を追加しました。
-- ワークフローで SageAttention をデフォルトで有効にしました。
-- `Download\loras\Bundle\NashikoneI2v720p.bat` を追加しました。
-- SageAttention と Triton をアンインストールする `EasyWanVideo\SageAttention\UninstallSageAttention.bat` を追加しました。
-- PyTorch 一式をアンインストールする `EasyWanVideo\SageAttention\UninstallPytorch.bat` を追加しました。
-- 試験的に Geforce RTX 50x0 に対応する、`EasyWanVideo\SageAttention\ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を追加しました。
+- `Easy/` のワークフローで SageAttention をデフォルトで有効にしました。
+- `Download/loras/Bundle/NashikoneI2v720p.bat` を追加しました。
+- SageAttention と Triton をアンインストールする `EasyWanVideo/SageAttention/UninstallSageAttention.bat` を追加しました。
+- PyTorch 一式をアンインストールする `EasyWanVideo/SageAttention/UninstallPytorch.bat` を追加しました。
+- 試験的に Geforce RTX 50x0 に対応する、`EasyWanVideo/SageAttention/ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を追加しました。
 	- 通常の SageAttention のセットアップ（`vs_buildtools.exe` と `cuda_12.8.0_windows_network.exe` のインストール）を済ませた後に、`ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を実行してください。
 		- PyTorch を Nightly にし、triton を最新版にして、SageAttention をビルドします。
 		- トラブルにより SageAttention と Triton を巻き戻すなら `UninstallSageAttention.bat` を実行します。
-		- トラブルにより PyTorch を巻き戻すなら、`UninstallPytorch.bat` を実行した後に、`EasyWanVideo\Setup.bat` を実行します。
+		- トラブルにより PyTorch を巻き戻すなら、`UninstallPytorch.bat` を実行した後に、`EasyWanVideo/Setup.bat` を実行します。
 	- Geforce RTX 30x0 や 40x0 で上手くインストールできていない環境でインストールすると、改善する可能性もあります。
 
 ### 2025/03/14
@@ -127,15 +130,15 @@ I2V のチュートリアルでは動画素材を生成します。
 - `Easy/30_Mosaic` で [Segment Anything Model 2](https://github.com/facebookresearch/sam2) によるポイント指定でのモザイクに対応しました。
 - `05_Kijai_I2v` でマスク指定によるモザイクの開始フレームと終了フレームの指定に対応しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
-	- `Download\loras\Effect\r0t4tion_360_degrees_rotation_v10.bat`
+	- `Download/loras/Effect/r0t4tion_360_degrees_rotation_v10.bat`
 
 ### 2025/03/13
 
 - `Easy/15_Native_I2v` と `Easy/00_Kijai_T2v1B` のワークフローを更新しました。
 - カラーマッチ用の `Easy/31_ColorMatch` ワークフローを追加しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
-	- `Download\loras\Nsfw\Cowgirl_v11.bat`
-	- `Download\loras\Nsfw\her_breasts_are_bouncing_v01.bat`
+	- `Download/loras/Nsfw/Cowgirl_v11.bat`
+	- `Download/loras/Nsfw/her_breasts_are_bouncing_v01.bat`
 
 ### 2025/03/12
 
@@ -143,7 +146,7 @@ I2V のチュートリアルでは動画素材を生成します。
 	- `Update.bat` を実行すると、この変更前に巻き戻します。  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202503/OomError.png)
 - 動作確認済みの LoRA とサンプルを追加しました。
-	- `Download\loras\Nsfw\tekoki_v028.bat`
+	- `Download/loras/Nsfw/tekoki_v028.bat`
 - `05_Kijai_I2v` ワークフローの `画像からのプロンプト生成` のデフォルトを無効にしました。
 
 ## ドキュメント

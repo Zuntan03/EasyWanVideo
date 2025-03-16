@@ -28,8 +28,8 @@ echo pip install --pre torch torchvision torchaudio --index-url https://download
 pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-echo pip install triton-windows==3.2.0.post13
-pip install triton-windows==3.2.0.post13
+echo pip install -U --pre triton-windows
+pip install -U --pre triton-windows
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/thu-ml/SageAttention
