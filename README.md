@@ -35,7 +35,7 @@
 ||Kijai 版|Native 版|メモ|
 |-:|:-:|:-:|:-|
 |メインメモリ|最低 48GB|最低 32GB|Kijai 版が GGUF 非対応の影響大。|
-|VRAM|最低 8GB?|最低 8GB?|VRAM 下限は未確認だが、12GB で余裕あり。<br>Native 版は GGUF で、Kijai版は BlockSwap で削減。|
+|VRAM|最低 8GB?|[最低 6GB](https://x.com/ooana11/status/1901116323763286063)|厳密な VRAM 下限は未確認だが、12GB で余裕あり。<br>Native 版は GGUF で、Kijai版は BlockSwap で削減。|
 |生成時間|短い|長い|Kijai 版の FlowUniPCMultistepScheduler は 10ステップで I2V 可。<br> Native 版は倍以上のステップ数が必要。|
 
 気づけていない点がありましたら、お知らせください。
@@ -100,6 +100,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 - 720p 用の LoRA は長辺が `720 pixel` 程度ないと暴れる印象がありますので、把握できる範囲で `Model/loras/Nsfw720p/` に分離しました。
 	- `Model/loras/Nsfw/` にある `her_breasts_are_bouncing_v01` は削除して問題ありません。
+- 720p 用モデルをダウンロードする `Download\Kijai_I2v720p.bat` と `Download\Native_I2v720p.bat` を追加しました。
 - 『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』と『**[よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)**』を更新しました。
 - 動作確認済みの LoRA とサンプルを追加しました。
 	- `Download\loras\Nsfw\deepthroat_blowjob_v10.bat`
