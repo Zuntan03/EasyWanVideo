@@ -38,7 +38,8 @@
 |VRAM|最低 8GB?|[最低 6GB](https://x.com/ooana11/status/1901116323763286063)|厳密な VRAM 下限は未確認だが、12GB で余裕あり。<br>Native 版は GGUF で、Kijai版は BlockSwap で削減。|
 |生成時間|短い|長い|Kijai 版の FlowUniPCMultistepScheduler は 10ステップで I2V 可。<br> Native 版は倍以上のステップ数が必要。|
 
-気づけていない点がありましたら、お知らせください。
+気づけていない点がありましたら、お知らせください。  
+特に Native 版で FlowUniPCMultistepScheduler を利用する方法があれば、知りたいです。
 
 ## EasyWanVideo のインストールとチュートリアル
 
@@ -97,6 +98,14 @@ I2V のチュートリアルでは動画素材を生成します。
 ## 最近の更新履歴
 
 [試験的な Geforce RTX 50x0 対応](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)
+
+### 2025/03/18
+
+- Kijai 版のメモリ不足問題が解消されたので、3/10 のバージョン固定から最新版を追跡するように戻しました。
+	- **VRAM が潤沢でない環境では、`WanVideoLoraSelect` ノードで `low_mem_load` を `true` にする必要があります。 **
+	- `WanVideo BlockSwap` ノードの `use_non_blocking` が有効だと、メモリの消費量が大きくなります。
+	- **更新に問題がある場合は、`EasyWanVideo\ComfyUi\KijaiRollback_20250310.bat` でバージョンを巻き戻せます。**
+- `DownloadUnconfirmed` に `LiveWallpaper`, `dabaichui_v10`, `l1v3w4llp4p3r_720p`, `BdsmBondage_T2v_ep17`, `Cumshot_T2v_v10`, `doggystyle_T2v_v10`, `shoejob_v10` を追加しました。
 
 ### 2025/03/17
 

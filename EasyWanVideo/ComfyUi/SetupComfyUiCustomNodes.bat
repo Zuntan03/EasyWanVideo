@@ -61,8 +61,12 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-KJNodes main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+if not exist ComfyUI-KJNodes\fonts\f910-shin-comic-2.04.otf (
+	copy %~dp0f910-shin-comic-2.04\f910-shin-comic-2.04.otf ComfyUI-KJNodes\fonts\
+)
+
 @REM https://github.com/ltdrdata/ComfyUI-Manager
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.31.2
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.31.4
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-MMAudio
@@ -82,9 +86,7 @@ call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
-@REM https://github.com/kijai/ComfyUI-WanVideoWrapper/commit/2f085b8511aa0668926283adaa75317b364202f8 OOM
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 1fe746bb9d61f3befd86d6ac1b552ee52a99e121
-@REM call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/chengzeyi/Comfy-WaveSpeed
