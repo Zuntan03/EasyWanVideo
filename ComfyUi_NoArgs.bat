@@ -28,8 +28,8 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM cl.exe 用にパスを通す
 if exist %EMBEDDABLE_PYTHON%\ (
-	set INCLUDE=%INCLUDE%;%EMBEDDABLE_PYTHON%\include
-	set LIB=%LIB%;%EMBEDDABLE_PYTHON%\libs
+	set "INCLUDE=%INCLUDE%;%EMBEDDABLE_PYTHON%\include"
+	set "LIB=%LIB%;%EMBEDDABLE_PYTHON%\libs"
 )
 
 @REM Cuda 2.6.0 以降の Ultratics Error 回避
