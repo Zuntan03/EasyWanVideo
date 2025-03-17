@@ -104,7 +104,7 @@ I2V のチュートリアルでは動画素材を生成します。
 ### 2025/03/18
 
 - Kijai 版のメモリ不足問題が解消されたので、3/10 のバージョン固定から最新版を追跡するように戻しました。
-	- **VRAM が潤沢でない環境では、`WanVideoLoraSelect` ノードで `low_mem_load` を `true` にする必要があります。 **
+	- **VRAM が潤沢でない環境では、`WanVideoLoraSelect` ノードで `low_mem_load` を `true` にする必要があります。**
 	- `WanVideo BlockSwap` ノードの `use_non_blocking` が有効だと、メモリの消費量が大きくなります。
 	- **更新に問題がある場合は、`EasyWanVideo\ComfyUi\KijaiRollback_20250310.bat` でバージョンを巻き戻せます。**
 - `DownloadUnconfirmed` に `LiveWallpaper`, `dabaichui_v10`, `l1v3w4llp4p3r_720p`, `BdsmBondage_T2v_ep17`, `Cumshot_T2v_v10`, `doggystyle_T2v_v10`, `shoejob_v10` を追加しました。
