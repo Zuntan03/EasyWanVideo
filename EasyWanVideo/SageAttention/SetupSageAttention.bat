@@ -67,7 +67,7 @@ echo pip install -qq "spas_sage_attn-0.1.0+cu124torch2.5.1-cp310-cp310-win_amd64
 pip install -qq "spas_sage_attn-0.1.0+cu124torch2.5.1-cp310-cp310-win_amd64.whl"
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-set CUDA_TOOLKIT_DL_VERSION=12.8.0
+set CUDA_TOOLKIT_DL_VERSION=12.8.1
 setlocal enabledelayedexpansion
 if not exist cuda_%CUDA_TOOLKIT_DL_VERSION%_windows_network.exe (
 	echo.

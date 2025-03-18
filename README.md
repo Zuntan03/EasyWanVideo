@@ -56,7 +56,7 @@ SageAttention を利用できない PC 環境では、代わりに SPDA を利�
 	1. `SetupSageAttention.bat` を実行します。
 	2. `vs_buildtools.exe` を実行して、`C++ によるデスクトップ開発` を選択して `Visual Studio Build Tolls 2022` をインストールします。  
 	![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
-	3. `EasyWanVideo/SageAttention/` にある`cuda_12.8.0_windows_network.exe` で `NVIDIA CUDA Toolkit` をインストールします。
+	3. `EasyWanVideo/SageAttention/` にある`cuda_12.8.1_windows_network.exe` で `NVIDIA CUDA Toolkit` をインストールします。
 		- CUDA Toolkit に合わせたグラフィックスドライバもインストールされます。
 	4. この環境以外で SageAttention を利用していた場合は、`EasyWanVideo/SageAttention/DeleteTritonCache.bat` で Triton のキャッシュを削除してください。
 	- SageAttention 導入に失敗する場合に『[Geforce RTX 50x0 で動作しない](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)』で改善する可能性があります。
@@ -94,7 +94,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |`Kijai_I2v`|画像から動画を生成する I2V のメインワークフロー。|
 |`Kijai_T2v1B`|テキストから動画を生成する T2V の軽量版。|
 |`Kijai_T2v14B`|テキストから動画を生成する T2V の高品質版。|
-|`Native_I2v`|ComfyUI ネイティブ版の I2V。FlowUniPCMultistepScheduler が利用できない問題あり。|
+|`Native_I2v`|ComfyUI ネイティブ版の I2V。メインメモリ 32GB で動作するが、FlowUniPCMultistepScheduler が利用できない問題あり。|
 |`GetLastImage`|動画の最終フレームの画像を取得する。|
 |`TwoImageInterpolate`|2枚の画像を補間する動画を生成する。|
 |`Cut`|指定したフレームで動画の前や後ろを切り取る。|
@@ -134,7 +134,8 @@ I2V のチュートリアルでは動画素材を生成します。
 	- **更新に問題がある場合は、`EasyWanVideo\ComfyUi\KijaiRollback_20250310.bat` でバージョンを巻き戻せます。**
 - 動画編集系のワークフローを多数追加しました。
 	- 各ワークフローについては『[ひとことワークフロー紹介](https://github.com/Zuntan03/EasyWanVideo#%E3%81%B2%E3%81%A8%E3%81%93%E3%81%A8%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E7%B4%B9%E4%BB%8B)』を参照ください。
-- `DownloadUnconfirmed` に `LiveWallpaper`, `dabaichui_v10`, `l1v3w4llp4p3r_720p`, `BdsmBondage_T2v_ep17`, `Cumshot_T2v_v10`, `doggystyle_T2v_v10`, `shoejob_v10` を追加しました。
+- `DownloadUnconfirmed` に `LiveWallpaper`, `dabaichui_v10`, `l1v3w4llp4p3r_720p`, `BdsmBondage_T2v_ep17`, `Cumshot_T2v_v10`, `doggystyle_T2v_v10`, `shoejob_v10`, `MasturbationCumshot_v10` を追加しました。
+- CUDA Toolkit のバージョンを 12.8.1 に更新。
 
 ### 2025/03/17
 
@@ -167,7 +168,7 @@ I2V のチュートリアルでは動画素材を生成します。
 - SageAttention と Triton をアンインストールする `EasyWanVideo/SageAttention/UninstallSageAttention.bat` を追加しました。
 - PyTorch 一式をアンインストールする `EasyWanVideo/SageAttention/UninstallPytorch.bat` を追加しました。
 - 試験的に Geforce RTX 50x0 に対応する、`EasyWanVideo/SageAttention/ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を追加しました。
-	- 通常の SageAttention のセットアップ（`vs_buildtools.exe` と `cuda_12.8.0_windows_network.exe` のインストール）を済ませた後に、`ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を実行してください。
+	- 通常の SageAttention のセットアップ（`vs_buildtools.exe` と `cuda_12.8.1_windows_network.exe` のインストール）を済ませた後に、`ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` を実行してください。
 		- PyTorch を Nightly にし、triton を最新版にして、SageAttention をビルドします。
 		- トラブルにより SageAttention と Triton を巻き戻すなら `UninstallSageAttention.bat` を実行します。
 		- トラブルにより PyTorch を巻き戻すなら、`UninstallPytorch.bat` を実行した後に、`EasyWanVideo/Setup.bat` を実行します。

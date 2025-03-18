@@ -6,7 +6,7 @@ set GITHUB_CLONE_OR_PULL_HASH=%EASY_TOOLS%\Git\GitHub_CloneOrPull_Hash.bat
 set PYTHON_ACTIVATE=%EASY_TOOLS%\Python\Python_Activate.bat
 set EMBEDDABLE_PYTHON=%EASY_TOOLS%\Python\env\python310
 
-echo "vs_buildtools.exe と cuda_12.8.0_windows_network.exe のインストールを先に済ませてください。"
+echo "vs_buildtools.exe と cuda_<version>_windows_network.exe のインストールを先に済ませてください。"
 echo "インストールしていない場合は、このウィンドウを閉じてください。"
 echo.
 echo "UninstallSageAttention.bat で SageAttention と Triton をアンインストールして、インストール前に戻せます。"
@@ -29,6 +29,7 @@ echo pip install --pre torch torchvision torchaudio --index-url https://download
 pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
+@REM https://github.com/woct0rdho/triton-windows
 echo pip install -U --pre triton-windows
 pip install -U --pre triton-windows
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
