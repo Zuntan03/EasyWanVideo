@@ -85,6 +85,31 @@ I2V のチュートリアルでは動画素材を生成します。
 
 よくある使い方についての問い合わせを、『**[よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)**』にまとめています。
 
+### ひとことワークフロー紹介
+
+**動画編集系のワークフローを多用する際は、`劣化なしで重い webp 保存` を有効にすると再エンコードによる劣化を防げます、が重いです。**
+
+|ワークフロー名|説明|
+|-:|:-|
+|`Kijai_I2v`|画像から動画を生成する I2V のメインワークフロー。|
+|`Kijai_T2v1B`|テキストから動画を生成する T2V の軽量版。|
+|`Kijai_T2v14B`|テキストから動画を生成する T2V の高品質版。|
+|`Native_I2v`|ComfyUI ネイティブ版の I2V。FlowUniPCMultistepScheduler が利用できない問題あり。|
+|`GetLastImage`|動画の最終フレームの画像を取得する。|
+|`TwoImageInterpolate`|2枚の画像を補間する動画を生成する。|
+|`Cut`|指定したフレームで動画の前や後ろを切り取る。|
+|`ReversePlayback`|動画を逆再生にする。|
+|`ColorMatch`|動画の色合いを指定した画像に合わせる。|
+|`Mosaic`|動画にモザイクを掛ける。|
+|`ConcatInterpolate`|ふたつの動画を滑らかに繋げる。|
+|`Concat`|ふたつの動画を繋げる。|
+|`Upscale`|動画を ESRGAN 系アップスケーラーで拡大する。|
+|`Resize`|動画のサイズを変更する。|
+|`AddLabel`|動画にテキストのラベルをつける。日本語対応済み。|
+|`Tiling`|動画を縦や横に並べる。|
+|`Interpolate`|動画のフレームを補間して `*.mp4` に変換する。|
+|`ConvertMp4`|動画を `*.mp4` に変換する。`Interpolate` の利用を推奨。|
+
 ## EasyWanVideo の更新方法
 
 1. `Update.bat` を実行すると、EasyWanVideo を更新します。
@@ -107,6 +132,8 @@ I2V のチュートリアルでは動画素材を生成します。
 	- **VRAM が潤沢でない環境では、`WanVideoLoraSelect` ノードで `low_mem_load` を `true` にする必要があります。**
 	- `WanVideo BlockSwap` ノードの `use_non_blocking` が有効だと、メモリの消費量が大きくなります。
 	- **更新に問題がある場合は、`EasyWanVideo\ComfyUi\KijaiRollback_20250310.bat` でバージョンを巻き戻せます。**
+- 動画編集系のワークフローを多数追加しました。
+	- 各ワークフローについては『ひとことワークフロー紹介』を参照ください。
 - `DownloadUnconfirmed` に `LiveWallpaper`, `dabaichui_v10`, `l1v3w4llp4p3r_720p`, `BdsmBondage_T2v_ep17`, `Cumshot_T2v_v10`, `doggystyle_T2v_v10`, `shoejob_v10` を追加しました。
 
 ### 2025/03/17
