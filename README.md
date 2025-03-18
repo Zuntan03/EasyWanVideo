@@ -133,7 +133,7 @@ I2V のチュートリアルでは動画素材を生成します。
 	- `WanVideo BlockSwap` ノードの `use_non_blocking` が有効だと、メモリの消費量が大きくなります。
 	- **更新に問題がある場合は、`EasyWanVideo\ComfyUi\KijaiRollback_20250310.bat` でバージョンを巻き戻せます。**
 - 動画編集系のワークフローを多数追加しました。
-	- 各ワークフローについては『ひとことワークフロー紹介』を参照ください。
+	- 各ワークフローについては『[ひとことワークフロー紹介](https://github.com/Zuntan03/EasyWanVideo#%E3%81%B2%E3%81%A8%E3%81%93%E3%81%A8%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E7%B4%B9%E4%BB%8B)』を参照ください。
 - `DownloadUnconfirmed` に `LiveWallpaper`, `dabaichui_v10`, `l1v3w4llp4p3r_720p`, `BdsmBondage_T2v_ep17`, `Cumshot_T2v_v10`, `doggystyle_T2v_v10`, `shoejob_v10` を追加しました。
 
 ### 2025/03/17
