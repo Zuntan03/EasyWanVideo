@@ -108,6 +108,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |`AddLabel`|動画にテキストのラベルをつける。日本語対応済み。|
 |`Tiling`|動画を縦や横に並べる。|
 |`Interpolate`|動画のフレームを補間して `*.mp4` に変換する。|
+|`InterpolateWebp`|動画のフレームを補間して `*.webp` のまま保存する。|
 |`ConvertMp4`|動画を `*.mp4` に変換する。`Interpolate` の利用を推奨。|
 
 ## EasyWanVideo の更新方法
@@ -125,6 +126,17 @@ I2V のチュートリアルでは動画素材を生成します。
 [試験的な Geforce RTX 50x0 対応](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
+
+### 2025/03/20
+
+- `InterpolateWebp` ワークフローを追加しました。
+- 以下の LoRA を追加しました。
+	- `DownloadUnconfirmed\loras\Nsfw\doggystyle_sex_v10.bat`
+	- `DownloadUnconfirmed\loras\Nsfw\doggystyle_v10.bat`
+- 以下の LoRA のバージョンを更新しました。
+	- `Download\loras\Nsfw\PovBlowjob_v11.bat`
+	- `DownloadUnconfirmed\loras\Nsfw\POVdog_v11.bat`
+- I2V 動画を複数連結するサンプルを追加しました。
 
 ### 2025/03/18
 
