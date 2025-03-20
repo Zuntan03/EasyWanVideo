@@ -89,6 +89,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/raindrop313/ComfyUI-WanVideoStartEndFrames
+@REM call :GITHUB_HASH_REQUIREMENTS raindrop313 ComfyUI-WanVideoStartEndFrames main
+@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/chengzeyi/Comfy-WaveSpeed
 @REM call :GITHUB_HASH_REQUIREMENTS chengzeyi Comfy-WaveSpeed main
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )

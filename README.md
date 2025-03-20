@@ -127,6 +127,16 @@ I2V のチュートリアルでは動画素材を生成します。
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
 
+### 2025/03/21
+
+- 実験的な機能として I2V で終了時の画像も指定できる `Kijai_I2vEnd` ワークフローを追加しました。
+	- `ComfyUI-WanVideoStartEndFrames` と異なり、LoRA を利用できます。
+- 以下の LoRA を追加しました。
+	- `DownloadUnconfirmed\loras\Nsfw\thick_whitish_translucent_semen_v10.bat`
+	- `DownloadUnconfirmed\loras\Nsfw720p\FutanariCowgirl_v10.bat`
+	- `DownloadUnconfirmed\loras\Nsfw\SexyEnhancer_v10.bat`
+	- `DownloadUnconfirmed\loras\Nsfw\Pl0wView_FrontDoggy_v10.bat`
+
 ### 2025/03/20
 
 - `InterpolateWebp` ワークフローを追加しました。
