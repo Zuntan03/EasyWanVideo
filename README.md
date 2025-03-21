@@ -92,6 +92,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |ワークフロー名|説明|
 |-:|:-|
 |`Kijai_I2v`|画像から動画を生成する I2V のメインワークフロー。|
+|`Kijai_I2vEnd`|開始と終了の画像から動画を生成する I2V のワークフロー。|
 |`Kijai_T2v1B`|テキストから動画を生成する T2V の軽量版。|
 |`Kijai_T2v14B`|テキストから動画を生成する T2V の高品質版。|
 |`Native_I2v`|ComfyUI ネイティブ版の I2V。メインメモリ 32GB で動作するが、FlowUniPCMultistepScheduler が利用できない問題あり。|
@@ -100,6 +101,8 @@ I2V のチュートリアルでは動画素材を生成します。
 |`Cut`|指定したフレームで動画の前や後ろを切り取る。|
 |`ReversePlayback`|動画を逆再生にする。|
 |`ColorMatch`|動画の色合いを指定した画像に合わせる。|
+|`FadeIn`|動画をフェードインする。|
+|`FadeOut`|動画をフェードアウトする。|
 |`Mosaic`|動画にモザイクを掛ける。|
 |`ConcatInterpolate`|ふたつの動画を滑らかに繋げる。|
 |`Concat`|ふたつの動画を繋げる。|
@@ -129,8 +132,12 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ### 2025/03/21
 
+- ドキュメントに『[I2V 連結で状況変化する動画を生成](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-%E9%80%A3%E7%B5%90%E3%81%A7%E7%8A%B6%E6%B3%81%E5%A4%89%E5%8C%96%E3%81%99%E3%82%8B%E5%8B%95%E7%94%BB%E3%82%92%E7%94%9F%E6%88%90)』を追加しました。
+	- 作例（X ログインが必要）: [1](https://x.com/Zuntan03/status/1902557483383525596)
+	- サンプルも追加済みです。
 - 実験的な機能として I2V で終了時の画像も指定できる `Kijai_I2vEnd` ワークフローを追加しました。
 	- `ComfyUI-WanVideoStartEndFrames` と異なり、LoRA を利用できます。
+- `FadeIn` と `FadeOut` のワークフローを追加しました。
 - 以下の LoRA を追加しました。
 	- `DownloadUnconfirmed\loras\Nsfw\thick_whitish_translucent_semen_v10.bat`
 	- `DownloadUnconfirmed\loras\Nsfw720p\FutanariCowgirl_v10.bat`
@@ -225,7 +232,7 @@ I2V のチュートリアルでは動画素材を生成します。
 - [I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
-<!-- - [ワークフロー説明](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E8%AA%AC%E6%98%8E) -->
+- [I2V 連結で状況変化する動画を生成](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-%E9%80%A3%E7%B5%90%E3%81%A7%E7%8A%B6%E6%B3%81%E5%A4%89%E5%8C%96%E3%81%99%E3%82%8B%E5%8B%95%E7%94%BB%E3%82%92%E7%94%9F%E6%88%90)
 - [よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)
 - [トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
