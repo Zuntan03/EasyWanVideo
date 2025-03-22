@@ -25,7 +25,7 @@
 	- 2025/03/10『[動画生成AIの進化がすごい　「超リアル」「ローカルで動く」2つの方向に](https://ascii.jp/elem/000/004/255/4255982/)』 p. 3
 	- 2025/03/14『[【動画生成AI】EasyWanVideoを使ってみる【Wan2.1】](https://note.com/aiaicreate/n/n5bf5060e4a14)』
 	- 2025/03/09『[[紳士向け] オープンソース＆次世代AI「Wan 2.1」と「EasyWanVideo」で、簡単に叡智動画を生成できる使い方ガイド！](https://note.com/ryu_senpen/n/n017863a1a7cd)』
-- 利用事例（「EasyWanVideo」検索にかかった投稿より）：
+- 利用事例（[「EasyWanVideo」検索にかかった投稿](https://x.com/search?q=EasyWanVideo) より）：
 	- [「画像からのプロンプト生成」のオンオフで変わる効き方の傾向ちょっとずつ分かってきた](https://x.com/Alone1Moon/status/1902162041454117353)  
 [@shibaben](https://x.com/shibaben/status/1903022334908506461),
 [@wann_waf](https://x.com/wann_waf/status/1902766615881764871),
@@ -145,6 +145,13 @@ I2V のチュートリアルでは動画素材を生成します。
 [試験的な Geforce RTX 50x0 対応](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
+
+### 2025/03/22
+
+- [重要] `Kijai_I2v` と `Kijai_I2vEnd` で TeaChache をデフォルト無効に変更しました。
+	- LoRA によっては効果がとても弱まる現象がありました。
+		- TeaChache の無効化で LoRA の効果が得られるようになる可能性があります。
+	- 高速化や品質向上の機能について、ワークフロー内の説明を追加しました。
 
 ### 2025/03/21
 
