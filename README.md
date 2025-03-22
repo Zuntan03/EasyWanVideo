@@ -146,6 +146,7 @@ I2V のチュートリアルでは動画素材を生成します。
 - [I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [I2V 連結で状況変化する動画を生成](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-%E9%80%A3%E7%B5%90%E3%81%A7%E7%8A%B6%E6%B3%81%E5%A4%89%E5%8C%96%E3%81%99%E3%82%8B%E5%8B%95%E7%94%BB%E3%82%92%E7%94%9F%E6%88%90)
+- [より高速な動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%82%8A%E9%AB%98%E9%80%9F%E3%81%AA%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)
 - [よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)
 - [トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
@@ -155,6 +156,10 @@ I2V のチュートリアルでは動画素材を生成します。
 [試験的な Geforce RTX 50x0 対応](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
+
+### 2025/03/23
+
+- ドキュメントに『[より高速な動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%82%8A%E9%AB%98%E9%80%9F%E3%81%AA%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)』を追加しました。
 
 ### 2025/03/22
 
@@ -168,7 +173,7 @@ I2V のチュートリアルでは動画素材を生成します。
 ### 2025/03/21
 
 - ドキュメントに『[I2V 連結で状況変化する動画を生成](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-%E9%80%A3%E7%B5%90%E3%81%A7%E7%8A%B6%E6%B3%81%E5%A4%89%E5%8C%96%E3%81%99%E3%82%8B%E5%8B%95%E7%94%BB%E3%82%92%E7%94%9F%E6%88%90)』を追加しました。
-	- 作例（X ログインが必要）: [1](https://x.com/Zuntan03/status/1902557483383525596)
+	- 作例（X ログインが必要）: [2](https://x.com/Zuntan03/status/1903297439840231636), [1](https://x.com/Zuntan03/status/1902557483383525596)
 	- サンプルも追加済みです。
 - 実験的な機能として I2V で終了時の画像も指定できる `Kijai_I2vEnd` ワークフローを追加しました。
 	- `ComfyUI-WanVideoStartEndFrames` と異なり、LoRA を利用できます。
