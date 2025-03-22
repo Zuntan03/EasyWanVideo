@@ -33,6 +33,12 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 :SKIP_TORCH_INSTALL
 
+@REM https://github.com/kijai/ComfyUI-Florence2/issues/134
+@REM https://github.com/huggingface/transformers/issues/36886
+echo pip install -qq transformers==4.49.0
+pip install -qq transformers==4.49.0
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
 echo pip install -qq -r requirements.txt
 pip install -qq -r requirements.txt
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )

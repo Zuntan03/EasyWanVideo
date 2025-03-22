@@ -159,6 +159,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ### 2025/03/23
 
+- Florence2 が [最新の transformers の 不具合](https://github.com/kijai/ComfyUI-Florence2/issues/134) で動作しないため、`Update.bat` で巻き戻すようにしました。
 - ドキュメントに『[より高速な動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%82%8A%E9%AB%98%E9%80%9F%E3%81%AA%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)』を追加しました。
 
 ### 2025/03/22

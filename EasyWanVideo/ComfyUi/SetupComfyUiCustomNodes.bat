@@ -30,8 +30,8 @@ call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-Florence2
-@REM https://github.com/Zuntan03/EasyWanVideo/issues/5
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-Florence2 main 841a4ae73602be46a131271aa17beaf29ba2996b
+@REM https://github.com/Zuntan03/EasyWanVideo/issues/5 841a4ae73602be46a131271aa17beaf29ba2996b
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-Florence2 main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/Fannovel16/ComfyUI-Frame-Interpolation
