@@ -6,7 +6,11 @@
 	- プロンプトからの動画の生成 (T2V) にも一応対応していますが、メインは I2V です。
 - I2V の元画像は [EasyReforge](https://github.com/Zuntan03/EasyReforge) などでお好みのキャラやシチュエーションの画像を用意します。
 	- 動画のアニメーションはプロンプトだけでなく、[Wan 用 LoRA](https://civitai.com/search/models?baseModel=Wan%20Video&modelType=LORA&sortBy=models_v9) も併用すると楽に制御できます。
-- **動作確認環境で生成した作例（要 X ログイン）:  
+- **動作確認環境の Geforce RTX 3060 12GB で生成した作例（要 X ログイン）：  
+[13](https://x.com/Zuntan03/status/1903297439840231636), 
+[12](https://x.com/Zuntan03/status/1902557483383525596), 
+[11](https://x.com/Zuntan03/status/1901936730238030302), 
+[10](https://x.com/Zuntan03/status/1901421174359461985), 
 [9](https://x.com/Zuntan03/status/1901052598607601850),
 [8](https://x.com/Zuntan03/status/1900804662569431481), 
 [7](https://x.com/Zuntan03/status/1899818287225242020), 
@@ -16,11 +20,23 @@
 [3](https://x.com/Zuntan03/status/1898559953687961728),
 [2](https://x.com/Zuntan03/status/1896103446983688362), 
 [Day1](https://x.com/Zuntan03/status/1894893100025422207)**
-	- **インストール後に 100 を超えるサンプル動画と、その生成設定を確認できます。**
-- 紹介記事:
+	- **インストール後に 100 超えのサンプル動画と、その生成設定を確認できます。**
+- 紹介記事：
 	- 2025/03/10『[動画生成AIの進化がすごい　「超リアル」「ローカルで動く」2つの方向に](https://ascii.jp/elem/000/004/255/4255982/)』 p. 3
 	- 2025/03/14『[【動画生成AI】EasyWanVideoを使ってみる【Wan2.1】](https://note.com/aiaicreate/n/n5bf5060e4a14)』
 	- 2025/03/09『[[紳士向け] オープンソース＆次世代AI「Wan 2.1」と「EasyWanVideo」で、簡単に叡智動画を生成できる使い方ガイド！](https://note.com/ryu_senpen/n/n017863a1a7cd)』
+- 利用事例（「EasyWanVideo」検索にかかった投稿より）：
+	- [「画像からのプロンプト生成」のオンオフで変わる効き方の傾向ちょっとずつ分かってきた](https://x.com/Alone1Moon/status/1902162041454117353)  
+[@shibaben](https://x.com/shibaben/status/1903022334908506461),
+[@wann_waf](https://x.com/wann_waf/status/1902766615881764871),
+[@MultusDim_AI](https://x.com/MultusDim_AI/status/1902632239495835816),
+[@Alone1Moon](https://x.com/Alone1Moon/status/1901997760582398191),
+[@shibaben](https://x.com/shibaben/status/1901956637503500675),
+[@tailtales](https://x.com/tailtales/status/1901937917410361816),
+[@atakatadai](https://x.com/atakatadai/status/1900036189777699010),
+[@Kuze0x0_](https://x.com/Kuze0x0_/status/1899871791025455299),
+[@kiyoshi_shin](https://x.com/kiyoshi_shin/status/1899324353998627021),
+[@kagami_kami_m](https://x.com/kagami_kami_m/status/1898958790470639923)
 
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/I2vAll.webp)
 
