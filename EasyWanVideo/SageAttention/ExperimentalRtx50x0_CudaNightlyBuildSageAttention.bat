@@ -11,7 +11,8 @@ echo "インストールしていない場合は、このウィンドウを閉�
 echo.
 echo "UninstallSageAttention.bat で SageAttention と Triton をアンインストールして、インストール前に戻せます。"
 echo "UninstallPytorch.bat で PyTorch をアンインストールして、EasyWanVideo\Setup.bat で再インストールできます。"
-pause
+echo.
+call %~dp0DeleteTritonCache.bat
 
 pushd %~dp0..\..\ComfyUI
 

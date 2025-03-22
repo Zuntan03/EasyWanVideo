@@ -5,6 +5,8 @@ set EASY_TOOLS=%~dp0..\..\EasyTools
 set GITHUB_CLONE_OR_PULL_TAG=%EASY_TOOLS%\Git\GitHub_CloneOrPull_Tag.bat
 set PYTHON_ACTIVATE=%EASY_TOOLS%\Python\Python_Activate.bat
 
+call %~dp0DeleteTritonCache.bat
+
 pushd %~dp0..\..\ComfyUI
 
 call %PYTHON_ACTIVATE%
