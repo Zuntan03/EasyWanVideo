@@ -50,7 +50,7 @@
 
 ||Kijai 版|Native 版|メモ|
 |-:|:-:|:-:|:-|
-|メインメモリ|最低 48GB|最低 32GB|Kijai 版が GGUF 非対応の影響大。|
+|メインメモリ|最低 48GB|[最低 16GB](https://x.com/T22901800417/status/1903550766163619856)|Kijai 版が GGUF 非対応の影響大。|
 |VRAM|最低 8GB?|[最低 6GB](https://x.com/ooana11/status/1901116323763286063)|厳密な VRAM 下限は未確認だが、12GB で余裕あり。<br>Native 版は GGUF で、Kijai版は BlockSwap で削減。|
 |生成時間|短い|長い|Kijai 版の FlowUniPCMultistepScheduler は 10ステップで I2V 可。<br> Native 版は倍以上のステップ数が必要。|
 
@@ -123,6 +123,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |`ConcatInterpolate`|ふたつの動画を滑らかに繋げる。|
 |`Concat`|ふたつの動画を繋げる。|
 |`Upscale`|動画を ESRGAN 系アップスケーラーで拡大する。|
+|`Crop`|動画の一部を切り抜く。|
 |`Resize`|動画のサイズを変更する。|
 |`AddLabel`|動画にテキストのラベルをつける。日本語対応済み。|
 |`Tiling`|動画を縦や横に並べる。|
@@ -161,6 +162,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 - Florence2 が [最新の transformers の 不具合](https://github.com/kijai/ComfyUI-Florence2/issues/134) で動作しないため、`Update.bat` で巻き戻すようにしました。
 - ドキュメントに『[より高速な動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%82%8A%E9%AB%98%E9%80%9F%E3%81%AA%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)』を追加しました。
+- 動画の一部を切り抜く `Crop` ワークフローを追加しました。
 
 ### 2025/03/22
 
