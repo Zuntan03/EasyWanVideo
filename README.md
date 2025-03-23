@@ -159,6 +159,11 @@ I2V のチュートリアルでは動画素材を生成します。
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
 
+### 2025/03/24
+
+- 『[長尺の動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E9%95%B7%E5%B0%BA%E3%81%AE%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)』のサンプルを追加しました。
+	- `20250324_long.mp4` は 20 動画を連結しています。
+
 ### 2025/03/23
 
 - Florence2 が [最新の transformers の 不具合](https://github.com/kijai/ComfyUI-Florence2/issues/134) で動作しないため、`Update.bat` で巻き戻すようにしました。
