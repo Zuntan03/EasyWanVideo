@@ -130,6 +130,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |`Interpolate`|動画のフレームを補間して `*.mp4` に変換する。|
 |`InterpolateWebp`|動画のフレームを補間して `*.webp` のまま保存する。|
 |`ConvertMp4`|動画を `*.mp4` に変換する。`Interpolate` の利用を推奨。|
+|`SequentialImages`|動画を連番画像に変換する。|
 
 ## EasyWanVideo の更新方法
 
@@ -163,6 +164,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 - 『[長尺の動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E9%95%B7%E5%B0%BA%E3%81%AE%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)』のサンプルを追加しました。
 	- `20250324_long.mp4` は 20 動画を連結しています。
+- 動画を連番画像に変換する `SequentialImages` ワークフローを追加しました。
 
 ### 2025/03/23
 
