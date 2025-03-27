@@ -162,6 +162,13 @@ I2V のチュートリアルでは動画素材を生成します。
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
 
+### 2025/03/27
+
+- `Easy/` の Kijai 版ワークフローのパラメータを、公式サンプルの更新に合わせつつ調整しました。
+	- `ClipVision Encode` の `tile` 無効化。
+	- `WanVideo Sampler` の `rope_function` を `comfy` に変更。
+- Kijai I2V 系ワークフローに [`CFG Zero*`](https://github.com/WeichenFan/CFG-Zero-star) の品質調整オプションを追加しました。
+
 ### 2025/03/26
 
 - LoRA 設定の組み合わせパターンで動画を生成し、最適な設定を探す `LoraChecker` のワークフローと [ドキュメント](https://github.com/Zuntan03/EasyWanVideo/wiki/LoraChecker-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC) を追加しました。
