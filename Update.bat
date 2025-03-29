@@ -11,8 +11,8 @@ if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 pushd %~dp0EasyTools
 echo.
-echo git pull https://github.com/Zuntan03/EasyTools
-git pull
+echo git fetch origin https://github.com/Zuntan03/EasyTools
+git fetch origin
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 echo git reset --hard origin/main
@@ -22,8 +22,8 @@ popd
 
 pushd %~dp0
 echo.
-echo git pull https://github.com/Zuntan03/EasyWanVideo
-git pull
+echo git fetch origin https://github.com/Zuntan03/EasyWanVideo
+git fetch origin
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 echo git reset --hard origin/main
