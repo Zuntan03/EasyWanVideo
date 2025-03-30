@@ -13,6 +13,10 @@ popd
 
 pushd %~dp0..\..\ComfyUI\custom_nodes
 
+@REM https://github.com/christian-byrne/audio-separation-nodes-comfyui
+call :GITHUB_HASH_REQUIREMENTS christian-byrne audio-separation-nodes-comfyui master
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/chrisgoringe/cg-use-everywhere
 call :GITHUB_HASH_REQUIREMENTS chrisgoringe cg-use-everywhere main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -27,6 +31,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/pythongosssss/ComfyUI-Custom-Scripts
 call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+@REM https://github.com/kijai/ComfyUI-DepthAnythingV2
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-DepthAnythingV2 main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-Florence2

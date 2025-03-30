@@ -2,6 +2,7 @@
 chcp 65001 > NUL
 
 call %~dp0All\upscale_models.bat
+call %~dp0All\vae_approx.bat
 
 call %~dp0diffusion_models\Native\wan2.1-t2v-14b-Q3_K_M.bat
 

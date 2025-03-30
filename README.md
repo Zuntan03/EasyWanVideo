@@ -107,11 +107,12 @@ I2V のチュートリアルでは動画素材を生成します。
 
 |ワークフロー名|説明|
 |-:|:-|
-|`Kijai_I2v`|画像から動画を生成する I2V のメインワークフロー。|
-|`Kijai_I2vEnd`|開始と終了の画像から動画を生成する I2V のワークフロー。|
+|`Kijai_I2v`|画像から動画を生成する I2V。|
+|`Kijai_I2vEnd`|開始と終了の画像から動画を生成する I2V。|
 |`Kijai_T2v1B`|テキストから動画を生成する T2V の軽量版。|
 |`Kijai_T2v14B`|テキストから動画を生成する T2V の高品質版。|
-|`Native_I2v`|ComfyUI ネイティブ版の I2V。メインメモリ 32GB で動作するが、FlowUniPCMultistepScheduler が利用できない問題あり。|
+|`Kijai_Vi2v`|動画と静止画から動画を生成する VI2V。|
+|`Native_I2v`|ComfyUI ネイティブ版の I2V。<br>メインメモリ 32GB で動作するが、FlowUniPCMultistepScheduler が利用できない問題あり。|
 |`GetLastImage`|動画の最終フレームの画像を取得する。|
 |`TwoImageInterpolate`|2枚の画像を補間する動画を生成する。|
 |`Cut`|指定したフレームで動画の前や後ろを切り取る。|
@@ -131,7 +132,11 @@ I2V のチュートリアルでは動画素材を生成します。
 |`InterpolateWebp`|動画のフレームを補間して `*.webp` のまま保存する。|
 |`ConvertMp4`|動画を `*.mp4` に変換する。`Interpolate` の利用を推奨。|
 |`SequentialImages`|動画を連番画像に変換する。|
-|[`LoraChecker`](https://github.com/Zuntan03/EasyWanVideo/wiki/LoraChecker-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC)|LoRA 設定の組み合わせパターンで動画を生成し、最適な設定を探す。|
+|[`Kijai_I2v_LoraChecker`](https://github.com/Zuntan03/EasyWanVideo/wiki/LoraChecker-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC)|LoRA 設定の組み合わせパターンで動画を生成し、最適な設定を探す。|
+|`AudioSeparation`|音声を `Vocal`, `Bass`, `Drums`, `Other` に分離します。|
+|`AudioCombine`|音声を平均や加算で結合します。<br>`AudioCombine` のエラーは入力音声を `AudioSeparation` でとりあえず回避できます。 |
+|`CannyCheck`|VI2V で利用する動画キャニーのパラメータを調査します。|
+|`Vi2vPreprocess`|`Kijai_Vi2v` 用の元動画や、改変元の開始イメージを用意します。|
 
 ## EasyWanVideo の更新方法
 
@@ -150,6 +155,7 @@ I2V のチュートリアルでは動画素材を生成します。
 - [動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [I2V 連結で状況変化する動画を生成](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-%E9%80%A3%E7%B5%90%E3%81%A7%E7%8A%B6%E6%B3%81%E5%A4%89%E5%8C%96%E3%81%99%E3%82%8B%E5%8B%95%E7%94%BB%E3%82%92%E7%94%9F%E6%88%90)
 - [長尺の動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E9%95%B7%E5%B0%BA%E3%81%AE%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)
+- [動画と画像から動画生成 VI2V チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%A8%E7%94%BB%E5%83%8F%E3%81%8B%E3%82%89%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90-VI2V-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [より高速な動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%82%8A%E9%AB%98%E9%80%9F%E3%81%AA%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)
 - [LoraChecker ワークフロー](https://github.com/Zuntan03/EasyWanVideo/wiki/LoraChecker-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC)
 - [よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)
@@ -161,6 +167,15 @@ I2V のチュートリアルでは動画素材を生成します。
 [試験的な Geforce RTX 50x0 対応](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
+
+### 2025/03/30
+
+- 動画と画像からの動画生成 (VI2V) の準備中です。
+	- `Download/Kijai_Ti2v.bat` でモデルをダウンロードします。
+	- ワークフローに `Kijai_Vi2v`, `Vi2vPreprocess`, `AudioSeparation`, `AudioCombine`, `CannyCheck` を追加しました。
+	- `VideoTool/` に動画を FFmpeg で前処理する `SetPlaySpeed`, `Cut_16FPS_81frames`, `6_Cut_16FPS_81frames_Mirror`, `Cut_16FPS_49frames`, `6_Cut_16FPS_49frames_Mirror` を追加しましたi。
+- 調査＆執筆中の『[動画と画像から動画生成 VI2V チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%A8%E7%94%BB%E5%83%8F%E3%81%8B%E3%82%89%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90-VI2V-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』
+	- 素材の準備部分を参考にしてください。
 
 ### 2025/03/29
 

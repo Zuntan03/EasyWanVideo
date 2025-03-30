@@ -7,6 +7,7 @@ if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 call %~dp0All\loras.bat
 call %~dp0All\upscale_models.bat
+call %~dp0All\vae_approx.bat
 
 call %~dp0clip_vision\Native\clip_vision_h.bat
 
