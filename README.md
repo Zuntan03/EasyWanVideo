@@ -123,6 +123,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |`Mosaic`|動画にモザイクを掛ける。|
 |`ConcatInterpolate`|ふたつの動画を滑らかに繋げる。|
 |`Concat`|ふたつの動画を繋げる。|
+|`TileUpscale`|コントロールネットの Tile を利用して書き換えつつ拡大する。|
 |`Upscale`|動画を ESRGAN 系アップスケーラーで拡大する。|
 |`Crop`|動画の一部を切り抜く。|
 |`Resize`|動画のサイズを変更する。|
@@ -167,6 +168,12 @@ I2V のチュートリアルでは動画素材を生成します。
 [試験的な Geforce RTX 50x0 対応](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
+
+### 2025/03/31
+
+- コントロールネットの Tile を利用して書き換えつつ拡大する `TileUpscale` ワークフローを追加しました。
+- `Kijai_Vi2v` で OpenPose に対応しました。
+	- 弱めのデプスと組み合わせると良い感じかもしれません。
 
 ### 2025/03/30
 

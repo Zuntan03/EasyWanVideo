@@ -21,6 +21,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS chrisgoringe cg-use-everywhere main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/Fannovel16/comfyui_controlnet_aux
+call :GITHUB_HASH_REQUIREMENTS Fannovel16 comfyui_controlnet_aux main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/SeargeDP/ComfyUI_Searge_LLM
 @REM call :GITHUB_HASH_REQUIREMENTS SeargeDP ComfyUI_Searge_LLM main
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -94,7 +98,7 @@ call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 7f1446b7aa8f8f7fca78228457a5ecf027c6b113
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/raindrop313/ComfyUI-WanVideoStartEndFrames
