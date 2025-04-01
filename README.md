@@ -22,6 +22,7 @@
 [Day1](https://x.com/Zuntan03/status/1894893100025422207)**
 	- **インストール後に 100 超えのサンプル動画と、その生成設定を確認できます。**
 - 紹介記事：
+	- 2025/03/31『[動画生成AI、革命の兆し 「Stable Diffusion」級の衝撃再び](https://ascii.jp/elem/000/004/260/4260102/)』 p. 4
 	- 2025/03/10『[動画生成AIの進化がすごい　「超リアル」「ローカルで動く」2つの方向に](https://ascii.jp/elem/000/004/255/4255982/)』 p. 3
 	- 2025/03/14『[【動画生成AI】EasyWanVideoを使ってみる【Wan2.1】](https://note.com/aiaicreate/n/n5bf5060e4a14)』
 	- 2025/03/09『[[紳士向け] オープンソース＆次世代AI「Wan 2.1」と「EasyWanVideo」で、簡単に叡智動画を生成できる使い方ガイド！](https://note.com/ryu_senpen/n/n017863a1a7cd)』
