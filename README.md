@@ -102,6 +102,8 @@ I2V のチュートリアルでは動画素材を生成します。
 
 よくある使い方についての問い合わせを、『**[よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)**』にまとめています。
 
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/SampleError.webp)
+
 ### ひとことワークフロー紹介
 
 **動画編集系のワークフローを多用する際は、`劣化なしで重い webp 保存` を有効にすると再エンコードによる劣化を防げます、が重いです。**
