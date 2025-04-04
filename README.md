@@ -178,6 +178,7 @@ I2V のチュートリアルでは動画素材を生成します。
 - `Download\loras\Bundle\nims1.bat` を追加しました。
 - `Download\loras\T2v1B\TinkerWan_v10.bat` を追加しました。
 - サンプルに `20250404_vi2v_*` を追加しました。
+- 更新時に `kijai/ComfyUI-WanVideoWrapper` の `example_workflows` を、ワークフローの `Kijai/` にコピーするようにしました。
 
 ### 2025/03/31
 

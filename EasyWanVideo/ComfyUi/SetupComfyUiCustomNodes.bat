@@ -41,6 +41,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-DepthAnythingV2 main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/cubiq/ComfyUI_essentials
+call :GITHUB_HASH_REQUIREMENTS cubiq ComfyUI_essentials main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/kijai/ComfyUI-Florence2
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-Florence2 main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -100,6 +104,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
 
 @REM https://github.com/raindrop313/ComfyUI-WanVideoStartEndFrames
 @REM call :GITHUB_HASH_REQUIREMENTS raindrop313 ComfyUI-WanVideoStartEndFrames main
