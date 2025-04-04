@@ -179,6 +179,11 @@ I2V のチュートリアルでは動画素材を生成します。
 - `Download\loras\T2v1B\TinkerWan_v10.bat` を追加しました。
 - サンプルに `20250404_vi2v_*` を追加しました。
 - 更新時に `kijai/ComfyUI-WanVideoWrapper` の `example_workflows` を、ワークフローの `Kijai/` にコピーするようにしました。
+- `Download\diffusion_models\Kijai\Wan2_1-VacePreview-1_3B.bat` を追加しました。
+- `Download\diffusion_models\Kijai\Wan2_1-VacePreview-1_3B_bf16.bat` を追加しました。
+	- `WanVideo VACE Model Select` ノードが必要です。
+- ワークフローの `Kijai/wanvideo_1_3B_VACE_examples_01` を試せます。
+	- 動いているっぽいですが、まだ良い結果を得られていません。
 
 ### 2025/03/31
 
