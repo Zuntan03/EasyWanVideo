@@ -114,7 +114,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |`Kijai_I2vEnd`|開始と終了の画像から動画を生成する I2V。|
 |`Kijai_T2v1B`|テキストから動画を生成する T2V の軽量版。|
 |`Kijai_T2v14B`|テキストから動画を生成する T2V の高品質版。|
-|`Kijai_Vi2v`|動画と静止画から動画を生成する VI2V。|
+|`KijaiFun_Vi2v`|動画と静止画から動画を生成する VI2V。|
 |`Native_I2v`|ComfyUI ネイティブ版の I2V。<br>メインメモリ 32GB で動作するが、FlowUniPCMultistepScheduler が利用できない問題あり。|
 |`GetLastImage`|動画の最終フレームの画像を取得する。|
 |`TwoImageInterpolate`|2枚の画像を補間する動画を生成する。|
@@ -140,7 +140,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |`AudioSeparation`|音声を `Vocal`, `Bass`, `Drums`, `Other` に分離します。|
 |`AudioCombine`|音声を平均や加算で結合します。<br>`AudioCombine` のエラーは入力音声を `AudioSeparation` でとりあえず回避できます。 |
 |`CannyCheck`|VI2V で利用する動画キャニーのパラメータを調査します。|
-|`Vi2vPreprocess`|`Kijai_Vi2v` 用の元動画や、改変元の開始イメージを用意します。|
+|`Vi2vPreprocess`|`KijaiFun_Vi2v` 用の元動画や、改変元の開始イメージを用意します。|
 
 ## EasyWanVideo の更新方法
 
@@ -172,17 +172,22 @@ I2V のチュートリアルでは動画素材を生成します。
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
 
+### 2025/04/04
+
+- 『[動画と画像から動画生成 VI2V チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%A8%E7%94%BB%E5%83%8F%E3%81%8B%E3%82%89%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90-VI2V-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』をひとまず完成させました。
+- `Download\loras\T2v1B\TinkerWan_v10.bat` を追加しました。
+
 ### 2025/03/31
 
 - コントロールネットの Tile を利用して書き換えつつ拡大する `TileUpscale` ワークフローを追加しました。
-- `Kijai_Vi2v` で OpenPose に対応しました。
+- `KijaiFun_Vi2v` で OpenPose に対応しました。
 	- 弱めのデプスと組み合わせると良い感じかもしれません。
 
 ### 2025/03/30
 
 - 動画と画像からの動画生成 (VI2V) の準備中です。
 	- `Download/Kijai_Ti2v.bat` でモデルをダウンロードします。
-	- ワークフローに `Kijai_Vi2v`, `Vi2vPreprocess`, `AudioSeparation`, `AudioCombine`, `CannyCheck` を追加しました。
+	- ワークフローに `KijaiFun_Vi2v`, `Vi2vPreprocess`, `AudioSeparation`, `AudioCombine`, `CannyCheck` を追加しました。
 	- `VideoTool/` に動画を FFmpeg で前処理する `SetPlaySpeed`, `Cut_16FPS_81frames`, `6_Cut_16FPS_81frames_Mirror`, `Cut_16FPS_49frames`, `6_Cut_16FPS_49frames_Mirror` を追加しましたi。
 - 調査＆執筆中の『[動画と画像から動画生成 VI2V チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%A8%E7%94%BB%E5%83%8F%E3%81%8B%E3%82%89%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90-VI2V-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』
 	- 素材の準備部分を参考にしてください。
