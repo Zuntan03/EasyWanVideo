@@ -15,11 +15,5 @@ for /f "tokens=*" %%f in (_SampleList.txt) do (
 		%CURL_CMD% -O "https://yyy.wpx.jp/EasyWanVideo/Sample/%%f"
 		if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 	)
-	if not exist "%%~nf.mp4" (
-		echo.
-		echo %CURL_CMD% -O "https://yyy.wpx.jp/EasyWanVideo/Sample/%%~nf.mp4"
-		%CURL_CMD% -O "https://yyy.wpx.jp/EasyWanVideo/Sample/%%~nf.mp4"
-		if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
-	) 
 )
 popd
