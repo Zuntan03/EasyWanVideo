@@ -2,7 +2,6 @@
 chcp 65001 > NUL
 set EASY_TOOLS=%~dp0..\..\..\EasyTools
 set HUGGING_FACE_HUB=%EASY_TOOLS%\Download\HuggingFaceHub.bat
-set CURL_CMD=C:\Windows\System32\curl.exe -kL
 set JUNCTION=%EASY_TOOLS%\Link\Junction.bat
 
 pushd %~dp0
