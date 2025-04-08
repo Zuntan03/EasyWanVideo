@@ -60,23 +60,11 @@
 
 ## EasyWanVideo のインストールとチュートリアル
 
-**[重要] インストールでは動画の生成速度がほぼ倍になる SageAttention を導入します。  
-ただし、PC 環境によっては SageAttention が動作しない場合があります。**
-
-SageAttention を利用できない PC 環境では、代わりに SPDA を利用することで動画を生成できます。  
-ただし、ワークフローやサンプルは SageAttention を利用しているため、設定を SPDA に変更しないとエラーになります。
-
 1. [EasyWanVideoInstaller.bat](https://github.com/Zuntan03/EasyWanVideo/raw/main/EasyWanVideo/EasyWanVideoInstaller.bat?ver=0) を右クリックから保存します。
 2. インストール先の空フォルダを `C:/EasyWan/` や `D:/EasyWan/` などの浅いパスに用意して、ここに `EasyWanVideoInstaller.bat` を移動して実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
-3. インストール先の `EasyWanVideo/SageAttention/` で、SageAttention を導入します。
-	1. `SetupSageAttention.bat` を実行します。
-	2. `vs_buildtools.exe` を実行して、`C++ によるデスクトップ開発` を選択して `Visual Studio Build Tolls 2022` をインストールします。  
-	![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
-	3. `EasyWanVideo/SageAttention/` にある`cuda_12.8.1_windows_network.exe` で `NVIDIA CUDA Toolkit` をインストールします。
-		- CUDA Toolkit に合わせたグラフィックスドライバもインストールされます。
-	4. この環境以外で SageAttention を利用していた場合は、`EasyWanVideo/SageAttention/DeleteTritonCache.bat` で Triton のキャッシュを削除してください。
-	- SageAttention 導入に失敗する場合に『[Geforce RTX 50x0 で動作しない](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)』で改善する可能性があります。
+3. インストール先の `EasyWanVideo/vs_buildtools.exe` を実行して、`C++ によるデスクトップ開発` を選択して `Visual Studio Build Tolls 2022` をインストールします。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
 
 インストールが完了したら、ComfyUI が正常動作することを確認します。  
 **まだ、I2V の生成はできません。チュートリアルで生成できるようになります。**
@@ -171,6 +159,19 @@ I2V のチュートリアルでは動画素材を生成します。
 [試験的な Geforce RTX 50x0 対応](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0#geforce-rtx-50x0-%E3%81%A7%E5%8B%95%E4%BD%9C%E3%81%97%E3%81%AA%E3%81%84)
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
+
+### 2025/04/08
+
+- インストール方法を変更し、追加のインストール作業なしで Geforce RTX 50x0、SageAttention、Triton に対応できるようにしました。
+	- CUDA Toolkit のインストールは不要になりましたので、アンインストールしても問題ありません。
+	- TorchCompile を利用する場合は、引き続き `Visual Studio Build Tolls 2022` のインストールが必要です。
+- 以下のダウンロードに対応しました。
+	- `Download\diffusion_models\Kijai\Wan2_1-FunInP-1_3B_bf16.bat`
+	- `Download\diffusion_models\Kijai\Wan2_1-FunInP-14B_fp8_e4m3fn.bat`
+	- `Download\loras\Fun\FunInP_1B_RewardHps.bat`
+	- `Download\loras\Fun\FunInP_1B_RewardMps.bat`
+	- `Download\loras\Fun\FunInP_14B_RewardHps.bat`
+	- `Download\loras\Fun\FunInP_14B_RewardMps.bat`
 
 ### 2025/04/04
 
