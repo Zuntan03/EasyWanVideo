@@ -160,6 +160,10 @@ I2V のチュートリアルでは動画素材を生成します。
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
 
+### 2025/04/09
+
+- 特定の環境で `python setup.py bdist_wheel did not run successfully.` のエラーでインストールに失敗する問題に対処しました。
+
 ### 2025/04/08
 
 - インストール方法を変更し、追加のインストール作業なしで Geforce RTX 50x0、SageAttention、Triton に対応できるようにしました。

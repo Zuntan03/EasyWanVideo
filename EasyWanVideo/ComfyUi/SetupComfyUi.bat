@@ -16,8 +16,8 @@ pushd %~dp0..\..\ComfyUI
 call %PYTHON_ACTIVATE%
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-echo python -m pip install -qq --upgrade pip
-python -m pip install -qq --upgrade pip
+echo python -m pip install -qq -U pip setuptools wheel
+python -m pip install -qq -U pip setuptools wheel
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/woct0rdho/SageAttention/releases
