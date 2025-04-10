@@ -26,10 +26,16 @@ echo python %~dp0EasyWanVideo\ComfyUi\src\comfy_ui_update_config.py user\default
 python %~dp0EasyWanVideo\ComfyUi\src\comfy_ui_update_config.py user\default\comfy.settings.json
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-@REM cl.exe 用にパスを通す
 if exist %EMBEDDABLE_PYTHON%\ (
-	set "INCLUDE=%INCLUDE%;%EMBEDDABLE_PYTHON%\include"
-	set "LIB=%LIB%;%EMBEDDABLE_PYTHON%\libs"
+	@REM tcc.exe & VS Build Tools cl.exe
+	if not exist %~dp0ComfyUI\venv\Scripts\Include\Python.h (
+		echo xcopy /SQY %EMBEDDABLE_PYTHON%\include\*.* %~dp0ComfyUI\venv\Scripts\Include\
+		xcopy /SQY %EMBEDDABLE_PYTHON%\include\*.* %~dp0ComfyUI\venv\Scripts\Include\
+	)
+
+	@REM VS Build Tools
+	@REM echo set "INCLUDE=%INCLUDE%;%EMBEDDABLE_PYTHON%\include"
+	@REM set "INCLUDE=%INCLUDE%;%EMBEDDABLE_PYTHON%\include"
 )
 
 @REM Cuda 2.6.0 以降の Ultratics Error 回避

@@ -63,8 +63,6 @@
 1. [EasyWanVideoInstaller.bat](https://github.com/Zuntan03/EasyWanVideo/raw/main/EasyWanVideo/EasyWanVideoInstaller.bat?ver=0) を右クリックから保存します。
 2. インストール先の空フォルダを `C:/EasyWan/` や `D:/EasyWan/` などの浅いパスに用意して、ここに `EasyWanVideoInstaller.bat` を移動して実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
-3. インストール先の `EasyWanVideo/vs_buildtools.exe` を実行して、`C++ によるデスクトップ開発` を選択して `Visual Studio Build Tolls 2022` をインストールします。  
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
 
 インストールが完了したら、ComfyUI が正常動作することを確認します。  
 **まだ、I2V の生成はできません。チュートリアルで生成できるようになります。**
@@ -162,6 +160,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ### 2025/04/11
 
+- `Visual Studio Build Tolls 2022` のインストールを不要にしました。
 - VAE と seed の接続でエラーが表示される問題を修正しました。
 
 ### 2025/04/10
