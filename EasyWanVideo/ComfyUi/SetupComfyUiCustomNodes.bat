@@ -103,7 +103,8 @@ call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main
+@REM Promotion for Float8 Types is not supported, attempted to promote Float8_e4m3fn and Float
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 7de8ac25a62c0a199922c831239f372ec243a3ca
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\

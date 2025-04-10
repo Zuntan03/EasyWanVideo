@@ -164,6 +164,7 @@ I2V のチュートリアルでは動画素材を生成します。
 - `Visual Studio Build Tolls 2022` のインストールを不要にしました。
 	- 代わりに `Microsoft Visual C++ Redistributable` のインストールが必要になります。
 - VAE と seed の接続でエラーが表示される問題を修正しました。
+- Kijai 版で `WanVideo Model Loader` の `quantization` を `fp8_e4m3fn` にするために、バージョンを巻き戻しました。
 
 ### 2025/04/10
 
