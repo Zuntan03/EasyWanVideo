@@ -18,7 +18,8 @@ call :GITHUB_HASH_REQUIREMENTS christian-byrne audio-separation-nodes-comfyui ma
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/chrisgoringe/cg-use-everywhere
-call :GITHUB_HASH_REQUIREMENTS chrisgoringe cg-use-everywhere main
+@REM VAE と seed でのエラー回避
+call :GITHUB_HASH_REQUIREMENTS chrisgoringe cg-use-everywhere main 8017bc6b063f45db6b986d9fc8bb76bd3234b838
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/Fannovel16/comfyui_controlnet_aux

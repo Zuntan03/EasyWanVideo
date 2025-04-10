@@ -160,6 +160,10 @@ I2V のチュートリアルでは動画素材を生成します。
 - `ComfyUi_SageAttention.bat` で起動する必要があるかもしれません。
 - 3/18 Python 3.10 系が未インストールの環境で `ExperimentalRtx50x0_CudaNightlyBuildSageAttention.bat` が失敗するかもな不具合を修正しました。
 
+### 2025/04/11
+
+- VAE と seed の接続でエラーが表示される問題を修正しました。
+
 ### 2025/04/10
 
 - Kijai 版で `WanVideo Model Loader` の `quantization` が `fp8_e4m3fn` の状態で LoRA を利用すると、`RuntimeError: Promotion for Float8 Types is not supported, attempted to promote Float8_e4m3fn and Float` のエラーになるようです。
