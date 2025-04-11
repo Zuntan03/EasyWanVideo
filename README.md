@@ -146,6 +146,7 @@ I2V のチュートリアルでは動画素材を生成します。
 - [動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [I2V 連結で状況変化する動画を生成](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-%E9%80%A3%E7%B5%90%E3%81%A7%E7%8A%B6%E6%B3%81%E5%A4%89%E5%8C%96%E3%81%99%E3%82%8B%E5%8B%95%E7%94%BB%E3%82%92%E7%94%9F%E6%88%90)
 - [長尺の動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E9%95%B7%E5%B0%BA%E3%81%AE%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)
+- [Wan Fun InP でお手軽に長尺の動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/Wan-Fun-InP-%E3%81%A7%E3%81%8A%E6%89%8B%E8%BB%BD%E3%81%AB%E9%95%B7%E5%B0%BA%E3%81%AE%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)
 - [動画と画像から動画生成 VI2V チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%A8%E7%94%BB%E5%83%8F%E3%81%8B%E3%82%89%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90-VI2V-%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [より高速な動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%82%8A%E9%AB%98%E9%80%9F%E3%81%AA%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)
 - [LoraChecker ワークフロー](https://github.com/Zuntan03/EasyWanVideo/wiki/LoraChecker-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC)
@@ -154,6 +155,13 @@ I2V のチュートリアルでは動画素材を生成します。
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
 
 ## 最近の更新履歴
+
+- [Wan2.1-Fun-14B-InP モデル](https://huggingface.co/alibaba-pai/Wan2.1-Fun-14B-InP) でより高精度な開始・終了フレーム画像の指定ができる `KijaiFun_I2vEnd` ワークフローを追加しました。
+- ドキュメントに『[Wan Fun InP でお手軽に長尺の動画生成](https://github.com/Zuntan03/EasyWanVideo/wiki/Wan-Fun-InP-%E3%81%A7%E3%81%8A%E6%89%8B%E8%BB%BD%E3%81%AB%E9%95%B7%E5%B0%BA%E3%81%AE%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90)』を追加しました。
+- 以下の LoRA を追加しました。
+	- `Download\loras\Nsfw\Fingering_v10.bat`
+	- `Download\loras\Nsfw\SquirtingVag_v101.bat`
+	- `Download\loras\Nsfw\BoobGrab_v01.bat`
 
 ### 2025/04/11
 
