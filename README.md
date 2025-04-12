@@ -156,6 +156,15 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+### 2025/04/13
+
+- サンプルに `20250413_missionary.mp4` を追加しました。
+	- 最初に ABCD の 4枚の画像を用意して、InP で `A>B`, `B>C`, `C>D`, `D>A` に遷移する動画を生成し、ガチャのあたりを `A>B>C>D` と繋げたものです。
+		- 『[開始フレーム画像と終了フレーム画像に異なる絵を指定して Fun_I2vEnd](https://github.com/Zuntan03/EasyWanVideo/wiki/Wan-Fun-InP-%E3%81%A7%E3%81%8A%E6%89%8B%E8%BB%BD%E3%81%AB%E9%95%B7%E5%B0%BA%E3%81%AE%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90#%E9%96%8B%E5%A7%8B%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E7%94%BB%E5%83%8F%E3%81%A8%E7%B5%82%E4%BA%86%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E7%94%BB%E5%83%8F%E3%81%AB%E7%95%B0%E3%81%AA%E3%82%8B%E7%B5%B5%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%A6-fun_i2vend)』
+- 以下の LoRA を追加しました。
+	- `Download\loras\Nsfw\BulgePovMissionary_v10.bat`
+	- `Download\loras\Nsfw\PovMissionary_v11.bat`
+
 ### 2025/04/12
 
 - [Wan2.1-Fun-14B-InP モデル](https://huggingface.co/alibaba-pai/Wan2.1-Fun-14B-InP) でより高精度な開始・終了フレーム画像の指定ができる `KijaiFun_I2vEnd` ワークフローを追加しました。
