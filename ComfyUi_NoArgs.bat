@@ -31,6 +31,9 @@ if exist %EMBEDDABLE_PYTHON%\ (
 	if not exist %~dp0ComfyUI\venv\Scripts\Include\Python.h (
 		echo xcopy /SQY %EMBEDDABLE_PYTHON%\include\*.* %~dp0ComfyUI\venv\Scripts\Include\
 		xcopy /SQY %EMBEDDABLE_PYTHON%\include\*.* %~dp0ComfyUI\venv\Scripts\Include\
+
+		echo xcopy /SQY %EMBEDDABLE_PYTHON%\libs\*.* %~dp0ComfyUI\venv\Scripts\libs\
+		xcopy /SQY %EMBEDDABLE_PYTHON%\libs\*.* %~dp0ComfyUI\venv\Scripts\libs\
 	)
 
 	@REM VS Build Tools
