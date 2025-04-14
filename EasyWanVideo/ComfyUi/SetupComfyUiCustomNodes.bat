@@ -87,8 +87,8 @@ call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.31.4
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-MMAudio
-@REM call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-MMAudio main
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-MMAudio main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-segment-anything-2
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-segment-anything-2 main

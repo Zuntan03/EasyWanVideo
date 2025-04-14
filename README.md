@@ -123,6 +123,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |`InterpolateWebp`|動画のフレームを補間して `*.webp` のまま保存する。|
 |`ConvertMp4`|動画を `*.mp4` に変換する。`Interpolate` の利用を推奨。|
 |`SequentialImages`|動画を連番画像に変換する。|
+|`MMAudio`|動画とプロンプトから音声を生成する。|
 |[`Kijai_I2v_LoraChecker`](https://github.com/Zuntan03/EasyWanVideo/wiki/LoraChecker-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC)|LoRA 設定の組み合わせパターンで動画を生成し、最適な設定を探す。|
 |`AudioSeparation`|音声を `Vocal`, `Bass`, `Drums`, `Other` に分離します。|
 |`AudioCombine`|音声を平均や加算で結合します。<br>`AudioCombine` のエラーは入力音声を `AudioSeparation` でとりあえず回避できます。 |
@@ -155,6 +156,19 @@ I2V のチュートリアルでは動画素材を生成します。
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
 
 ## 最近の更新履歴
+
+### 2025/04/15
+
+- ワークフローに `MMAudio` を追加しました。
+	- `*.mp4` の動画とプロンプトから音声を生成します。
+	- `Download/MMAudio.bat` で利用前にモデルをダウンロードします。
+- サンプルに `20250414_futanari.mp4` を追加しました。
+	- I2V で生成した動画を InP で繋いでみるサンプルです。
+
+### 2025/04/14
+
+- サンプルに `20250414_yuri.mp4` を追加しました。
+	- I2V で生成した動画を InP で繋いでみるサンプルです。
 
 ### 2025/04/13
 
