@@ -162,6 +162,8 @@ I2V のチュートリアルでは動画素材を生成します。
 - 実験的に [FramePack](https://github.com/lllyasviel/FramePack) 対応を入れてみました。
 	- `FramePack.bat` で長時間のインストール後に起動します。
 	- `50GB` 程度のストレージが必要です。
+	- Geforce RTX 50x0 対応に必要そうなので？ PyTorch や SageAttention のバージョンを引き上げています。
+		- 不具合の原因になる可能性もありますが、とりあえず手元の Geforce RTX 3060 では動いています。
 
 ### 2025/04/15
 
