@@ -157,6 +157,11 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+### 2025/04/18
+
+- FramePack の `*.mp4` が黒画面になるのを修正する `FixFramePackMp4` ワークフローを追加しました。
+- サンプルに `20250418_cowgirl` を追加しました。
+
 ### 2025/04/17
 
 - 実験的に [FramePack](https://github.com/lllyasviel/FramePack) 対応を入れてみました。
