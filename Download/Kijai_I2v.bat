@@ -15,6 +15,7 @@ call %~dp0clip\Kijai\open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.bat
 call %~dp0diffusion_models\Kijai\Wan2_1-I2V-14B-480P_fp8_e4m3fn.bat
 call %~dp0diffusion_models\Kijai\Wan2_1-I2V-14B-720P_fp8_e4m3fn.bat
 
+call %~dp0diffusion_models\Kijai\Wan2_1-FLF2V-14B-720P_fp8_e4m3fn.bat
 call %~dp0diffusion_models\Kijai\Wan2_1-FunControl-1_3B_bf16.bat
 call %~dp0diffusion_models\Kijai\Wan2_1-FunInP-14B_fp8_e4m3fn.bat
 

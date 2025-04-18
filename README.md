@@ -157,6 +157,14 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+### 2025/04/19
+
+- [Kijai WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) の更新に伴い、一部の既存ワークフローの接続が壊れます。
+	1. `WanVideo Sampler` の `experimental_args` に `slg_args` からの線が繋がっている場合に、`WanVideo Sampler` の `slg_args` に繋ぎ直します。
+	2. `WanVideo Sampler` の `loop_args` に `exp_args` からの線が繋がっている場合に、`WanVideo Sampler` の `experimental_args` に繋ぎ直します。
+- [Kijai 版 FramePack](https://github.com/kijai/ComfyUI-FramePackWrapper) に対応した、`Kijai_I2V_FramePack` ワークフローを追加しました。
+	- `Download/Kijai_FramePack.bat` で先にモデルをダウンロードしてください。
+
 ### 2025/04/18
 
 - FramePack の `*.mp4` が黒画面になるのを修正する `FramePack_FixBlackVideo.bat` を用意しました。
