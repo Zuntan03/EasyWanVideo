@@ -159,8 +159,12 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ### 2025/04/18
 
-- FramePack の `*.mp4` が黒画面になるのを修正する `FixFramePackMp4` ワークフローを追加しました。
+- FramePack の `*.mp4` が黒画面になるのを修正する `FramePack_FixBlackVideo.bat` を用意しました。
+	- 動画を直接 `FramePack_FixBlackVideo.bat` にドラッグ＆ドロップするか、実行してからコンソールにドラッグ＆ドロップで変換します。
+- FramePack での画像読み込み時に `h11._util.LocalProtocolError: Too little data for declared Content-Length` が出る問題は、ファイル名を変更するだけで読み込めるようになったりとよくわかりません。
 - サンプルに `20250418_cowgirl` を追加しました。
+- ~~FramePack の `*.mp4` が黒画面になるのを修正する `FixFramePackMp4` ワークフローを追加しました。~~
+	- 削除しました。
 
 ### 2025/04/17
 
