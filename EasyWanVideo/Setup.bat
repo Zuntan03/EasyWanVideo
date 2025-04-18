@@ -11,6 +11,11 @@ if %ERRORLEVEL% neq 0 ( exit /b 1 )
 call %~dp0ComfyUi\SetupComfyUiLink.bat
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
+if not exist %~do0..\FramePack\ ( goto :NOT_EXIST_FRAME_PACK )
+call %~dp0SetupFramePack.bat
+if %ERRORLEVEL% neq 0 ( exit /b 1 )
+:NOT_EXIST_FRAME_PACK
+
 @REM if exist %~dp0vs_BuildTools.exe ( goto :EXIST_VS_BUILD_TOOLS )
 @REM echo.
 @REM echo %CURL_CMD% -o %~dp0vs_BuildTools.exe https://aka.ms/vs/17/release/vs_buildtools.exe
