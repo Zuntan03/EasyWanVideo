@@ -11,7 +11,7 @@ if %ERRORLEVEL% neq 0 ( exit /b 1 )
 call %~dp0ComfyUi\SetupComfyUiLink.bat
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
-if not exist %~do0..\FramePack\ ( goto :NOT_EXIST_FRAME_PACK )
+if not exist %~dp0..\FramePack\ ( goto :NOT_EXIST_FRAME_PACK )
 call %~dp0SetupFramePack.bat
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 :NOT_EXIST_FRAME_PACK
