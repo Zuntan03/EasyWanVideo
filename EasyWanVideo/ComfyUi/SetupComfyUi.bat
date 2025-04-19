@@ -37,13 +37,13 @@ set "TORCH_INDUCTOR_TEMP=C:\Users\%USERNAME%\AppData\Local\Temp\torchinductor_%U
 if not exist "%TRITON_CACHE%" ( goto :EASY_TRITON_CACHE_NOT_FOUND )
 echo rmdir /S /Q "%TRITON_CACHE%"
 rmdir /S /Q "%TRITON_CACHE%"
-if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+@REM if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
 :EASY_TRITON_CACHE_NOT_FOUND
 
 if not exist "%TORCH_INDUCTOR_TEMP%" ( goto :EASY_TORCH_INDUCTOR_TEMP_NOT_FOUND )
 echo rmdir /S /Q "%TORCH_INDUCTOR_TEMP%"
 rmdir /S /Q "%TORCH_INDUCTOR_TEMP%"
-if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+@REM if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
 :EASY_TORCH_INDUCTOR_TEMP_NOT_FOUND
 
 
