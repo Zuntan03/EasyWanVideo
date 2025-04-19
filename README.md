@@ -98,6 +98,7 @@ I2V のチュートリアルでは動画素材を生成します。
 |ワークフロー名|説明|
 |-:|:-|
 |`Kijai_I2v`|画像から動画を生成する I2V。|
+|`Kijai_I2v_FramePack`|[FramePack](https://github.com/kijai/ComfyUI-FramePackWrapper) で画像から動画を生成する I2V。|
 |`Kijai_I2vEnd`|開始と終了の画像から動画を生成する I2V。|
 |`Kijai_T2v1B`|テキストから動画を生成する T2V の軽量版。|
 |`Kijai_T2v14B`|テキストから動画を生成する T2V の高品質版。|

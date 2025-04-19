@@ -133,7 +133,7 @@ if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 if /i "%DOWNLOAD_MODEL_YES_OR_NO%" == "n" ( goto :FINALIZE )
 call %PROJECT_MODEL_DOWNLOAD_BAT%
-if %ERRORLEVEL% neq 0 ( exit /b 1 )
+@REM if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 goto :FINALIZE
 
