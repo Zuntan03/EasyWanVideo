@@ -166,6 +166,7 @@ I2V のチュートリアルでは動画素材を生成します。
 - [Kijai 版 FramePack](https://github.com/kijai/ComfyUI-FramePackWrapper) に対応した、`Kijai_I2V_FramePack` ワークフローを追加しました。
 	- `Download/Kijai_FramePack.bat` で先にモデルをダウンロードしてください。
 - 実験的対応な方の FramePack 環境を [nirvash 版](https://github.com/nirvash/FramePack) に切り替え、[EndFrame](https://x.com/nirvash/status/1913149548870156592) や [キーフレーム](https://x.com/nirvash/status/1913234244698357857) に対応する `FramePackEndFrame.bat` を追加しました。
+- `SequentialImages` ワークフローで `*.mp4` の読み込みに対応しました。
 
 ### 2025/04/18
 
