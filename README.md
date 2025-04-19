@@ -165,6 +165,7 @@ I2V のチュートリアルでは動画素材を生成します。
 	2. `WanVideo Sampler` の `loop_args` に `exp_args` からの線が繋がっている場合に、`WanVideo Sampler` の `experimental_args` に繋ぎ直します。
 - [Kijai 版 FramePack](https://github.com/kijai/ComfyUI-FramePackWrapper) に対応した、`Kijai_I2V_FramePack` ワークフローを追加しました。
 	- `Download/Kijai_FramePack.bat` で先にモデルをダウンロードしてください。
+- 実験的対応な方の FramePack 環境を [nirvash 版](https://github.com/nirvash/FramePack) に切り替え、[EndFrame](https://x.com/nirvash/status/1913149548870156592) や [キーフレーム](https://x.com/nirvash/status/1913234244698357857) に対応する `FramePackEndFrame.bat` を追加しました。
 
 ### 2025/04/18
 

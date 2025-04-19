@@ -7,13 +7,25 @@ set EMBEDDABLE_PYTHON=%EASY_TOOLS%\Python\env\python310
 
 pushd %~dp0..
 
+@REM https://github.com/lllyasviel/FramePack/commits/main/
 @REM 2025/04/17 0e5fe5d7ca13c76fb8e13708f4b92e7c7a34f20c
 @REM 2025/04/18 4292ab9812d92d1387c5dee3d93c768737ac3a0c
-call %GITHUB_CLONE_OR_PULL_HASH% lllyasviel FramePack main 4292ab9812d92d1387c5dee3d93c768737ac3a0c
+@REM 2025/04/19 743657ef2355920fb2f1f934a34647ccd0f916c7
+call %GITHUB_CLONE_OR_PULL_HASH% lllyasviel FramePack main 743657ef2355920fb2f1f934a34647ccd0f916c7
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 popd rem %~dp0..
 pushd %~dp0..\FramePack
+
+echo git fetch https://github.com/nirvash/FramePack main
+git fetch https://github.com/nirvash/FramePack main
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+@REM https://github.com/nirvash/FramePack/commits/main/
+@REM 2025/04/18 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
+echo git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
+git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 call %PYTHON_ACTIVATE%
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
