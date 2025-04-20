@@ -8,8 +8,6 @@ set EMBEDDABLE_PYTHON=%EASY_TOOLS%\Python\env\python310
 pushd %~dp0..
 
 @REM https://github.com/lllyasviel/FramePack/commits/main/
-@REM 2025/04/17 0e5fe5d7ca13c76fb8e13708f4b92e7c7a34f20c
-@REM 2025/04/18 4292ab9812d92d1387c5dee3d93c768737ac3a0c
 @REM 2025/04/19 743657ef2355920fb2f1f934a34647ccd0f916c7
 call %GITHUB_CLONE_OR_PULL_HASH% lllyasviel FramePack main 743657ef2355920fb2f1f934a34647ccd0f916c7
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
