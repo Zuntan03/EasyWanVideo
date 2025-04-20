@@ -54,7 +54,7 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM 2025/04/18 82cfd59232eaac7c58aa3c1d6b6913cbfea14b65
 @REM https://github.com/nirvash/ComfyUI-FramePackWrapper
 @REM 2025/04/20 74ab70db5cd47c2e152a44493db8881b0b64aba4
-call :GITHUB_HASH_REQUIREMENTS nirvash ComfyUI-FramePackWrapper main 74ab70db5cd47c2e152a44493db8881b0b64aba4
+call :GITHUB_HASH_REQUIREMENTS nirvash ComfyUI-FramePackWrapper main 0aac41b10266313bf9a25bbabba73bea6027b982
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-FramePackWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
