@@ -14,5 +14,4 @@ call %~dp0All\vae_approx.bat
 call %RECURSIVE_BAT_CALL% %~dp0All\Kijai
 
 call %~dp0Kijai_FramePack.bat
-call %~dp0diffusion_models\Kijai\FramePack-I2V-HY_bf16.bat
 call %~dp0text_encoders\Native\llava_llama3_fp16.bat

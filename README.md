@@ -162,6 +162,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 - `Kijai_I2V_FramePack` ワークフローも [Kijai 版](https://github.com/kijai/ComfyUI-FramePackWrapper) から [nirvash 版](https://github.com/nirvash/ComfyUI-FramePackWrapper) に切り替えました。
 	- 開始フレーム画像の他に、最終フレーム画像・キーフレーム画像・キーフレームプロンプトに対応しています。
+	- FramePack のモデルで `fp8` と `bf16` の切り替えに対応しましたので、`Download/Kijai_FramePack.bat` でモデルをダウンロードしてください。
 	- 最終フレーム画像とキーフレーム画像を同時に利用すると、動画の後半で最終フレーム画像の影響が支配的になるようです。
 		- キーフレーム画像の効果を確認する場合は、最終フレーム画像を無効にしたほうがよいかもしれません。
 	- 最終フレーム画像は影響力が強いため、開始フレーム画像から最終フレーム画像に 1秒で遷移する動画なども生成できます。
