@@ -158,6 +158,11 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/04/21
+
+- サンプルに `20250421_framepack` を追加しました。
+	- ComfyUI のワークフローで FramePack の最終フレーム画像、キーフレーム画像、キーフレームプロンプトを使用したサンプルです。
+
 ### 2025/04/20
 
 - `Kijai_I2V_FramePack` ワークフローも [Kijai 版](https://github.com/kijai/ComfyUI-FramePackWrapper) から [nirvash 版](https://github.com/nirvash/ComfyUI-FramePackWrapper) に切り替えました。
