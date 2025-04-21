@@ -54,7 +54,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM 2025/04/18 82cfd59232eaac7c58aa3c1d6b6913cbfea14b65
 @REM https://github.com/nirvash/ComfyUI-FramePackWrapper
 @REM 2025/04/20 05f26b56f87bded5e1c9c3a65f0a1199563e6cd8
-call :GITHUB_HASH_REQUIREMENTS nirvash ComfyUI-FramePackWrapper main 05f26b56f87bded5e1c9c3a65f0a1199563e6cd8
+@REM 2025/04/21 90dc098131ead10cd0bfee165f4acd082c0af619
+call :GITHUB_HASH_REQUIREMENTS nirvash ComfyUI-FramePackWrapper main 90dc098131ead10cd0bfee165f4acd082c0af619
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-FramePackWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
@@ -115,7 +116,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM Promotion for Float8 Types is not supported, attempted to promote Float8_e4m3fn and Float: 941acc434d0a3d5dbb53902b27ee9bb0e2f82f81
 @REM 2025/04/18 00de4f5e0e2469d0e1c743b80e9be3a3349f1a2a
 @REM 2025/04/20 604f0e2714134eb122c13a8f08bb90d729cc452f
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 604f0e2714134eb122c13a8f08bb90d729cc452f
+@REM 2025/04/21 e5a326c9811514f2c08c89bccea9a7c731d9a503
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main e5a326c9811514f2c08c89bccea9a7c731d9a503
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\

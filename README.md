@@ -162,6 +162,9 @@ I2V のチュートリアルでは動画素材を生成します。
 
 - サンプルに `20250421_framepack` を追加しました。
 	- ComfyUI のワークフローで FramePack の最終フレーム画像、キーフレーム画像、キーフレームプロンプトを使用したサンプルです。
+- [Kijai WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) の UniAnimate 更新に伴い、既存ワークフローの接続が壊れています。
+	- `slg_args` から `WanVideo Sampler` の `unianimate_poses` への接続を `slg_args` に繋ぎ直します。
+	- `exp_args` から `WanVideo Sampler` の `loop_args` または `sigmas` への接続を `experimental_args` に繋ぎ直します。
 
 ### 2025/04/20
 
