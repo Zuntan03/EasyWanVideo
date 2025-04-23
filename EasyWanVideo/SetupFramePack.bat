@@ -25,6 +25,15 @@ echo git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
 git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
+@REM https://github.com/git-ai-code/FramePack-eichi/commits/main/
+@REM 2025/04/23 0857b35023fc8a8e585428add2ecb1e347edca82
+call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main 0857b35023fc8a8e585428add2ecb1e347edca82
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+echo xcopy /SQY FramePack-eichi\webui\*.* .\
+xcopy /SQY FramePack-eichi\webui\*.* .\
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
 call %PYTHON_ACTIVATE%
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
