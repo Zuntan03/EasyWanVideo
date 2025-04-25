@@ -56,7 +56,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM 2025/04/20 05f26b56f87bded5e1c9c3a65f0a1199563e6cd8
 @REM 2025/04/21 90dc098131ead10cd0bfee165f4acd082c0af619
 @REM 2025/04/22 e33447c67b561fa6c415ca06c9b7483bc39aaf01
-call :GITHUB_HASH_REQUIREMENTS nirvash ComfyUI-FramePackWrapper main e33447c67b561fa6c415ca06c9b7483bc39aaf01
+@REM 2025/04/24 b4e1fbf2cd9c0d1b6a63e480e432763d2d64c438
+call :GITHUB_HASH_REQUIREMENTS nirvash ComfyUI-FramePackWrapper main b4e1fbf2cd9c0d1b6a63e480e432763d2d64c438
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-FramePackWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
@@ -86,7 +87,7 @@ call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Subpack main 1.2.9
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-KJNodes
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-KJNodes main
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-KJNodes main 3e3a1a8aac61dc4515f6a7da74e026f05a80299f
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 if not exist ComfyUI-KJNodes\fonts\f910-shin-comic-2.04.otf (
@@ -119,7 +120,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM 2025/04/20 604f0e2714134eb122c13a8f08bb90d729cc452f
 @REM 2025/04/21 e5a326c9811514f2c08c89bccea9a7c731d9a503
 @REM 2025/04/22 6099ad393b071728032fd481e96d77d2900eee2c
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 6099ad393b071728032fd481e96d77d2900eee2c
+@REM 2025/04/25 fc7ab666a2087b0ba41a0692f813b332665ffd43
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main fc7ab666a2087b0ba41a0692f813b332665ffd43
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
