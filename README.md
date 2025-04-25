@@ -160,6 +160,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 2025/04/25
 
+- [FramePack-eichi](https://github.com/git-ai-code/FramePack-eichi) を `v1.5` に更新しました。
 - `Sample` に I2V と FunInP で 1枚の画像から動画を量産する `doublejob` サンプルを追加しました。
 - 以下の LoRA を追加しました。
 	- `Download\loras\Nsfw\AmorousLesbianKisses.bat`
