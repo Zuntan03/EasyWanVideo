@@ -163,6 +163,8 @@ I2V のチュートリアルでは動画素材を生成します。
 - [Kijai WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) の Fantasy Talking 更新に伴い、既存ワークフローの `WanVideo Sampler` への接続が壊れています。
 	- `Skip Layer Guidance` の `slg_args` を `slg_args` に繋ぎ直してください。
 	- `CFG-Zero*` の `exp_args` を `experimental_args` に繋ぎ直してください。
+- [FramePack-eichi](https://github.com/git-ai-code/FramePack-eichi) との互換性が失われたため、`FramePackEndFrame.bat` を削除しました。
+	- `FramePackEichi.bat` をご利用ください。
 
 ## 2025/04/26
 

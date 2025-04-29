@@ -15,15 +15,15 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 popd rem %~dp0..
 pushd %~dp0..\FramePack
 
-echo git fetch https://github.com/nirvash/FramePack main
-git fetch https://github.com/nirvash/FramePack main
-if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+@REM echo git fetch https://github.com/nirvash/FramePack main
+@REM git fetch https://github.com/nirvash/FramePack main
+@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/nirvash/FramePack/commits/main/
 @REM 2025/04/18 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
-echo git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
-git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
-if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+@REM echo git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
+@REM git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
+@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/git-ai-code/FramePack-eichi/commits/main/
 @REM 2025/04/25 4899bebdba66fc185beec8a174352185c6b98f36
