@@ -8,7 +8,6 @@ set EMBEDDABLE_PYTHON=%EASY_TOOLS%\Python\env\python310
 pushd %~dp0..
 
 @REM https://github.com/lllyasviel/FramePack/commits/main/
-@REM 2025/04/19 743657ef2355920fb2f1f934a34647ccd0f916c7
 @REM 2025/04/23 a875c8b58691c7ba98f93ad6623994a4e69df8ef
 call %GITHUB_CLONE_OR_PULL_HASH% lllyasviel FramePack main a875c8b58691c7ba98f93ad6623994a4e69df8ef
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -27,9 +26,9 @@ git switch -C 0dcb0ca 0dcb0cab8d9e0a131c9121abbed98320fe4801c7
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/git-ai-code/FramePack-eichi/commits/main/
-@REM 2025/04/23 0857b35023fc8a8e585428add2ecb1e347edca82
 @REM 2025/04/25 4899bebdba66fc185beec8a174352185c6b98f36
-call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main 4899bebdba66fc185beec8a174352185c6b98f36
+@REM 2025/04/29 004302b16a35f6e988b3041816ddc03f5a64a5e8
+call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main 004302b16a35f6e988b3041816ddc03f5a64a5e8
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo xcopy /SQY FramePack-eichi\webui\*.* .\

@@ -158,6 +158,12 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/04/29
+
+- [Kijai WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) の Fantasy Talking 更新に伴い、既存ワークフローの `WanVideo Sampler` への接続が壊れています。
+	- `Skip Layer Guidance` の `slg_args` を `slg_args` に繋ぎ直してください。
+	- `CFG-Zero*` の `exp_args` を `experimental_args` に繋ぎ直してください。
+
 ## 2025/04/26
 
 - `Sample/` に昨日の I2V と FunInP で 1枚の画像から動画を量産する `20250425_doublejob` サンプルから、開始画像を EasyReforge で書き換えてバリエーションを簡単に生成する `20250426_doublejob` サンプルを追加しました。
