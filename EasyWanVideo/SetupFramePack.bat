@@ -28,7 +28,8 @@ pushd %~dp0..\FramePack
 @REM https://github.com/git-ai-code/FramePack-eichi/commits/main/
 @REM 2025/04/25 4899bebdba66fc185beec8a174352185c6b98f36
 @REM 2025/04/29 004302b16a35f6e988b3041816ddc03f5a64a5e8
-call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main 004302b16a35f6e988b3041816ddc03f5a64a5e8
+@REM 2025/04/30 6d5a3f16681b1d8fcbc037cf360cd6a7f63cbdce
+call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main 6d5a3f16681b1d8fcbc037cf360cd6a7f63cbdce
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo xcopy /SQY FramePack-eichi\webui\*.* .\

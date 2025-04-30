@@ -53,8 +53,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM https://github.com/kijai/ComfyUI-FramePackWrapper
 @REM https://github.com/nirvash/ComfyUI-FramePackWrapper
 @REM 2025/04/24 b4e1fbf2cd9c0d1b6a63e480e432763d2d64c438
-@REM 2025/04/28 cb60db736ac5fbbdd42a44eab8c290dc5c6d557e
-call :GITHUB_HASH_REQUIREMENTS nirvash ComfyUI-FramePackWrapper main cb60db736ac5fbbdd42a44eab8c290dc5c6d557e
+@REM 2025/04/29 fd2fcc2f1951982d4511f41ba644c3531718fe7b
+call :GITHUB_HASH_REQUIREMENTS nirvash ComfyUI-FramePackWrapper main fd2fcc2f1951982d4511f41ba644c3531718fe7b
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-FramePackWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
@@ -114,7 +114,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
 @REM 2025/04/25 fc7ab666a2087b0ba41a0692f813b332665ffd43
 @REM 2025/04/29 e3afc7fc758add9ba0ca7e6e219c30f312758484
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main e3afc7fc758add9ba0ca7e6e219c30f312758484
+@REM 2025/04/30 77f78cededad60202e1098f0fd2f0bc8605acfe7
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 77f78cededad60202e1098f0fd2f0bc8605acfe7
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
