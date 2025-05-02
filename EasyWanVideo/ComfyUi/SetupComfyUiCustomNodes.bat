@@ -72,8 +72,8 @@ call :GITHUB_HASH_REQUIREMENTS city96 ComfyUI-GGUF main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-HunyuanVideoWrapper
-@REM call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-HunyuanVideoWrapper main
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-HunyuanVideoWrapper main 83f0bbb8694cf92e994189b045270aab4e5029b5
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Pack
 call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.10
@@ -112,10 +112,9 @@ call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
-@REM 2025/04/25 fc7ab666a2087b0ba41a0692f813b332665ffd43
-@REM 2025/04/29 e3afc7fc758add9ba0ca7e6e219c30f312758484
 @REM 2025/04/30 77f78cededad60202e1098f0fd2f0bc8605acfe7
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 77f78cededad60202e1098f0fd2f0bc8605acfe7
+@REM 2025/05/02 03edd8cbf2fdb45c628b63cc093fe8f2e31e43df
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 03edd8cbf2fdb45c628b63cc093fe8f2e31e43df
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
