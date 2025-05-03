@@ -32,7 +32,7 @@ pushd %~dp0..\FramePack
 @REM 2025/05/02 ad1756f76e971c6f12a6def9cd2221f7ca56fb2a
 @REM 2025/05/03 f18270f4f0292d11f8f9524fc7999aef5f0dafbe
 @REM 2025/05/03 6cd4b3963b912a331ac04677d39422c97dedbebf
-call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main 6cd4b3963b912a331ac04677d39422c97dedbebf
+call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo xcopy /SQY FramePack-eichi\webui\*.* .\

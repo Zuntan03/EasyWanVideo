@@ -158,6 +158,13 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/05/04
+
+- 現時点では正常動作しませんが、`FramePackEichiF1.bat` を追加しました。
+	- 自前で [仮対処](https://github.com/git-ai-code/FramePack-eichi/issues/40) を入れるか、[元リポジトリでの修正](https://github.com/git-ai-code/FramePack-eichi/commits/main/)をお待ち下さい。
+		- FramePack-eichi を `Update.bat` 実行時に常に最新版に更新します。
+			- 動作確認はできませんが、元リポジトリに修正が入れば `Update.bat` ですぐに試せます。
+
 ## 2025/05/03
 
 - [FramePack F1](https://github.com/lllyasviel/FramePack/commit/0f4df006cf38a47820514861e0076977967e6d51) 用の `FramePackF1.bat` を追加しました。
