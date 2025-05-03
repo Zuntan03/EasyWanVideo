@@ -9,7 +9,8 @@ pushd %~dp0..
 
 @REM https://github.com/lllyasviel/FramePack/commits/main/
 @REM 2025/04/23 a875c8b58691c7ba98f93ad6623994a4e69df8ef
-call %GITHUB_CLONE_OR_PULL_HASH% lllyasviel FramePack main a875c8b58691c7ba98f93ad6623994a4e69df8ef
+@REM 2025/05/03 0f4df006cf38a47820514861e0076977967e6d51
+call %GITHUB_CLONE_OR_PULL_HASH% lllyasviel FramePack main 0f4df006cf38a47820514861e0076977967e6d51
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 popd rem %~dp0..
@@ -30,7 +31,8 @@ pushd %~dp0..\FramePack
 @REM 2025/05/01 c20bd53a1c74df5753c0f5f0dc7f43804ab78929
 @REM 2025/05/02 ad1756f76e971c6f12a6def9cd2221f7ca56fb2a
 @REM 2025/05/03 f18270f4f0292d11f8f9524fc7999aef5f0dafbe
-call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main f18270f4f0292d11f8f9524fc7999aef5f0dafbe
+@REM 2025/05/03 6cd4b3963b912a331ac04677d39422c97dedbebf
+call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main 6cd4b3963b912a331ac04677d39422c97dedbebf
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo xcopy /SQY FramePack-eichi\webui\*.* .\

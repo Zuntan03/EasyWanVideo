@@ -160,6 +160,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 2025/05/03
 
+- [FramePack F1](https://github.com/lllyasviel/FramePack/commit/0f4df006cf38a47820514861e0076977967e6d51) 用の `FramePackF1.bat` を追加しました。
 - `FramePackEichi.bat` で生成した動画にモザイクを掛けるための、`MosaicMp4` ワークフローを追加しました。
 
 ## 2025/04/29
