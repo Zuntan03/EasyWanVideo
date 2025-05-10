@@ -22,13 +22,12 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/woct0rdho/SageAttention/releases
 @REM https://github.com/woct0rdho/triton-windows/releases
-echo pip install -qq --pre torch==2.7.0.dev20250311+cu128 torchvision==0.22.0.dev20250312+cu128 torchaudio==2.6.0.dev20250312+cu128 --index-url https://download.pytorch.org/whl/nightly/cu128
-pip install -qq --pre torch==2.7.0.dev20250311+cu128 torchvision==0.22.0.dev20250312+cu128 torchaudio==2.6.0.dev20250312+cu128 --index-url https://download.pytorch.org/whl/nightly/cu128
+echo pip install -qq torch==2.7.0+cu128 torchvision==0.22.0+cu128 torchaudio==2.7.0+cu128 --index-url https://download.pytorch.org/whl/cu128
+pip install -qq torch==2.7.0+cu128 torchvision==0.22.0+cu128 torchaudio==2.7.0+cu128 --index-url https://download.pytorch.org/whl/cu128
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-
-echo pip install -qq --pre triton-windows==3.3.0a0.post14
-pip install -qq --pre triton-windows==3.3.0a0.post14
+echo pip install -qq triton-windows==3.3.0.post19
+pip install -qq triton-windows==3.3.0.post19
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 set "TRITON_CACHE=C:\Users\%USERNAME%\.triton\cache"

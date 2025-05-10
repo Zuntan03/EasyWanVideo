@@ -8,9 +8,9 @@ set EMBEDDABLE_PYTHON=%EASY_TOOLS%\Python\env\python310
 pushd %~dp0..
 
 @REM https://github.com/lllyasviel/FramePack/commits/main/
-@REM 2025/04/23 a875c8b58691c7ba98f93ad6623994a4e69df8ef
 @REM 2025/05/03 0f4df006cf38a47820514861e0076977967e6d51
-call %GITHUB_CLONE_OR_PULL_HASH% lllyasviel FramePack main 0f4df006cf38a47820514861e0076977967e6d51
+@REM 2025/05/04 c5d375661a2557383f0b8da9d11d14c23b0c4eaf
+call %GITHUB_CLONE_OR_PULL_HASH% lllyasviel FramePack main c5d375661a2557383f0b8da9d11d14c23b0c4eaf
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 popd rem %~dp0..
@@ -27,11 +27,6 @@ pushd %~dp0..\FramePack
 @REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/git-ai-code/FramePack-eichi/commits/main/
-@REM 2025/04/30 6d5a3f16681b1d8fcbc037cf360cd6a7f63cbdce
-@REM 2025/05/01 c20bd53a1c74df5753c0f5f0dc7f43804ab78929
-@REM 2025/05/02 ad1756f76e971c6f12a6def9cd2221f7ca56fb2a
-@REM 2025/05/03 f18270f4f0292d11f8f9524fc7999aef5f0dafbe
-@REM 2025/05/03 6cd4b3963b912a331ac04677d39422c97dedbebf
 call %GITHUB_CLONE_OR_PULL_HASH% git-ai-code FramePack-eichi main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
@@ -48,13 +43,13 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/woct0rdho/SageAttention/releases
 @REM https://github.com/woct0rdho/triton-windows/releases
-echo pip install -qq --pre torch==2.7.0.dev20250311+cu128 torchvision==0.22.0.dev20250312+cu128 torchaudio==2.6.0.dev20250312+cu128 --index-url https://download.pytorch.org/whl/nightly/cu128
-pip install -qq --pre torch==2.7.0.dev20250311+cu128 torchvision==0.22.0.dev20250312+cu128 torchaudio==2.6.0.dev20250312+cu128 --index-url https://download.pytorch.org/whl/nightly/cu128
+echo pip install -qq torch==2.7.0+cu128 torchvision==0.22.0+cu128 torchaudio==2.7.0+cu128 --index-url https://download.pytorch.org/whl/cu128
+pip install -qq torch==2.7.0+cu128 torchvision==0.22.0+cu128 torchaudio==2.7.0+cu128 --index-url https://download.pytorch.org/whl/cu128
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM triton
-echo pip install -qq --pre triton-windows==3.3.0a0.post14
-pip install -qq --pre triton-windows==3.3.0a0.post14
+echo pip install -qq triton-windows==3.3.0.post19
+pip install -qq triton-windows==3.3.0.post19
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 set "TRITON_CACHE=C:\Users\%USERNAME%\.triton\cache"

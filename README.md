@@ -61,7 +61,7 @@
 ## EasyWanVideo のインストールとチュートリアル
 
 1. [EasyWanVideoInstaller.bat](https://github.com/Zuntan03/EasyWanVideo/raw/main/EasyWanVideo/EasyWanVideoInstaller.bat?ver=0) を右クリックから保存します。
-2. インストール先の空フォルダを `C:/EasyWan/` や `D:/EasyWan/` などの浅いパスに用意して、ここに `EasyWanVideoInstaller.bat` を移動して実行します。
+2. インストール先の **空フォルダ** を `C:/EasyWan/` や `D:/EasyWan/` などの浅いパスに用意して、ここに `EasyWanVideoInstaller.bat` を移動して実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 3. インストール先の `EasyWanVideo/vc_redist.x64.exe` で、`Microsoft Visual C++ Redistributable` をインストールします。
 
@@ -111,7 +111,8 @@ I2V のチュートリアルでは動画素材を生成します。
 |`ColorMatch`|動画の色合いを指定した画像に合わせる。|
 |`FadeIn`|動画をフェードインする。|
 |`FadeOut`|動画をフェードアウトする。|
-|`Mosaic(Mp4)`|動画にモザイクを掛ける。|
+|`Mosaic`|動画にモザイクを掛ける。|
+|`MosaicMp4`|mp4 動画にモザイクを掛ける。主に FramePack で生成した動画用。|
 |`ConcatInterpolate`|ふたつの動画を滑らかに繋げる。|
 |`Concat`|ふたつの動画を繋げる。|
 |`TileUpscale`|コントロールネットの Tile を利用して書き換えつつ拡大する。|
@@ -158,12 +159,27 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/05/11
+
+- FramePack 叡智で 1フレーム推論をする `FramePackEichi1Frame.bat` を追加しました。
+- torch と triton のバージョンを更新しました。
+
+## 2025/05/05
+
+- SkyReelsV2 I2V モデルのダウンロードに対応しました。
+	- I2V では `Cfg 5.0, Shift 3.0` が公式のおすすめ設定のようです。
+	- `Download\diffusion_models\Kijai\Wan2_1-SkyReelsV2-I2V-14B-540P_fp8_e4m3fn.bat`
+		- `Wan2_1-I2V-14B-480P_fp8_e4m3fn` の代わりに利用できます。
+	- `Download\diffusion_models\Kijai\Wan2_1-SkyReelsV2-I2V-14B-720P_fp8_e4m3fn.bat`
+		- `Wan2_1-I2V-14B-720P_fp8_e4m3fn` の代わりに利用できます。
+
 ## 2025/05/04
 
-- 現時点では正常動作しませんが、`FramePackEichiF1.bat` を追加しました。
-	- 自前で [仮対処](https://github.com/git-ai-code/FramePack-eichi/issues/40) を入れるか、[元リポジトリでの修正](https://github.com/git-ai-code/FramePack-eichi/commits/main/)をお待ち下さい。
-		- FramePack-eichi を `Update.bat` 実行時に常に最新版に更新します。
-			- 動作確認はできませんが、元リポジトリに修正が入れば `Update.bat` ですぐに試せます。
+- ~~現時点では正常動作しませんが、~~`FramePackEichiF1.bat` を追加しました。
+	- ~~自前で [仮対処](https://github.com/git-ai-code/FramePack-eichi/issues/40) を入れるか、[元リポジトリでの修正](https://github.com/git-ai-code/FramePack-eichi/commits/main/)をお待ち下さい。~~
+		- `Update.bat` 実行時に FramePack-eichi を常に最新版に更新します。
+			- ~~動作確認はできませんが、元リポジトリに修正が入れば `Update.bat` ですぐに試せます。~~
+	- 5/4 9:30 頃の更新で修正されているようです。
 
 ## 2025/05/03
 
