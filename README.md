@@ -77,6 +77,7 @@
 インストールで問題が発生した場合は、『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』を確認ください。  
 次はチュートリアルに進みます。
 
+- メインメモリが 48GB 以上で、手軽に NSFW 動画を生成するなら『[簡単 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』
 - メインメモリが 48GB 以上なら『**[I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
 - メインメモリが 32GB なら『**[I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
 
@@ -144,6 +145,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## ドキュメント
 
+- [簡単 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
@@ -158,6 +160,17 @@ I2V のチュートリアルでは動画素材を生成します。
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
 
 ## 最近の更新履歴
+
+## 2025/05/13
+
+- 簡単 NSFW 動画生成のワークフロー `Kijai_NsfwI2v`, `Kijai_NsfwLoop` と[チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB) を追加しました。
+	- よくある構図のエロ画像から、お手軽に動画を生成します。
+		- LoRA やプロンプトの調査や調整が不要
+		- Wan なので動画生成の時間が短い
+		- 実績のあるプリセットで高打率な動画生成
+	- **メインメモリ 48GB と VRAM 6GB の NVIDIA ビデオカードが必要です。**  
+	- **開発もサンプルの生成も、すべて Geforge RTX 3060 12GB・メインメモリ 64GB 環境で実施しています。**
+- [モザイク自動検出モデル](https://civitai.com/models/1313556?modelVersionId=1749813) を更新しました。
 
 ## 2025/05/11
 
