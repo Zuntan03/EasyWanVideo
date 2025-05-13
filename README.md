@@ -161,6 +161,11 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/05/14
+
+- `SampleNsfw/` のサンプルに `ShiikoCosplay` を追加しました。
+	- EasyReforge に追加したリアル系アジアモデルの [DivingIL_RealAsian_v20](https://civitai.com/models/1562047?modelVersionId=1778467) を利用しています。
+
 ## 2025/05/13
 
 - 簡単 NSFW 動画生成のワークフロー `Kijai_NsfwI2v`, `Kijai_NsfwLoop` と[チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB) を追加しました。
