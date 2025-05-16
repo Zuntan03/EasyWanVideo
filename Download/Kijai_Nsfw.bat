@@ -25,6 +25,8 @@ call %~dp0vae\Kijai\Wan2_1_VAE_bf16.bat
 call %~dp0loras\Bundle\NashikoneI2v720p.bat
 call %~dp0loras\Bundle\nims1.bat
 
+call %~dp0loras\Fast\Wan21_CausVid_14B_T2V_lora_rank32.bat
+
 @REM call %~dp0
 call %~dp0loras\Nsfw\BulgePovMissionary_v11.bat
 call %~dp0loras\Nsfw\Cowgirl_v13.bat
