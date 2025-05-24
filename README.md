@@ -161,6 +161,17 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/05/24
+
+- `Kijai_NsfwFast` ワークフローを追加しました。
+	- Geforce RTX 3060 で 3秒動画のシードガチャが 100秒です。  
+	![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202505/Fast100sec.png)
+	- `Download/Kijai_NsfwFast.bat` で必要なファイルをダウンロードしてください。
+	- CausVid との相性により、I2V 720p で学習した LoRA がよく効きます。
+		- CausVid との相性の悪い LoRA は、効きが悪くなります。
+	- VACE による手軽なループにも対応しています。
+- `SampleNsfw` に `paizuri_VaceLoop` と `paizuri_proj_cum` を追加しました。
+
 ## 2025/05/14
 
 - `SampleNsfw/` のサンプルに `ShiikoCosplay` を追加しました。

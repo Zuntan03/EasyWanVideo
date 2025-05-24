@@ -13,6 +13,9 @@ popd
 
 pushd %~dp0..\..\ComfyUI\custom_nodes
 
+@REM pip UnicodeDecodeError: 'cp932' codec can't decode byte 0x97 in position 2879: illegal multibyte sequence
+set PYTHONUTF8=1
+
 @REM https://github.com/christian-byrne/audio-separation-nodes-comfyui
 call :GITHUB_HASH_REQUIREMENTS christian-byrne audio-separation-nodes-comfyui master
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -99,6 +102,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-MMAudio main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/1038lab/ComfyUI-RMBG
+call :GITHUB_HASH_REQUIREMENTS 1038lab ComfyUI-RMBG main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/kijai/ComfyUI-segment-anything-2
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-segment-anything-2 main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -114,7 +121,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
 @REM 2025/05/15 4494bda6038416f266bc07fe000b985d657cc037
 @REM 2025/05/16 1c3060f59f8d4762d94efdc277eafd0b15729eb5
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 1c3060f59f8d4762d94efdc277eafd0b15729eb5
+@REM 2025/05/24 fe7a3d5b46008f40cd8b864adf835210d55a525c
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main fe7a3d5b46008f40cd8b864adf835210d55a525c
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
