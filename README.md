@@ -77,7 +77,7 @@
 インストールで問題が発生した場合は、『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』を確認ください。  
 次はチュートリアルに進みます。
 
-- メインメモリが 48GB 以上で、手軽に NSFW 動画を生成するなら『[簡単 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』
+- メインメモリが 48GB 以上で、手軽に NSFW 動画を生成するなら『[簡単高速 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』
 - メインメモリが 48GB 以上なら『**[I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
 - メインメモリが 32GB なら『**[I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
 
@@ -145,6 +145,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## ドキュメント
 
+- [簡単高速 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [簡単 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
 - [I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)
@@ -163,7 +164,11 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 2025/05/25
 
-- `Kijai_NsfwFast` ワークフローで手コキ LoRA のプリセットを追加しました。
+- `Kijai_NsfwFast` ワークフローで 480p LoRA などを利用した際に、開始時に雷光のように動画が乱れることがあります。
+	- この部分をカットするために `カットする開始フレーム数` ノードを追加しました。
+- ドキュメントに『[簡単高速 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』を追加しました。
+- `Kijai_NsfwFast` ワークフローに手コキ の LoRA プリセットを追加しました。
+- `Kijai_NsfwFast` ワークフローにフェラチオとダブルフェラの LoRA プリセットを追加しましたが、動画の開始時に雷光のような乱れが発生するため、`カットする開始フレーム数` に `8` で開始 0.5秒程度をカットする必要があります。
 - `SampleNsfw` に `tekoki` と `tekoki_cum` を追加しました。
 
 ## 2025/05/24
