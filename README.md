@@ -168,6 +168,8 @@ I2V のチュートリアルでは動画素材を生成します。
 	- 480p LoRA と 720p LoRA を併用でき、高速生成でもダイナミックな動きを実現します。
 	- `Download/Kijai_NsfwFast.bat` で必要なファイルをダウンロードしてください。
 - [簡単高速 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB) の内容を変更に合わせて修正しました。
+- 新しい `Kijai_NsfwFast` ワークフローで生成したサンプルを追加しました。
+	- `paizuri` 
 
 ## 2025/05/25
 

@@ -19,6 +19,7 @@ call %~dp0ultralytics\segm\AnimeNsfwDetectionAll_v3.bat
 
 call %~dp0vae\Kijai\Wan2_1_VAE_bf16.bat
 
+call %~dp0loras\Bundle\Nashikone.bat
 call %~dp0loras\Bundle\NashikoneI2v720p.bat
 
 call %~dp0loras\Fast\Wan21_AccVid_T2V_14B_lora_rank32_fp16.bat
