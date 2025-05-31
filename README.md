@@ -162,6 +162,13 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/05/31
+
+- `Kijai_NsfwFast` ワークフローを [AccVideo LoRA](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_AccVid_T2V_14B_lora_rank32_fp16.safetensors) と [CausVid LoRA](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors) を併用して大幅に改善しました。
+	- 480p LoRA と 720p LoRA を併用でき、高速生成でもダイナミックな動きを実現します。
+	- `Download/Kijai_NsfwFast.bat` で必要なファイルをダウンロードしてください。
+- [簡単高速 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB) の内容を変更に合わせて修正しました。
+
 ## 2025/05/25
 
 - `Kijai_NsfwFast` ワークフローで 480p LoRA などを利用した際に、開始時に雷光のように動画が乱れることがあります。
