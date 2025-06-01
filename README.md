@@ -165,7 +165,7 @@ I2V のチュートリアルでは動画素材を生成します。
 ## 2025/06/01
 
 - 新しい `Kijai_NsfwFast` ワークフローで生成したサンプルを追加しました。
-	- `deepthroat_tatsumaki`, `deepthroat_yachiyo`, `fellatio_deepthroat`
+	- `deepthroat_tatsumaki`, `deepthroat_yachiyo`, `fellatio_deepthroat`, `fellatio_tekoki`
 
 ## 2025/05/31
 
