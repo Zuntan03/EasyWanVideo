@@ -162,6 +162,11 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/06/02
+
+- 新しい `Kijai_NsfwFast` ワークフローで生成したサンプルを追加しました。
+	- `proj_cum` 
+
 ## 2025/06/01
 
 - VACE 簡単ループを一昨日リリースされた [CausVid v2.0](https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_CausVid_14B_T2V_lora_rank32_v2.safetensors) を利用するように変更しました。
