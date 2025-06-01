@@ -165,7 +165,7 @@ I2V のチュートリアルでは動画素材を生成します。
 ## 2025/06/02
 
 - 新しい `Kijai_NsfwFast` ワークフローで生成したサンプルを追加しました。
-	- `proj_cum`, `fellatio_cum`, `doublejob_cum_GQ-A,B`, `doublejob_cum_MD`
+	- `proj_cum`, `fellatio_cum`, `doublejob_cum_GQ-A,B`, `doublejob_cum_MD`, `cowgirl`
 
 ## 2025/06/01
 
