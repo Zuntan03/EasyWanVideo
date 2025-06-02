@@ -29,6 +29,8 @@ call %~dp0loras/Fast/Wan21_CausVid_14B_T2V_lora_rank32_v1_5_no_first_block.bat
 call %~dp0loras/Fast/Wan21_CausVid_14B_T2V_lora_rank32_v2.bat
 
 @REM call %~dp0
+call %~dp0loras\Motion\l1v3w4llp4p3r_720p.bat
+call %~dp0loras\Motion\LiveWallpaper.bat
 call %~dp0loras\Nsfw\BulgePovMissionary_v11.bat
 call %~dp0loras\Nsfw\Cowgirl_v13.bat
 call %~dp0loras\Nsfw\deepthroat_blowjob_v10.bat

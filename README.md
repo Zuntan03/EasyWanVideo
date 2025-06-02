@@ -164,6 +164,10 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 2025/06/02
 
+- `Kijai_NsfwFast` ワークフローに VACE でブツ切りな動画を自然に延長する `動画の延長` に対応しました。
+	- [動画のループ化](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB#%E5%8B%95%E7%94%BB%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%97%E5%8C%96) での `生成モードの選択` で、`動画のループ` の代わりに `動画の延長` を選択してください。  
+	あとの操作は [動画のループ化](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB#%E5%8B%95%E7%94%BB%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%97%E5%8C%96) と同じです。
+	- `VACE_Extension` サンプルも追加しました。
 - 新しい `Kijai_NsfwFast` ワークフローで生成したサンプルを追加しました。
 	- `proj_cum`, `fellatio_cum`, `doublejob_cum_GQ-A,B`, `doublejob_cum_MD`, `cowgirl`
 
