@@ -15,7 +15,7 @@ call %~dp0diffusion_models\Kijai\Wan2_1-VACE_module_14B_fp8_e4m3fn.bat
 
 call %~dp0text_encoders\Native\umt5_xxl_fp8_e4m3fn_scaled.bat
 
-call %~dp0ultralytics\segm\AnimeNsfwDetectionAll_v3.bat
+call %~dp0ultralytics\segm\AnimeNsfwDetectionAll_v4.bat
 
 call %~dp0vae\Kijai\Wan2_1_VAE_bf16.bat
 
@@ -37,4 +37,5 @@ call %~dp0loras\Nsfw\deepthroat_blowjob_v10.bat
 call %~dp0loras\Nsfw\DoubleSingleBlowjob_v10.bat
 call %~dp0loras\Nsfw\nsfwsks_InAndOut_v014.bat
 call %~dp0loras\Nsfw\PovMissionary_v11.bat
+call %~dp0loras\Nsfw\shoejob_v10.bat
 call %~dp0loras\Nsfw\tekoki_v028.bat

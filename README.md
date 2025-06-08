@@ -162,6 +162,11 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/06/08
+
+- `Kijai_NsfwFast` ワークフローに `足コキ`, `胸揉み` のプリセットと `footjob_grab_breast`  サンプルを追加しました。
+- `Download\ultralytics\segm\AnimeNsfwDetectionAll_v4.bat` のバージョンを v3 から v4 に上げました。
+
 ## 2025/06/04
 
 - `Kijai_NsfwFast` ワークフローで `動画のループや延長` の処理を整理しました。

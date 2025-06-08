@@ -18,7 +18,7 @@ call %~dp0diffusion_models\Kijai\WanNsfwI2vEnd-14B-480p_fp8_e4m3fn.bat
 @REM call %~dp0text_encoders\Kijai\umt5-xxl-enc-fp8_e4m3fn.bat
 call %~dp0text_encoders\Native\umt5_xxl_fp8_e4m3fn_scaled.bat
 
-call %~dp0ultralytics\segm\AnimeNsfwDetectionAll_v3.bat
+call %~dp0ultralytics\segm\AnimeNsfwDetectionAll_v4.bat
 
 call %~dp0vae\Kijai\Wan2_1_VAE_bf16.bat
 
