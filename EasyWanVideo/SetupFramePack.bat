@@ -43,8 +43,9 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/woct0rdho/SageAttention/releases
 @REM https://github.com/woct0rdho/triton-windows/releases
-echo pip install -qq torch==2.7.1+cu128 torchaudio==2.7.1+cu128 torchvision==0.22.1+cu128 --index-url https://download.pytorch.org/whl/cu128
-pip install -qq torch==2.7.1+cu128 torchaudio==2.7.1+cu128 torchvision==0.22.1+cu128 --index-url https://download.pytorch.org/whl/cu128
+@REM torch 2.7.1 != xformers 0.0.30
+echo pip install -qq torch==2.7.0+cu128 torchvision==0.22.0+cu128 torchaudio==2.7.0+cu128 xformers==0.0.30 --index-url https://download.pytorch.org/whl/cu128
+pip install -qq torch==2.7.0+cu128 torchvision==0.22.0+cu128 torchaudio==2.7.0+cu128 xformers==0.0.30 --index-url https://download.pytorch.org/whl/cu128
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM triton
@@ -68,6 +69,7 @@ rmdir /S /Q "%TORCH_INDUCTOR_TEMP%"
 :EASY_TORCH_INDUCTOR_TEMP_NOT_FOUND
 
 @REM sageattention
+@REM torch 2.7.0 != 2.7.1
 echo pip install -qq https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu128torch2.7.1-cp310-cp310-win_amd64.whl
 pip install -qq https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu128torch2.7.1-cp310-cp310-win_amd64.whl
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
