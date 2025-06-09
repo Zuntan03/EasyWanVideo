@@ -35,7 +35,9 @@ call %~dp0loras\Nsfw\BulgePovMissionary_v11.bat
 call %~dp0loras\Nsfw\Cowgirl_v13.bat
 call %~dp0loras\Nsfw\deepthroat_blowjob_v10.bat
 call %~dp0loras\Nsfw\DoubleSingleBlowjob_v10.bat
+call %~dp0loras\Nsfw\her_breasts_are_bouncing_v01.bat
 call %~dp0loras\Nsfw\nsfwsks_InAndOut_v014.bat
 call %~dp0loras\Nsfw\PovMissionary_v11.bat
 call %~dp0loras\Nsfw\shoejob_v10.bat
 call %~dp0loras\Nsfw\tekoki_v028.bat
+call %~dp0loras\Nsfw\tribadism.bat

@@ -161,10 +161,15 @@ I2V のチュートリアルでは動画素材を生成します。
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
 
 ## 最近の更新履歴
+<!-- 
+- ADetailer 用モデルを追加しました。
+	- `Download\ultralytics\segm\99coins_anime_girl_face_m_seg.bat`
+	- `Download\ultralytics\segm\AnzhcFace-v2-768MS-seg.bat` -->
 
 ### 2025/06/09
 
-- `sageattention` のために `torch` のバージョンを `2.7.0` から `2.7.1` に上げました。
+- `Kijai_NsfwFast` プリセットに `汎用 NSFW`, `胸揺れ`, `貝合せ` のプリセットを追加しました。
+- `triton` と `sageattention` のバージョンを更新しました。
 
 ## 2025/06/08
 
