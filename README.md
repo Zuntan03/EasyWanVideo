@@ -166,6 +166,10 @@ I2V のチュートリアルでは動画素材を生成します。
 	- `Download\ultralytics\segm\99coins_anime_girl_face_m_seg.bat`
 	- `Download\ultralytics\segm\AnzhcFace-v2-768MS-seg.bat` -->
 
+### 2025/06/10
+
+- `Kijai_NsfwFast` プリセットの `貝合せ`, `胸揺れ` サンプルの `tribadism` を追加しました。
+
 ### 2025/06/09
 
 - `Kijai_NsfwFast` プリセットに `汎用 NSFW`, `胸揺れ`, `貝合せ` のプリセットを追加しました。

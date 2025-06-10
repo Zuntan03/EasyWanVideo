@@ -120,7 +120,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
 @REM 2025/06/04 45dca5c41c11d56aec63a2db962529f0f6dbb93b
 @REM 2025/06/09 39412cf4223d92a023c8f83938d88d309ddaacc5
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 39412cf4223d92a023c8f83938d88d309ddaacc5
+@REM 2025/06/10 6eddec54a69d9fac30b0125a3c06656e7c533eca
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 6eddec54a69d9fac30b0125a3c06656e7c533eca
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
