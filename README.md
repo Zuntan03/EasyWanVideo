@@ -161,16 +161,37 @@ I2V のチュートリアルでは動画素材を生成します。
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
 
 ## 最近の更新履歴
-<!-- 
-- ADetailer 用モデルを追加しました。
-	- `Download\ultralytics\segm\99coins_anime_girl_face_m_seg.bat`
-	- `Download\ultralytics\segm\AnzhcFace-v2-768MS-seg.bat` -->
 
-### 2025/06/10
+## 2025/06/13
+
+- `Kijai_NsfwFast` で HiresFix に対応しました。
+	- ガチャの当たり動画に対して、後から画質を格段に向上できます。
+		- `SampleNsfw/` にある元動画の `20250613-upscale_Original.mp4` と、HiresFix 後の `20250613-upscale_HiresFix.mp4` を見比べてみてください。
+		- UltraSharpV2 や AnimeSharpV4 のアップスケーラでは、目のディティール改善が限定的です。
+	- ガチャの当たり動画を読み込んで、`I2V HiresFix` ノードを `HiresFix あり` に変更して再生成します。  
+**最初から HiresFix 有効で生成するのはオススメしません。**  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202506/HiresFix.webp)
+
+	- VRAM 消費は大きく、生成時間は長くなります。
+		- 参考値: Geforce RTX 3060 12GB、長辺 576px
+			- 3sec 動画なら HiresFix 2倍
+			- 5sec 動画なら HiresFix 1.5倍
+	- HiresFix 後に `動画のループ` や `動画の延長` も VRAM が足りればできます。
+		- `動画の長さ` を `2秒` に縮めて VRAM を節約することで生成できたりします。
+- `Kijai_NsfwFast` のプリセットに `主観視点の積極的騎乗位` と `アニメ胸揺れ` の LoRA を変更しました。
+	- `Download\loras\Nsfw\AssertiveCowgirl_v10.bat`
+	- `Download\loras\Nsfw\BounceOfPleasure_v10.bat`
+- `Kijai_NsfwFast` のプリセットで `騎乗位` の LoRA を変更しました。
+	- `Download\loras\Nsfw\c0wg1rl_v10.bat`
+- アップスケールモデルに `UltraSharpV2` を追加しました。
+	- `Download\upscale_models\4x-UltraSharpV2.bat`
+	- `Download\upscale_models\4x-UltraSharpV2_Lite.bat`
+
+## 2025/06/10
 
 - `Kijai_NsfwFast` プリセットの `貝合せ`, `胸揺れ` サンプルの `tribadism` を追加しました。
 
-### 2025/06/09
+## 2025/06/09
 
 - `Kijai_NsfwFast` プリセットに `汎用 NSFW`, `胸揺れ`, `貝合せ` のプリセットを追加しました。
 - `triton` と `sageattention` のバージョンを更新しました。
