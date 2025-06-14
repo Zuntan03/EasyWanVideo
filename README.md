@@ -165,6 +165,7 @@ I2V のチュートリアルでは動画素材を生成します。
 ## 2025/06/14
 
 - `Kijai_NsfwFast` に `主観視点の積極的騎乗位`, `騎乗位`, `胸揺れ`, `アニメ胸揺れ` を比較する `cowgirl` サンプルを追加しました。
+- `Kijai_NsfwFast` の HiresFix 利用時に、画像サイズのアスペクト比によって `The size of tensor a (xxx) must match the size of tensor b (xxx) at non-singleton dimension 3` といったエラーになる不具合を修正しました。
 
 ## 2025/06/13
 
