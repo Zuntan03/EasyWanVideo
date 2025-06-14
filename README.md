@@ -162,6 +162,10 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+## 2025/06/14
+
+- `主観視点の積極的騎乗位`, `騎乗位`, `胸揺れ`, `アニメ胸揺れ` を比較する `cowgirl` サンプルを追加しました。
+
 ## 2025/06/13
 
 - `Kijai_NsfwFast` で HiresFix に対応しました。
@@ -178,6 +182,7 @@ I2V のチュートリアルでは動画素材を生成します。
 			- 5sec 動画なら HiresFix 1.5倍
 	- HiresFix 後に `動画のループ` や `動画の延長` も VRAM が足りればできます。
 		- `動画の長さ` を `2秒` に縮めて VRAM を節約することで生成できたりします。
+	- **VRAM 不足のエラーになっても、画面上部の `Free model and node cache` してから生成するとエラーにならない場合があります。**
 - `Kijai_NsfwFast` のプリセットに `主観視点の積極的騎乗位` と `アニメ胸揺れ` の LoRA を変更しました。
 	- `Download\loras\Nsfw\AssertiveCowgirl_v10.bat`
 	- `Download\loras\Nsfw\BounceOfPleasure_v10.bat`
