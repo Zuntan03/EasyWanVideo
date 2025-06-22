@@ -73,6 +73,7 @@
 関係のないワークフローですので、閉じてください。
 - 黒いコンソール画面を閉じると、EasyWanVideo を終了できます。
 - `Update.bat` を実行すると、EasyWanVideo を更新できます。
+	- 利用するワークフローに合わせて `Download/*.bat` も実行してください。
 
 インストールで問題が発生した場合は、『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』を確認ください。  
 次はチュートリアルに進みます。
@@ -161,6 +162,20 @@ I2V のチュートリアルでは動画素材を生成します。
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
 
 ## 最近の更新履歴
+
+### 2025/06/22
+
+- `NsfwFast` を [lightx2v/Wan2.1-T2V-14B-StepDistill-CfgDistill](https://huggingface.co/lightx2v/Wan2.1-T2V-14B-StepDistill-CfgDistill) を軸に再構成し、打率と速度を向上しました。
+	- **`Download\Kijai_NsfwFast.bat` で追加ファイルをダウンロードしてください。**
+	- 480p LoRA の打率が向上し、動画開始時のフラッシュが起こりにくくなりました。
+	- Geforce RTX 30x0 系でもコンパイルを使えるようにし、デフォルトでコンパイルを有効にしました。
+		- 推論時間の比率が高い Hires Fix 利用時に、高速化を実感しやすいです。
+	- `動画のループや延長` での色ズレが起こりにくくなりました。
+		- ループや延長部分の明るさを抑える機能も追加しています。
+- プリセットプロンプトと入力欄プロンプトを、`(prompt: 1.5)` 構文で強化する `プロンプトの強化` を追加しました。
+	- `画像からのプロンプト生成` は強化の対象外です。
+- [ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) の互換性の無い変更で、既存のワークフローが使えなくなる場合があります。
+	- `WanVideo Sampler` の `image_embeds` と `text_embeds` を入れ替えるように接続し直すことで修正できます。
 
 ### 2025/06/16
 

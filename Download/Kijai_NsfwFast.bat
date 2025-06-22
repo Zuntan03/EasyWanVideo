@@ -13,9 +13,9 @@ call %~dp0upscale_models\4x-UltraSharpV2.bat
 
 call %~dp0clip\Kijai\open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.bat
 
-call %~dp0diffusion_models\Kijai\I2v-WanSkyRel07-14B-fp8_e4m3fn.bat
-call %~dp0diffusion_models\Kijai\Wan2_1-T2V-14B_fp8_e4m3fn.bat
-call %~dp0diffusion_models\Kijai\Wan2_1-VACE_module_14B_fp8_e4m3fn.bat
+call %~dp0diffusion_models\Kijai\I2v-WanSkyRel07-14B-FastMix-fp8_e5m2.bat
+call %~dp0diffusion_models\Kijai\T2v-Wan-14B-FastMix-fp8_e5m2.bat
+call %~dp0diffusion_models\Kijai\Wan2_1-VACE_module_14B-fp8_e5m2.bat
 
 call %~dp0text_encoders\Native\umt5_xxl_fp8_e4m3fn_scaled.bat
 
@@ -26,11 +26,14 @@ call %~dp0vae\Kijai\Wan2_1_VAE_bf16.bat
 call %~dp0loras\Bundle\Nashikone.bat
 call %~dp0loras\Bundle\NashikoneI2v720p.bat
 
-@REM CausVid v1.5 のみ不使用
-call %~dp0loras\Fast\Wan21_AccVid_T2V_14B_lora_rank32_fp16.bat
-call %~dp0loras\Fast\Wan21_CausVid_14B_T2V_lora_rank32.bat
-call %~dp0loras/Fast/Wan21_CausVid_14B_T2V_lora_rank32_v1_5_no_first_block.bat
-call %~dp0loras/Fast/Wan21_CausVid_14B_T2V_lora_rank32_v2.bat
+@REM call %~dp0loras\Fast\Wan21_AccVid_I2V_480P_14B_lora_rank32_fp16.bat
+@REM call %~dp0loras\Fast\Wan21_AccVid_T2V_14B_lora_rank32_fp16.bat
+@REM call %~dp0loras\Fast\Wan21_CausVid_14B_T2V_lora_rank32.bat
+@REM call %~dp0loras\Fast\Wan21_CausVid_14B_T2V_lora_rank32_v1_5_no_first_block.bat
+@REM call %~dp0loras\Fast\Wan21_CausVid_14B_T2V_lora_rank32_v2.bat
+@REM call %~dp0loras\Fast\Wan21_I2V_14B_FusionX_LoRA.bat
+@REM call %~dp0loras\Fast\Wan21_T2V_14B_FusionX_LoRA.bat
+@REM call %~dp0loras\Fast\Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.bat
 
 @REM call %~dp0
 call %~dp0loras\Nsfw\nsfwsks_InAndOut_v014.bat
@@ -47,3 +50,4 @@ call %~dp0loras\Nsfw\tekoki_v028.bat
 call %~dp0loras\Nsfw\shoejob_v10.bat
 call %~dp0loras\Motion\l1v3w4llp4p3r_720p.bat
 call %~dp0loras\Nsfw\DildoRide_v20.bat
+call %~dp0loras\Nsfw\AnimeCumshotAesthetics_v10.bat
