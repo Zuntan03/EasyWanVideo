@@ -163,6 +163,10 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+### 2025/06/24
+
+- `NsfwFast` で `動画のループや延長` が正常に動作しない不具合を修正しました。
+
 ### 2025/06/22
 
 - `NsfwFast` を [lightx2v/Wan2.1-T2V-14B-StepDistill-CfgDistill](https://huggingface.co/lightx2v/Wan2.1-T2V-14B-StepDistill-CfgDistill) を軸に再構成し、打率と速度を向上しました。
