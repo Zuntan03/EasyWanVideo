@@ -5,6 +5,7 @@ set PYTHON_ACTIVATE=%EASY_TOOLS%\Python\Python_Activate.bat
 set GITHUB_CLONE_OR_PULL_HASH=%EASY_TOOLS%\Git\GitHub_CloneOrPull_Hash.bat
 set GITHUB_CLONE_OR_PULL_TAG=%EASY_TOOLS%\Git\GitHub_CloneOrPull_Tag.bat
 set CURL_CMD=C:\Windows\System32\curl.exe -kL
+set PS_CMD=PowerShell -Version 5.1 -NoProfile -ExecutionPolicy Bypass
 
 pushd %~dp0..\..\ComfyUI
 call %PYTHON_ACTIVATE%
@@ -122,8 +123,14 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM 2025/06/17 dd1f3c3ecb91d9a802668c405de893768d6946d9
 @REM 2025/06/18 b5cae8bf1a7b348e9c9fa230640be7e11c573ca9
 @REM 2025/06/20 8479624614ec0d52e982bbbab633736fb1a15eef
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 8479624614ec0d52e982bbbab633736fb1a15eef
+@REM 2025/07/11 880194a1f9da7bcb096baf58ca2ae971daeba071
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 880194a1f9da7bcb096baf58ca2ae971daeba071
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+@REM Patch
+echo %PS_CMD% -c %PS_CMD% -c "(gc ComfyUI-WanVideoWrapper/gguf/gguf.py) -replace 'lora_diffs = \[p\[1\]\.weights for p in patch\]', 'lora_diffs = [p[1][1] for p in patch]' | sc ComfyUI-WanVideoWrapper/gguf/gguf.py"
+%PS_CMD% -c "(gc ComfyUI-WanVideoWrapper/gguf/gguf.py) -replace 'lora_diffs = \[p\[1\]\.weights for p in patch\]', 'lora_diffs = [p[1][1] for p in patch]' | sc ComfyUI-WanVideoWrapper/gguf/gguf.py"
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
 

@@ -13,9 +13,12 @@ call %~dp0upscale_models\4x-UltraSharpV2.bat
 
 call %~dp0clip\Kijai\open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.bat
 
-call %~dp0diffusion_models\Kijai\I2v-WanSkyRel07-14B-FastMix-fp8_e5m2.bat
-call %~dp0diffusion_models\Kijai\T2v-Wan-14B-FastMix-fp8_e5m2.bat
-call %~dp0diffusion_models\Kijai\Wan2_1-VACE_module_14B-fp8_e5m2.bat
+@REM call %~dp0diffusion_models\Kijai\I2v-WanSkyRel07-14B-FastMix-fp8_e5m2.bat
+@REM call %~dp0diffusion_models\Kijai\T2v-Wan-14B-FastMix-fp8_e5m2.bat
+@REM call %~dp0diffusion_models\Kijai\Wan2_1-VACE_module_14B-fp8_e5m2.bat
+
+call %~dp0diffusion_models\Native\Wan21-BothI2v-14B-FastMix-Q3_K_M.bat
+call %~dp0diffusion_models\Native\Wan21-VACE-14B-FastMix-Q4_K_M.bat
 
 call %~dp0text_encoders\Native\umt5_xxl_fp8_e4m3fn_scaled.bat
 
