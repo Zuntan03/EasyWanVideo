@@ -43,6 +43,8 @@
 
 ## [重要] Kijai 版と Native 版、2種類の Wan 生成環境
 
+**Kijai 版が GGUF に対応したため、古い情報です。**
+
 [ComfyUI](https://github.com/comfyanonymous/ComfyUI) での Wan 動画の生成環境には、[Kijai 版](https://github.com/kijai/ComfyUI-WanVideoWrapper) と [Native 版](https://comfyanonymous.github.io/ComfyUI_examples/wan/) の 2種類があります。
 
 **現在はメインメモリが 48GB 以上なら、Kijai 版の利用を推奨しています。**
@@ -78,9 +80,9 @@
 インストールで問題が発生した場合は、『**[トラブルシューティング](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)**』を確認ください。  
 次はチュートリアルに進みます。
 
-- メインメモリが 48GB 以上で、手軽に NSFW 動画を生成するなら『[簡単高速 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』
-- メインメモリが 48GB 以上なら『**[I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
-- メインメモリが 32GB なら『**[I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
+- 手軽に NSFW 動画を生成するなら『[簡単高速 NSFW 動画生成のチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E7%B0%A1%E5%8D%98%E9%AB%98%E9%80%9F-NSFW-%E5%8B%95%E7%94%BB%E7%94%9F%E6%88%90%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)』
+- ~~メインメモリが 48GB 以上なら『**[I2V Kijai 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Kijai-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』~~
+- ~~メインメモリが 32GB なら『**[I2V Native 版チュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/I2V-Native-%E7%89%88%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』~~
 
 I2V のチュートリアルでは動画素材を生成します。  
 お好みの動画素材を生成できたら、動画を仕上げます。
@@ -170,6 +172,8 @@ I2V のチュートリアルでは動画素材を生成します。
 		- 余ったメモリはブロックスワップ高速化・高解像度動画・長尺動画・並列作業などにご利用ください。
 	- **`Update.bat` 後に `Download\Kijai_NsfwFast.bat` でモデルをダウンロードする必要があります。**
 - `SampleNsfw` に GGUF 対応の `Dance` サンプルを追加しました。
+
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202507/Gguf32GB.webp)
 
 ### 2025/07/06
 
