@@ -95,4 +95,10 @@ if not exist models\mmaudio\ ( mkdir models\mmaudio )
 if not exist models\ultralytics\ ( mkdir models\ultralytics )
 if not exist user\default\workflows\ ( mkdir user\default\workflows )
 
+if exist input\takopii_kirara.webp ( goto :EXIST_INPUT_IMG )
+echo %CURL_CMD% -o input\takopii_kirara.webp https://yyy.wpx.jp/EasyWanVideo/input/takopii_kirara.webp
+%CURL_CMD% -o input\takopii_kirara.webp https://yyy.wpx.jp/EasyWanVideo/input/takopii_kirara.webp
+@REM No error checking.
+:EXIST_INPUT_IMG
+
 popd rem %~dp0..\..\ComfyUI

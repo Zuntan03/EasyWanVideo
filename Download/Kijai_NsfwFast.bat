@@ -39,13 +39,14 @@ call %~dp0loras\Bundle\NashikoneI2v720p.bat
 @REM call %~dp0loras\Fast\Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.bat
 
 @REM call %~dp0
+call %~dp0loras\Motion\dabaichui_v10.bat
 call %~dp0loras\Nsfw\nsfwsks_InAndOut_v014.bat
 call %~dp0loras\Nsfw\her_breasts_are_bouncing_v01.bat
 call %~dp0loras\Nsfw\BounceOfPleasure_v10.bat
 call %~dp0loras\Nsfw\PovMissionary_v11.bat
 call %~dp0loras\Nsfw\BulgePovMissionary_v11.bat
 call %~dp0loras\Nsfw\c0wg1rl_v10.bat
-call %~dp0\loras\Nsfw\AssertiveCowgirl_v10.bat
+call %~dp0loras\Nsfw\AssertiveCowgirl_v10.bat
 call %~dp0loras\Nsfw\tribadism.bat
 call %~dp0loras\Nsfw\DoubleSingleBlowjob_v10.bat
 call %~dp0loras\Nsfw\deepthroat_blowjob_v10.bat
