@@ -54,4 +54,5 @@ call %~dp0loras\Nsfw\tekoki_v028.bat
 call %~dp0loras\Nsfw\shoejob_v10.bat
 call %~dp0loras\Motion\l1v3w4llp4p3r_720p.bat
 call %~dp0loras\Nsfw\DildoRide_v20.bat
+call %~dp0loras\Motion\GlassFloor_v09.bat
 call %~dp0loras\Nsfw\AnimeCumshotAesthetics_v10.bat
