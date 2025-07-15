@@ -119,12 +119,9 @@ call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
-@REM 2025/06/13 c3ee35f3ece76e38099dc516182d69b406e16772
-@REM 2025/06/17 dd1f3c3ecb91d9a802668c405de893768d6946d9
-@REM 2025/06/18 b5cae8bf1a7b348e9c9fa230640be7e11c573ca9
-@REM 2025/06/20 8479624614ec0d52e982bbbab633736fb1a15eef
 @REM 2025/07/11 880194a1f9da7bcb096baf58ca2ae971daeba071
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 880194a1f9da7bcb096baf58ca2ae971daeba071
+@REM 2025/07/14 f96128bf2ce9e456637341abf6937a479c2d6a93
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main f96128bf2ce9e456637341abf6937a479c2d6a93
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM Patch

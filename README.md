@@ -91,11 +91,7 @@ I2V のチュートリアルでは動画素材を生成します。
 
 - 動画素材を公開用に整える 『**[動画の仕上げチュートリアル](https://github.com/Zuntan03/EasyWanVideo/wiki/%E5%8B%95%E7%94%BB%E3%81%AE%E4%BB%95%E4%B8%8A%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB)**』
 
-<!-- ワークフローの内容については『**[ワークフロー説明](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E8%AA%AC%E6%98%8E)**』を確認ください。 -->
-
 よくある使い方についての問い合わせを、『**[よくある質問と回答](https://github.com/Zuntan03/EasyWanVideo/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F%E3%81%A8%E5%9B%9E%E7%AD%94)**』にまとめています。
-
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/SampleError.webp)
 
 ### ひとことワークフロー紹介
 
@@ -166,6 +162,13 @@ I2V のチュートリアルでは動画素材を生成します。
 - [更新履歴](https://github.com/Zuntan03/EasyWanVideo/wiki/%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
 
 ## 最近の更新履歴
+
+### 2025/07/15
+
+- `NsfwFast` のプリセットに `ガラスフロア` を追加し、`SampleNsfw` にサンプルも追加しました。
+	- VRAM 12GB 環境で作成した、1728x2304 で 7秒のループ動画です。
+
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/man/Gguf2Fp8.png)
 
 ### 2025/07/14
 
