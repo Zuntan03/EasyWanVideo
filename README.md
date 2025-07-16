@@ -163,6 +163,10 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+### 2025/07/16
+
+- `Download\loras\Fast\Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank64.bat` と `Download\loras\Fast\Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.bat` を追加しました。
+
 ### 2025/07/15
 
 - `NsfwFast` のプリセットに `ガラスフロア` を追加し、`SampleNsfw` にサンプルも追加しました。
