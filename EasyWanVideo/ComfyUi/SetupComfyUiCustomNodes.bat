@@ -121,7 +121,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
 @REM 2025/07/11 880194a1f9da7bcb096baf58ca2ae971daeba071
 @REM 2025/07/14 f96128bf2ce9e456637341abf6937a479c2d6a93
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main f96128bf2ce9e456637341abf6937a479c2d6a93
+@REM 2025/07/17 17d48e3e450c7e75f60566e787404cb3d917f48e
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 17d48e3e450c7e75f60566e787404cb3d917f48e
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM Patch

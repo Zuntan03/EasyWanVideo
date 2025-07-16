@@ -166,6 +166,10 @@ I2V のチュートリアルでは動画素材を生成します。
 ### 2025/07/16
 
 - `Download\loras\Fast\Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank64.bat` と `Download\loras\Fast\Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.bat` を追加しました。
+	- `Download\loras\Fast\Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank64.bat` はまともに動作しないようです。
+- `Download\loras\Fast\lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank(128~4)_bf16.bat` を追加しました。
+	- Kijai 版の T2V LoRA は手元で VACE ループを試してみた範囲ではまともに動作しています。
+	- 128 と 16 以外はファイル名末尾に `_` が残っていたため、修正でそのうちリンク切れするかもしれません。
 
 ### 2025/07/15
 
