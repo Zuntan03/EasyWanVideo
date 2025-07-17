@@ -163,6 +163,12 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+### 2025/07/17
+
+- `Download\loras\Fast\lightx2v_I2V_14B_480p_cfg_step_distill_rank(4~128)_bf16.bat` を追加しました。
+- `Download\loras\Fast\lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank(64~4)_bf16.bat` のリネームに対応しました。
+- `Mosaic` 系ワークフローの自動検出モデルの更新忘れを修正しました。
+
 ### 2025/07/16
 
 - `Download\loras\Fast\Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank64.bat` と `Download\loras\Fast\Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.bat` を追加しました。

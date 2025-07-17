@@ -5,7 +5,7 @@ set HUGGING_FACE=%EASY_TOOLS%\Download\HuggingFace.bat
 pushd %~dp0..\..\..\ComfyUI\models\loras
 
 @REM https://huggingface.co/Kijai/WanVideo_comfy
-call %HUGGING_FACE% Fast\ lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank4_bf16.safetensors Kijai/WanVideo_comfy Lightx2v/
+call %HUGGING_FACE% Fast\ lightx2v_I2V_14B_480p_cfg_step_distill_rank32_bf16.safetensors Kijai/WanVideo_comfy Lightx2v/
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 popd rem %~dp0..\..\..\ComfyUI\models\loras
