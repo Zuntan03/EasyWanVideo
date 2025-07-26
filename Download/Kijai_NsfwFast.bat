@@ -13,11 +13,8 @@ call %~dp0upscale_models\4x-UltraSharpV2.bat
 
 call %~dp0clip\Kijai\open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.bat
 
-@REM call %~dp0diffusion_models\Kijai\I2v-WanSkyRel07-14B-FastMix-fp8_e5m2.bat
-@REM call %~dp0diffusion_models\Kijai\T2v-Wan-14B-FastMix-fp8_e5m2.bat
-@REM call %~dp0diffusion_models\Kijai\Wan2_1-VACE_module_14B-fp8_e5m2.bat
-
-call %~dp0diffusion_models\Native\Wan21-BothI2v-14B-FastMix-Q3_K_M.bat
+call %~dp0diffusion_models\Native\Wan21-BothI2v-FastMix2-14B-Q3_K_M.bat
+call %~dp0diffusion_models\Native\Wan21-BothI2vAnisora-FastMix2-14B-Q3_K_M.bat
 call %~dp0diffusion_models\Native\Wan21-VACE-14B-FastMix-Q4_K_M.bat
 
 call %~dp0text_encoders\Native\umt5_xxl_fp8_e4m3fn_scaled.bat
@@ -28,6 +25,8 @@ call %~dp0vae\Kijai\Wan2_1_VAE_bf16.bat
 
 call %~dp0loras\Bundle\Nashikone.bat
 call %~dp0loras\Bundle\NashikoneI2v720p.bat
+
+call %~dp0loras\Fast\Wan21_PusaV1_LoRA_14B_rank512_bf16.bat
 
 @REM call %~dp0loras\Fast\Wan21_AccVid_I2V_480P_14B_lora_rank32_fp16.bat
 @REM call %~dp0loras\Fast\Wan21_AccVid_T2V_14B_lora_rank32_fp16.bat

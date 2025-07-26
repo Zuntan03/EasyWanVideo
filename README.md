@@ -163,6 +163,30 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+### 2025/07/26
+
+**`Update.bat` での更新後に、`Download\Kijai_NsfwFast.bat` で必要なファイルをダウンロードしてください。**
+
+- `Easy/Kijai_NsfwFast` ワークフローを更新しました。
+	- 新しい高速化 LoRA でチューニングを見直しました。
+		- 動画開始時の色変化を低減しました。
+	- Anisora をマージしたモデルで、LoRA によっては顔がリアルになってしまう現象を低減できるようにしました。以下の設定で利用できます。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202507/Anisora.png)
+	- Hires. Fix のステップ数を 4 から 3 に削減して高速化しました。
+		- 通常生成を `3`ステップ、Hires. Fix を `2`ステップに減らすこともできますが、細部や動きが劣化します。
+	- Pusa に対応しました。相性の良い LoRA ではクオリティが向上しています。以下のオプションで LoRA をマージするか、マージ済みモデルをダウンロードします。利用時にはサンプラーを `lcm` から `flowmatch_pusa` に変更してください。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyWanVideo/log/202507/Pusa.png)
+- 以下のファイルのダウンロードに対応しました。
+	- `Download\diffusion_models\Native\Wan21-BothI2v-FastMix2-14B-Q3_K_M.bat`
+	- `Download\diffusion_models\Native\Wan21-BothI2vAnisora-FastMix2-14B-Q3_K_M.bat`
+	- `Download\loras\Fast\lightx2v_I2V_14B_480p_cfg_step_distill_rank256_bf16.bat`
+	- `Download\loras\Fast\lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank256_bf16.bat`
+	- `Download\loras\Fast\Wan21_PusaV1_LoRA_14B_rank512_bf16.bat`
+- 新しくマージした FastMix2 モデルを [HuggingFace で公開](https://huggingface.co/Zuntan/Wan21-FastMix) しています。
+	- fp8 や高精度 GGUF のモデルをダウンロードできます。
+
+描画のループや延長の VACE モデルはまだ見直していませんが、先に Wan 2.2 が出そうです。
+
 ### 2025/07/17
 
 - `Download\loras\Fast\lightx2v_I2V_14B_480p_cfg_step_distill_rank(4~128)_bf16.bat` を追加しました。

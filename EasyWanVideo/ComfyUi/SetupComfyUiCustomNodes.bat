@@ -119,13 +119,14 @@ call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
-@REM 2025/07/11 880194a1f9da7bcb096baf58ca2ae971daeba071
-@REM 2025/07/14 f96128bf2ce9e456637341abf6937a479c2d6a93
-@REM 2025/07/17 17d48e3e450c7e75f60566e787404cb3d917f48e
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main 17d48e3e450c7e75f60566e787404cb3d917f48e
+@REM 2025/07/22 70fcdff3c535d09eb1cfc92425728796433752c5
+@REM 2025/07/23 838803d0536c0750cfc26d38b39f175dda9df52a
+@REM 2025/07/24 d6425cab02d052e3d39732e56df7f7e6a52d4d50 要 patch
+@REM 2025/07/26 34c2cc23a9b450c836f235b824a5f140e44a3501 lora key not loaded
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-WanVideoWrapper main d6425cab02d052e3d39732e56df7f7e6a52d4d50
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-@REM Patch
+@REM Patch 2025/07/25 から不要
 echo %PS_CMD% -c %PS_CMD% -c "(gc ComfyUI-WanVideoWrapper/gguf/gguf.py) -replace 'lora_diffs = \[p\[1\]\.weights for p in patch\]', 'lora_diffs = [p[1][1] for p in patch]' | sc ComfyUI-WanVideoWrapper/gguf/gguf.py"
 %PS_CMD% -c "(gc ComfyUI-WanVideoWrapper/gguf/gguf.py) -replace 'lora_diffs = \[p\[1\]\.weights for p in patch\]', 'lora_diffs = [p[1][1] for p in patch]' | sc ComfyUI-WanVideoWrapper/gguf/gguf.py"
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
