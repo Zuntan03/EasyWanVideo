@@ -39,6 +39,7 @@ call %~dp0loras\Fast\Wan21_PusaV1_LoRA_14B_rank512_bf16.bat
 
 @REM call %~dp0
 call %~dp0loras\Motion\dabaichui_v10.bat
+call %~dp0loras\Nsfw\BetterAnimeSexFaces_v40.bat
 call %~dp0loras\Nsfw\nsfwsks_InAndOut_v014.bat
 call %~dp0loras\Nsfw\her_breasts_are_bouncing_v01.bat
 call %~dp0loras\Nsfw\BounceOfPleasure_v10.bat
