@@ -18,7 +18,7 @@ pushd %~dp0..\..\ComfyUI\custom_nodes
 set PYTHONUTF8=1
 
 @REM https://github.com/christian-byrne/audio-separation-nodes-comfyui
-call :GITHUB_HASH_REQUIREMENTS christian-byrne audio-separation-nodes-comfyui master
+call :GITHUB_HASH_REQUIREMENTS christian-byrne audio-separation-nodes-comfyui master 31a4567726e035097cc2d1f767767908a6fda2ea
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/chrisgoringe/cg-use-everywhere
@@ -27,7 +27,7 @@ call :GITHUB_HASH_REQUIREMENTS chrisgoringe cg-use-everywhere main 8017bc6b063f4
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/Fannovel16/comfyui_controlnet_aux
-call :GITHUB_HASH_REQUIREMENTS Fannovel16 comfyui_controlnet_aux main
+call :GITHUB_HASH_REQUIREMENTS Fannovel16 comfyui_controlnet_aux main 59b027e088c1c8facf7258f6e392d16d204b4d27
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/SeargeDP/ComfyUI_Searge_LLM
@@ -39,19 +39,19 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/pythongosssss/ComfyUI-Custom-Scripts
-call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main
+call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main aac13aa7ce35b07d43633c3bbe654a38c00d74f5
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-DepthAnythingV2
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-DepthAnythingV2 main
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-DepthAnythingV2 main d505cbca99803fc63327b8305618a23e59a18b42
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/cubiq/ComfyUI_essentials
-call :GITHUB_HASH_REQUIREMENTS cubiq ComfyUI_essentials main
+call :GITHUB_HASH_REQUIREMENTS cubiq ComfyUI_essentials main 9d9f4bedfc9f0321c19faf71855e228c93bd0dc9
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-Florence2
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-Florence2 main
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-Florence2 main de485b65b3e1b9b887ab494afa236dff4bef9a7e
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-FramePackWrapper
@@ -63,7 +63,7 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 xcopy /SQY ComfyUI-FramePackWrapper\example_workflows\*.* ..\user\default\workflows\Kijai\
 
 @REM https://github.com/Fannovel16/ComfyUI-Frame-Interpolation
-call :GITHUB_HASH_REQUIREMENTS Fannovel16 ComfyUI-Frame-Interpolation main
+call :GITHUB_HASH_REQUIREMENTS Fannovel16 ComfyUI-Frame-Interpolation main a969c01dbccd9e5510641be04eb51fe93f6bfc3d
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo pip install -qq -r ComfyUI-Frame-Interpolation\requirements-no-cupy.txt
@@ -71,7 +71,7 @@ pip install -qq -r ComfyUI-Frame-Interpolation\requirements-no-cupy.txt
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/city96/ComfyUI-GGUF
-call :GITHUB_HASH_REQUIREMENTS city96 ComfyUI-GGUF main
+call :GITHUB_HASH_REQUIREMENTS city96 ComfyUI-GGUF main b3ec875a68d94b758914fd48d30571d953bb7a54
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-HunyuanVideoWrapper
@@ -99,27 +99,27 @@ call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.31.4
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-MMAudio
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-MMAudio main
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-MMAudio main 61f03a65a62dfeeb4687787104809f0e8028073a
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/1038lab/ComfyUI-RMBG
-call :GITHUB_HASH_REQUIREMENTS 1038lab ComfyUI-RMBG main
+call :GITHUB_HASH_REQUIREMENTS 1038lab ComfyUI-RMBG main 4b2e8ce688386cca1257ae3aea94cb7c6bfca09f
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-segment-anything-2
-call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-segment-anything-2 main
+call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-segment-anything-2 main c59676b008a76237002926f684d0ca3a9b29ac54
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/SeanScripts/ComfyUI-Unload-Model
-call :GITHUB_HASH_REQUIREMENTS SeanScripts ComfyUI-Unload-Model main
+call :GITHUB_HASH_REQUIREMENTS SeanScripts ComfyUI-Unload-Model main ac5ffb4ed05546545ce7cf38e7b69b5152714eed
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite
-call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
+@REM 2025/05/07 38fbe354b1eff10ef8066a580402ae3e33a59f5d
+call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main 38fbe354b1eff10ef8066a580402ae3e33a59f5d
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-WanVideoWrapper
-@REM 2025/07/22 70fcdff3c535d09eb1cfc92425728796433752c5
 @REM 2025/07/23 838803d0536c0750cfc26d38b39f175dda9df52a
 @REM 2025/07/24 d6425cab02d052e3d39732e56df7f7e6a52d4d50 要 patch
 @REM 2025/07/26 34c2cc23a9b450c836f235b824a5f140e44a3501 lora key not loaded
@@ -146,7 +146,7 @@ xcopy /SQY ComfyUI-WanVideoWrapper\example_workflows\*.* ..\user\default\workflo
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/rgthree/rgthree-comfy
-call :GITHUB_HASH_REQUIREMENTS rgthree rgthree-comfy main
+call :GITHUB_HASH_REQUIREMENTS rgthree rgthree-comfy main 944d5353a1b0a668f40844018c3dc956b95a67d7
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/KohakuBlueleaf/z-tipo-extension
