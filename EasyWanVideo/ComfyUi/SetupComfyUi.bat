@@ -85,6 +85,11 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 @REM pip install -qq torchao==0.7.0
 @REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
+@REM ComfyUI-Impact-Pack\requirements.txt
+echo pip install -qq opencv-python-headless==4.11.0.86 opencv-contrib-python==4.11.0.86 opencv-python==4.11.0.86
+pip install -qq opencv-python-headless==4.11.0.86 opencv-contrib-python==4.11.0.86 opencv-python==4.11.0.86
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
 call %EASY_TOOLS%\Ffmpeg\Ffmpeg_Setup.bat venv\Scripts
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
