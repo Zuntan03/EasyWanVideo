@@ -165,12 +165,16 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ### 2025/07/27
 
+**`Update.bat` での更新後に、`Download\Kijai_NsfwFast.bat` で必要なファイルをダウンロードしてください。**
+
 - `NsfwFast` のプリセットに `アニメ顔` を追加しました。
-	<!-- - `SampleNsfw` にアニメモデルとの比較用サンプルも追加しました。 -->
+	- `SampleNsfw` にアニメモデルとの比較用サンプルも追加しました。
 - `ComfyUI-Impact-Pack\requirements.txt` のインストール時に発生していたエラーを修正しました。
 	- エラーが発生していても、実害は確認していません。
 - `ComfyUI-VideoHelperSuite` のバージョンを、互換性のない変更が入る前に固定しました。
 - すべてのカスタムノードのバージョンを固定しました。
+- `Download/Kijai_NsfwFast.bat` への `BetterAnimeSexFaces_v40` の追加を漏れを修正しました。
+	- `Update.bat` 後に `Download\Kijai_NsfwFast.bat` してください。
 
 ### 2025/07/26
 
