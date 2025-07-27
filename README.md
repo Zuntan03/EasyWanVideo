@@ -163,6 +163,10 @@ I2V のチュートリアルでは動画素材を生成します。
 
 ## 最近の更新履歴
 
+### 2025/07/28
+
+- `Easy/Kijai_NsfwFast` ワークフローで `ComfyUI-VideoHelperSuite` の互換性のない変更によるエラーを修正しました。
+
 ### 2025/07/27
 
 **`Update.bat` での更新後に、`Download\Kijai_NsfwFast.bat` で必要なファイルをダウンロードしてください。**
